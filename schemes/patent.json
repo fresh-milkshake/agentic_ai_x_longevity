@@ -1,0 +1,212 @@
+{
+    "applicants": [
+        {
+            "applicant_designation": "keyword",
+            "applicant_name_first": "text",
+            "applicant_name_last": "text",
+            "applicant_organization": "text",
+            "applicant_sequence": 1,
+            "applicant_type": "keyword",
+            "location_id": "keyword"
+        }
+    ],
+    "application": [
+        {
+            "application_id": "keyword",
+            "application_type": "keyword",
+            "filing_date": "1976-01-06",
+            "filing_type": "keyword",
+            "rule_47_flag": true,
+            "series_code": "keyword"
+        }
+    ],
+    "assignees": [
+        {
+            "assignee": "keyword",
+            "assignee_type": "keyword",
+            "assignee_individual_name_first": "text",
+            "assignee_individual_name_last": "text",
+            "assignee_organization": "text",
+            "assignee_city": "text",
+            "assignee_state": "text",
+            "assignee_country": "text",
+            "assignee_sequence": 1
+        }
+    ],
+    "attorneys": [
+        {
+            "attorney_id": "keyword",
+            "attorney_name_first": "text",
+            "attorney_name_last": "text",
+            "attorney_organization": "text",
+            "attorney_sequence": 1
+        }
+    ],
+    "botanic": [
+        {
+            "latin_name": "keyword",
+            "variety": "keyword"
+        }
+    ],
+    "cpc_at_issue": [
+        {
+            "cpc_class": "keyword",
+            "cpc_class_id": "keyword",
+            "cpc_group": "keyword",
+            "cpc_group_id": "keyword",
+            "cpc_section": "keyword",
+            "cpc_sequence": 1,
+            "cpc_subclass": "keyword",
+            "cpc_subclass_id": "keyword",
+            "cpc_type": "keyword"
+        }
+    ],
+    "cpc_current": [
+        {
+            "cpc_class": "keyword",
+            "cpc_class_id": "keyword",
+            "cpc_group": "keyword",
+            "cpc_group_id": "keyword",
+            "cpc_section": "keyword",
+            "cpc_sequence": 1,
+            "cpc_subclass": "keyword",
+            "cpc_subclass_id": "keyword",
+            "cpc_type": "keyword"
+        }
+    ],
+    "examiners": [
+        {
+            "art_group": "keyword",
+            "examiner_first_name": "text",
+            "examiner_id": "keyword",
+            "examiner_last_name": "text",
+            "examiner_role": "keyword"
+        }
+    ],
+    "figures": [
+        {
+            "num_figures": 1,
+            "num_sheets": 1
+        }
+    ],
+    "foreign_priority": [
+        {
+            "filing_date": "1976-01-06",
+            "foreign_application_id": "keyword",
+            "foreign_country_filed": "keyword",
+            "priority_claim_kind": "keyword",
+            "priority_claim_sequence": 1
+        }
+    ],
+    "gov_interest_contract_award_numbers": [
+        {
+            "award_number": "keyword"
+        }
+    ],
+    "gov_interest_organizations": [
+        {
+            "fedagency_name": "text",
+            "level_one": "text",
+            "level_three": "text",
+            "level_two": "text"
+        }
+    ],
+    "gov_interest_statement": "text",
+    "granted_pregrant_crosswalk": [
+        {
+            "application_number": "keyword",
+            "document_number": "keyword"
+        }
+    ],
+    "inventors": [
+        {
+            "inventor": "keyword",
+            "inventor_name_first": "text",
+            "inventor_name_last": "text",
+            "inventor_city": "text",
+            "inventor_state": "text",
+            "inventor_country": "text",
+            "inventor_sequence": 1
+        }
+    ],
+    "ipcr": [
+        {
+            "ipc_action_date": "1976-01-06",
+            "ipc_class": "keyword",
+            "ipc_classification_data_source": "keyword",
+            "ipc_classification_value": "keyword",
+            "ipc_id": "keyword",
+            "ipc_main_group": "keyword",
+            "ipc_section": "keyword",
+            "ipc_sequence": 1,
+            "ipc_subclass": "keyword",
+            "ipc_subgroup": "keyword",
+            "ipc_symbol_position": "keyword"
+        }
+    ],
+    "patent_abstract": "text",
+    "patent_cpc_current_group_average_patent_processing_days": 1,
+    "patent_date": "1976-01-06",
+    "patent_detail_desc_length": 1,
+    "patent_earliest_application_date": "1976-01-06",
+    "patent_id": "keyword",
+    "patent_num_foreign_documents_cited": 1,
+    "patent_num_times_cited_by_us_patents": 1,
+    "patent_num_total_documents_cited": 1,
+    "patent_num_us_applications_cited": 1,
+    "patent_num_us_patents_cited": 1,
+    "patent_processing_days": 1,
+    "patent_term_extension": 1,
+    "patent_title": "text",
+    "patent_type": "keyword",
+    "patent_uspc_current_mainclass_average_patent_processing_days": 1,
+    "patent_year": 1,
+    "pct_data": [
+        {
+            "application_kind": "keyword",
+            "pct_102_date": "1976-01-06",
+            "pct_371_date": "1976-01-06",
+            "pct_doc_number": "keyword",
+            "pct_doc_type": "keyword",
+            "published_filed_date": "1976-01-06"
+        }
+    ],
+    "us_related_documents": [
+        {
+            "published_country": "keyword",
+            "related_doc_kind": "keyword",
+            "related_doc_number": "keyword",
+            "related_doc_published_date": "1976-01-06",
+            "related_doc_sequence": 1,
+            "related_doc_status": "keyword",
+            "related_doc_type": "keyword",
+            "wipo_kind": "keyword"
+        }
+    ],
+    "us_term_of_grant": [
+        {
+            "disclaimer_date": "1976-01-06",
+            "term_disclaimer": "keyword",
+            "term_extension": "keyword",
+            "term_grant": "keyword"
+        }
+    ],
+    "uspc_at_issue": [
+        {
+            "uspc_mainclass": "keyword",
+            "uspc_mainclass_id": "keyword",
+            "uspc_sequence": 1,
+            "uspc_subclass": "keyword",
+            "uspc_subclass_id": "keyword"
+        }
+    ],
+    "wipo": [
+        {
+            "wipo_field": "keyword",
+            "wipo_field_id": "keyword",
+            "wipo_sequence": 1
+        }
+    ],
+    "withdrawn": false,
+    "wipo_kind": "keyword"
+}

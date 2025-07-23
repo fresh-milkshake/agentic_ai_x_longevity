@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Mono&family=Pixelify+Sans:wght@400..700&display=swap");
+
+html,
+body,
+.reveal {
+    background: #000;
+    color: #ffffff;
+}
+
+.reveal p,
+ul,
+li,
+tr,
+td,
+th {
+    font-size: 30px;
+    color: #ffffff;
+    font-family: "PT Mono", Arial, sans-serif;
+    font-weight: 900;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+    font-family: "Fira Code", Arial, sans-serif;
+    color: #00ff90;
+    text-transform: none;
+}
+
+code,
+pre code,
+.hljs {
+    font-family: "Fira Code", "Fira Mono", "Consolas", "Menlo", "Monaco",
+        monospace !important;
+    font-variant-ligatures: contextual;
+    font-size: 1em;
+    border-radius: 0.3em;
+}
+
+.accent {
+    color: #00ff90;
+    font-weight: bold;
+}
+
+.reveal .heading-title {
+    font-family: "Pixelify Sans", Arial, sans-serif;
+    font-weight: 900;
+}
+
+.reveal .heading-subtitle {
+    color: white;
+}

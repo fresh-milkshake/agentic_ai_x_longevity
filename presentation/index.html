@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+        <title>
+            Longevity: AI-платформа для извлечения данных о связывании лигандов
+            и белков
+        </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/theme/white.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-dark.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css"
+        />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <!-- Title Slide -->
+                <section>
+                    <img
+                        class="moving-pixel"
+                        data-id="pixel1"
+                        src="https://optim.tildacdn.com/tild6562-3834-4564-a136-656564636536/-/resize/144x/-/format/webp/20250618_2318_Pixel_.png.webp"
+                        alt="pixel-art"
+                        style="
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            z-index: 10;
+                            width: 72px;
+                            height: auto;
+                            pointer-events: none;
+                        "
+                    />
+                    <h2 class="heading-title">Agentic AI x Longevity</h2>
+                    <h4 class="heading-subtitle">
+                        Кейс: ИИ-агенты для извлечения
+                        <span class="accent">биоактивности</span> из патентов
+                    </h4>
+                    <p style="font-size: 20px">
+                        Пайплайн для фильтрации, анализа и оценки научных
+                        публикаций и патентов
+                    </p>
+                </section>
+
+                <!-- Project Overview -->
+                <section>
+                    <h2>Обзор проекта</h2>
+                    <ul>
+                        <li>
+                            Автоматизация извлечения и структурирования данных о
+                            взаимодействиях лигандов и белков из патентов
+                        </li>
+                        <li>
+                            Использование Agents Framework, OCR, OpenCV и других
+                            технологий для обработки
+                        </li>
+                        <li>
+                            Результат: демонстрация подхода и формирование
+                            основы для последующего расширения и улучшения
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Dataset Structure -->
+                <!-- <section>
+                    <h2>Структура набора данных</h2>
+                    <table>
+                        <tr>
+                            <td><b>Ligand SMILES</b></td>
+                            <td>Молекулярная структура</td>
+                        </tr>
+                        <tr>
+                            <td><b>Ligand InChI Key</b></td>
+                            <td>Уникальный идентификатор</td>
+                        </tr>
+                        <tr>
+                            <td><b>Sequence</b></td>
+                            <td>Аминокислотная последовательность белка</td>
+                        </tr>
+                        <tr>
+                            <td><b>Patent ID</b></td>
+                            <td>ID патента</td>
+                        </tr>
+                        <tr>
+                            <td><b>Ki, IC50, Kd, EC50</b></td>
+                            <td>Параметры связывания (нМ)</td>
+                        </tr>
+                    </table>
+                </section> -->
+
+                <!-- System Architecture -->
+                <section>
+                    <h2>Архитектура системы</h2>
+                    <img
+                        src="draft/arch-diagram.png"
+                        alt="Архитектура"
+                        style="
+                            max-width: 80%;
+                            background: #fff;
+                            border-radius: 8px;
+                            box-shadow: 0 2px 8px #ccc;
+                        "
+                        onerror="this.style.display='none'"
+                    />
+                    <ul>
+                        <li>
+                            Многоуровневая обработка: получение патентов →
+                            анализ → валидация
+                        </li>
+                        <li>
+                            Модули: Orchestrator, Pipeline, AI-агенты, OCR,
+                            API-интеграции
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Main Modules -->
+                <section>
+                    <h2>Основные модули</h2>
+                    <ul>
+                        <li>
+                            <b>Orchestrator</b> — управление скачивнием
+                            патентов, обработкой, сохранием и остальными
+                            процессами
+                        </li>
+                        <li>
+                            <b>Pipeline</b> — последовательная обработка
+                            документов и использование AI-агентов
+                        </li>
+                        <li>
+                            <b>AI-агенты</b> — SearcherAgent, BioinfAgent,
+                            SupervisorAgent, FixerAgent
+                        </li>
+                        <li>
+                            <b>OCR и Text Extraction</b> — извлечение текста из
+                            PDF
+                        </li>
+                        <li>
+                            <b>Filtering</b> — интеграция с USPTO API и
+                            опционально с SureChEMBL
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Key Algorithm: Orchestrator Example -->
+                <section>
+                    <h2>Пример: Orchestrator</h2>
+                    <pre><code class="python">class Orchestrator:
+    def run(self):
+        results = self._extract_texts()
+        all_docs = self._collect_documents(results)
+        self._process_documents(all_docs[3:])
+</code></pre>
+                    <ul>
+                        <li>Извлечение текстов из патентов</li>
+                        <li>Сбор документов и запуск пайплайна обработки</li>
+                    </ul>
+                </section>
+
+                <!-- Key Algorithm: Pipeline & Agents -->
+                <section>
+                    <h2>Pipeline и ИИ-агенты</h2>
+                    <pre><code class="python">class Pipeline:
+    def __init__(self, txt_document):
+        self.searcher_agent = Agent(...)
+        self.bioinf_agent = Agent(...)
+        self.supervisor_agent = Agent(...)
+    def run(self):
+        # 1. Поиск взаимодействий
+        # 2. Извлечение структурированных данных
+        # 3. Валидация и исправление
+                    </code></pre>
+                    <ul>
+                        <li>
+                            Многоагентная обработка: поиск, извлечение,
+                            валидация
+                        </li>
+                        <li>
+                            Использование базовой нейросети для анализа
+                            биомедицинских текстов
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Data Sources -->
+                <section>
+                    <h2>Источники данных</h2>
+                    <ul>
+                        <li>
+                            <b>BindingDB</b> — экспериментальные данные
+                            связывания
+                        </li>
+                        <li>
+                            <b>SureChEMBL API</b> — патентные данные и
+                            химические структуры
+                        </li>
+                        <li>
+                            <b>PubChem API</b> — биологическая активность и
+                            мишени
+                        </li>
+                        <li><b>USPTO Patents</b> — патентные документы</li>
+                    </ul>
+                </section>
+
+                <!-- Quality Assurance -->
+                <section> 
+                    <!-- TODO: Переписать -->
+                    <h2>Контроль качества</h2> 
+                    <ul>
+                        <li>
+                            Базовая валидация формата SMILES и белковых
+                            последовательностей
+                        </li>
+                        <li>Проверка диапазонов значений активности</li>
+                        <li>Удаление дубликатов и ручная модерация</li>
+                        <li>Многоуровневая система валидации с ИИ-агентами</li>
+                    </ul>
+                </section>
+
+                <!-- Usage Examples TODO: Переписать -->
+                <section>
+                    <h2>Примеры использования</h2>
+                    <pre><code class="python">import pandas as pd
+# Загрузка демо-данных
+df = pd.read_csv('data/ligand_protein_binding_dataset.csv')
+# Фильтрация по активности
+ki_data = df[df['Ki (nM)'].notna()]
+</code></pre>
+                    <pre><code class="bash"># Запуск пайплайна
+python run.py
+</code></pre>
+                </section>
+
+                <!-- Future Development TODO: Переписать -->
+                <section>
+                    <h2>Планы развития</h2>
+                    <ul>
+                        <li>Интеграция UniProt и PubMed</li>
+                        <li>Улучшение качества OCR и фильтрации</li>
+                        <li>
+                            Расширение набора данных и автоматизация анализа
+                        </li>
+                        <li>
+                            Внедрение новых ML-моделей и кастомных датасетов
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Technology Stack -->
+                <section>
+                    <h2>Технологический стек</h2>
+                    <ul>
+                        <li>Python 3.13+, Pandas, Pydantic, Requests</li>
+                        <li>PyTesseract, OpenCV, PyMuPDF</li>
+                        <li>OpenAI Agents, Ollama, Llama3.2</li>
+                        <li>Loguru, Rich, Textual</li>
+                    </ul>
+                </section>
+
+                <!-- Conclusion -->
+                <section>
+                    <img
+                        class="moving-pixel"
+                        data-id="pixel2"
+                        src="https://optim.tildacdn.com/tild6562-3834-4564-a136-656564636536/-/resize/144x/-/format/webp/20250618_2318_Pixel_.png.webp"
+                        alt="pixel-art"
+                        style="
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            z-index: 10;
+                            width: 72px;
+                            height: auto;
+                            pointer-events: none;
+                        "
+                    />
+                    <h2>Заключение</h2>
+                    <ul>
+                        <!-- TODO: Переписать -->
+                        <li>
+                            Longevity — AI-платформа для извлечения и анализа
+                            биомедицинских данных из патентов
+                        </li>
+                        <li>
+                            Гибкая архитектура, интеграция с ведущими
+                            источниками, возможность масштабирования
+                        </li>
+                        <li>
+                            Прототип служит отправной точкой для дальнейших
+                            исследований вопроса скрапинга патентов и их анализа
+                        </li>
+                    </ul>
+                    <h3>Спасибо за внимание!</h3>
+                </section>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/notes/notes.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/markdown/markdown.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/highlight/highlight.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/zoom/zoom.js"></script>
+        <script src="script.js"></script>
+        <script>
+            Reveal.initialize({
+                hash: true,
+                transition: "slide",
+                transitionSpeed: "default",
+                backgroundTransition: "fade",
+                plugins: [
+                    RevealMarkdown,
+                    RevealHighlight,
+                    RevealNotes,
+                    RevealZoom,
+                ],
+                highlight: {
+                    highlightOnLoad: true,
+                    tabReplace: "  ",
+                },
+            });
+        </script>
+    </body>
+</html>
