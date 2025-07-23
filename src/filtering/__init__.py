@@ -1,3 +1,3 @@
-from .fetch import USPTO
+from .fetch import PatentsRegistry
 
-__all__ = ["USPTO"]
+__all__ = ["PatentsRegistry"]

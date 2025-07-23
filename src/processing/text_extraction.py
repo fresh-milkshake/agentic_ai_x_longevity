@@ -15,6 +15,7 @@ from loguru import logger
 
 from src.utils import cut_str
 from src.constants.processing import PAGE_DIVIDER
+from src.constants.general import RESULTS_RAW_DIR
 
 
 @dataclass
@@ -26,17 +27,18 @@ class ExtractionResults:
     count_total: int
     time_taken: float
 
+
 @dataclass
 class OCRConfig:
     """Конфигурация для OCR обработки"""
 
     language: str = "eng"
     dpi: int = 300
-    psm: int = 6  # Page segmentation mode
-    oem: int = 3  # OCR Engine Mode
+    psm: int = 6
+    oem: int = 3
     enable_preprocessing: bool = True
     max_workers: int | None = None
-    chunk_size: int = 4  # Количество страниц для обработки в одном чанке
+    chunk_size: int = 4
 
 
 class OCRConfigEnum:
@@ -73,30 +75,23 @@ class ImagePreprocessor:
     def enhance_image(image: Image.Image) -> Image.Image:
         """Улучшает изображение для лучшего распознавания текста"""
         try:
-            # Конвертируем в RGB если нужно
             if image.mode != "RGB":
                 image = image.convert("RGB")
 
-            # Конвертируем в numpy array для OpenCV
             img_array = np.array(image)
             img_cv = cv2.cvtColor(img_array, cv2.COLOR_RGB2BGR)
 
-            # Конвертируем в градации серого
             gray = cv2.cvtColor(img_cv, cv2.COLOR_BGR2GRAY)
 
-            # Применяем гауссово размытие для удаления шума
             blurred = cv2.GaussianBlur(gray, (1, 1), 0)
 
-            # Применяем пороговую обработку (бинаризация)
             _, thresh = cv2.threshold(
                 blurred, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU
             )
 
-            # Морфологические операции для улучшения качества
             kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (1, 1))
             processed = cv2.morphologyEx(thresh, cv2.MORPH_CLOSE, kernel)
 
-            # Конвертируем обратно в PIL Image
             processed_pil = Image.fromarray(processed)
 
             return processed_pil
@@ -109,19 +104,15 @@ class ImagePreprocessor:
     def pil_enhance_image(image: Image.Image) -> Image.Image:
         """Альтернативная обработка через PIL (если OpenCV недоступен)"""
         try:
-            # Конвертируем в градации серого
             if image.mode != "L":
                 image = image.convert("L")
 
-            # Увеличиваем контрастность
             enhancer = ImageEnhance.Contrast(image)
             image = enhancer.enhance(1.5)
 
-            # Увеличиваем резкость
             enhancer = ImageEnhance.Sharpness(image)
             image = enhancer.enhance(1.2)
 
-            # Применяем фильтр для уменьшения шума
             image = image.filter(ImageFilter.MedianFilter(size=3))
 
             return image
@@ -131,7 +122,9 @@ class ImagePreprocessor:
             return image
 
 
-def _process_page_chunk(args: tuple[Path, list[int], OCRConfig]) -> list[tuple[int, str]]:
+def _process_page_chunk(
+    args: tuple[Path, list[int], OCRConfig],
+) -> list[tuple[int, str]]:
     """Обрабатывает chunk страниц PDF"""
     document_path, page_nums, config = args
     results = []
@@ -140,11 +133,9 @@ def _process_page_chunk(args: tuple[Path, list[int], OCRConfig]) -> list[tuple[i
         logger.debug(
             f"Открываем документ {document_path} для чанка страниц: {page_nums}"
         )
-        # Открываем документ один раз для всего чанка
         pdf_document = fitz.open(document_path)
         matrix = fitz.Matrix(config.dpi / 72, config.dpi / 72)
 
-        # Формируем конфигурацию Tesseract
         tesseract_config = f"--psm {config.psm} --oem {config.oem}"
         logger.debug(f"Tesseract config: {tesseract_config}")
 
@@ -152,11 +143,10 @@ def _process_page_chunk(args: tuple[Path, list[int], OCRConfig]) -> list[tuple[i
             try:
                 logger.debug(f"Загружаем страницу {page_num + 1}")
                 page = pdf_document.load_page(page_num)
-                pix = page.get_pixmap(matrix=matrix)
+                pix = page.get_pixmap(matrix=matrix) # type: ignore
                 img_data = pix.tobytes("ppm")
                 image = Image.open(io.BytesIO(img_data))
 
-                # Предобработка изображения если включена
                 if config.enable_preprocessing:
                     logger.debug(
                         f"Выполняется предобработка изображения для страницы {page_num + 1}"
@@ -169,7 +159,6 @@ def _process_page_chunk(args: tuple[Path, list[int], OCRConfig]) -> list[tuple[i
                         )
                         image = ImagePreprocessor.pil_enhance_image(image)
 
-                # OCR
                 logger.debug(f"Запуск OCR для страницы {page_num + 1}")
                 page_text = pytesseract.image_to_string(
                     image, lang=config.language, config=tesseract_config
@@ -177,7 +166,7 @@ def _process_page_chunk(args: tuple[Path, list[int], OCRConfig]) -> list[tuple[i
 
                 if page_text.strip():
                     result = (
-                        PAGE_DIVIDER.replace("%NUM%", str(page_num + 1))
+                        PAGE_DIVIDER.replace("%NUM%", str(page_num + 1)) + "\n"
                         + page_text.strip()
                         + "\n\n"
                     )
@@ -222,7 +211,7 @@ class PDFTextExtractor:
         if self.config.max_workers is None:
             self.config.max_workers = min(
                 mp.cpu_count(), 4
-            )  # Ограничиваем для экономии памяти
+            )
         logger.debug(f"PDFTextExtractor инициализирован с config: {self.config}")
 
     def extract_text(self, document_path: Path) -> str:
@@ -242,7 +231,6 @@ class PDFTextExtractor:
         """
         start_time = time.time()
 
-        # Валидация входных данных
         if not document_path.exists():
             raise FileNotFoundError(f"Файл не найден: {document_path}")
 
@@ -250,7 +238,6 @@ class PDFTextExtractor:
             raise ValueError("Файл должен быть в формате PDF")
 
         try:
-            # Получаем информацию о документе
             logger.debug(f"Открываем PDF для подсчета страниц: {document_path}")
             pdf_document = fitz.open(document_path)
             num_pages = len(pdf_document)
@@ -264,15 +251,12 @@ class PDFTextExtractor:
                 f"Начинаем обработку PDF: {cut_str(document_path.name)} ({num_pages} страниц)"
             )
 
-            # Создаем чанки страниц
             page_nums = list(range(num_pages))
             chunks = _create_chunks(page_nums, self.config.chunk_size)
             logger.debug(f"Создано {len(chunks)} чанков для обработки")
 
-            # Подготавливаем аргументы для процессов
             args = [(document_path, chunk, self.config) for chunk in chunks]
 
-            # Обработка с использованием ProcessPoolExecutor
             results = []
             with ProcessPoolExecutor(max_workers=self.config.max_workers) as executor:
                 future_to_chunk = {
@@ -290,7 +274,6 @@ class PDFTextExtractor:
                     except Exception as e:
                         logger.error(f"Ошибка в чанке {chunk_idx + 1}: {e}")
 
-            # Сортируем результаты по номеру страницы
             results.sort(key=lambda x: x[0])
             extracted_text = [r[1] for r in results]
 
@@ -350,18 +333,34 @@ class PDFTextExtractor:
 
 
 def extract_texts(
-    documents_path: Path, config: OCRConfig = OCRConfigEnum.HIGH_ACCURACY
+    documents_path: Path,
+    config: OCRConfig = OCRConfigEnum.HIGH_ACCURACY,
+    export_path: Path = RESULTS_RAW_DIR,
 ) -> ExtractionResults:
     start_time = time.time()
     extractor = PDFTextExtractor(config)
     pdf_files = list(documents_path.glob("*.pdf"))
+
+    if not pdf_files:
+        logger.info(f"В директории {documents_path} нет PDF файлов")
+        return ExtractionResults(
+            new_txts=[],
+            old_txts=[],
+            count_new=0,
+            count_old=0,
+            count_total=0,
+            time_taken=0,
+        )
+
+    if not export_path.exists():
+        export_path.mkdir(parents=True, exist_ok=True)
 
     new_txts = []
     old_txts = []
     for pdf_file in pdf_files:
         try:
             logger.info(f"Обрабатываем: {cut_str(pdf_file.name)}")
-            output_path = documents_path / f"{pdf_file.stem}.txt"
+            output_path = export_path / f"{pdf_file.stem}.txt"
 
             if output_path.exists():
                 logger.info(f"Файл {cut_str(output_path)} уже существует, пропускаем")
@@ -376,12 +375,10 @@ def extract_texts(
                 )
                 continue
 
-            # Извлекаем с метаданными
             logger.debug(f"Запуск извлечения текста с метаданными для {pdf_file.name}")
             text, metadata = extractor.extract_with_confidence(pdf_file)
 
             if text:
-                # Сохраняем результат
                 logger.debug(f"Сохраняем результат в {output_path}")
 
                 with open(output_path, "w", encoding="utf-8") as f:

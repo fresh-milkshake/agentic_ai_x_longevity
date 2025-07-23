@@ -1,0 +1,854 @@
+=== СТРАНИЦА 1 ===
+US011709136B2
+a2) United States Patent (10) Patent No.: US 11,709,136 B2
+York et al. (45) Date of Patent: Jul. 25, 2023
+(54) SYSTEM AND METHOD FOR INFERRING (56) References Cited
+PROTEIN BINDING
+U.S. PATENT DOCUMENTS
+(71) Applicant: CALICO LIFE SCIENCES LLC,
+: 6,284,544 B1L* 9/2001 Thompson ........... GOIN 33/582
+South San Francisco, CA (US) 436/83
+. 6,603,546 B1* 8/2003 Barbieri ............. GOIN 21/6452
+(72) Inventors: Andrew Gregory York, San Francisco, 356/417
+CA (US); Maria Del Mar Ingaramo, (Continued)
+San Francisco, CA (US)
+(73) Assignee: CALICO LIFE SCIENCES LLC, OTHER PUBLICATIONS
+South San Francisco, CA (US) Gaab et al., Nonstationary Rotational Diffusion in Room Tempera-
+(*) Notice: Subject to any disclaimer, the term of this ture Liquids Measured by Femtosecond Three-Pulse Transient
+patent is extended or adjusted under 35 Sin The e004) Physical Society, vol. 93, No. 5, Jul. 30,
+U.S.C. 154(b) by 0 days. 2004, 1-4 (Year: 2004).
+(Continued)
+(21) Appl. No.: 17/253,444
+; Primary Examiner — David P Porta
+(22) PCT Filed: Jun. 17, 2019 Assistant Examiner — Djura Malevic
+(86) PCT No:: PCT/US2019/037433 (74) Attorney, Agent, or Firm — Lando & Anastasi, LLP
+§ 371 (c)(), (57) ABSTRACT
+(2) Date: Dec. 17, 2020 Methods and apparatus for inferring protein binding based
+(87) PCT Pub. No.: WO2019/245946 on rotational diffusion ofa collection of fluorophores. One
+example of a method includes applying a first light pulse to
+PCT Pub. Date: Dec. 26, 2019 excite a plurality of fluorophores in the collection of fluo-
+; oe rophores to produce a plurality of excited fluorophores, the
+(65) Prior Publication Data first light pulse having a first polarization and the plurality
+US 2021/0247315 Al Aug. 12, 2021 of excited fluorophores having a component of their orien-
+tation aligned with the first polarization, applying a second
+Related U.S. Application Data light pulse to stimulate emission by the plurality of excited
+(60) Provisional application No. 62/686,279, filed on Jun. fluorophores, the second light pulse having a second polar-
+18, 2018. ization orthogonal to the first polarization, after a time delay
+following application of the second light pulse, applying a
+(51) Int. Cl. third light pulse of the second polarization to further stimu-
+GOIN 21/64 (2006.01) late emission by the plurality of excited fluorophores, detect-
+(52) U.S. Cl. ing polarized emissions from the plurality of excited fluo-
+CPC ...... GOIN 21/6408 (2013.01); GOIN 21/6445 rophores, and inferring the rate of rotational diffusion of the
+(2013.01) collection of fluorophores based on the detected polarized
+(58) Field of Classification Search emissions.
+CPC oo GOIN 21/6408; GOIN 21/6445
+See application file for complete search history. 15 Claims, 15 Drawing Sheets
+INTIAL COLLECTION OF A
+| STRONG ORIENTATION SELECTION
+on x we CATON TON BIRECTION-SPECIFIC DEPLETION oes a
+| aCRVATION 480 | CURVES TO INTER
+i c | CURVES 70 INFER
+—— — | TUMBLING: RATES
+| BIRECTION~SPECIFIC | NFER PROTEIN
+i DEACTIVATION r479 | BINDING
+| DETECT EMISSION
+850) TNE DELAY i AUOROPHORES
+es ee ee
+i EXCITATION -
+
+=== СТРАНИЦА 2 ===
+US 11,709,136 B2
+Page 2
+(56) References Cited 2012/0018651 Al* 1/2012 Hess ........00...... GO2B 21/0088
+359/385
+U.S. PATENT DOCUMENTS 2016/0170199 Al* 6/2016 Inoue ................. HO4N 9/3158
+353/31
+7,456,954 B2* 11/2008 Weiss ................ GOIN 21/6445 2017/0045521 A1* 2/2017 Vinegoni ........... G02B 21/0096
+356/417 2017/0176334 Al* 6/2017 Mattioli Della Rocea oo...
+7,842,491 B2* 11/2010 Thompson ......... GOIN 21/6445 GOIN 21/21
+435/232 2017/0176338 AL* 6/2017 Wu oo. GO2B 21/367
+250/459.1 GOIN 21/6428
+8,309,346 B2* 11/2012 Zuckerman .......... A6IB 5/4842 2023/0073324 Al* 3/2023 Lew uu... GOIN 21/6458
+356/369
+8,948,539 B2* 2/2015 Meyers ........0..... GO6K 9/40 OTHER PUBLICATIONS
+382/275
+10,119,912 B2* 11/2018 Mattioli Della Rocca ....cc Kevin M. Gaab et al., “Nonstationary Rotational Diffusion in Room
+GOIN 21/6456 Temperature Liquids Measured by Femtosecond Three-Pulse Tran-
+10,386,300 B2* 8/2019 Wu oe. GOIN 21/6408 sient Anisotropy”, Physical Review Letters, vol. 93, No. 5 (Jul.
+2002/0055091 Al* 5/2002 Thompson ........... GOIN 33/542 2004); XP0556144 18, ISSN:0031-9007, DOI: 10.1103/PhysRevLett.
+436/83 93.056001.
+2003/0206297 Al* 11/2003 Barbieri ............. GOIN 21/6408 Christoph M. Pieper et al., “Fluorescence correlation spectroscopy
+356/417 as a tool for measuring the rotational diffusion of macromolecules”,
+2005/0064485 Al* 3/2005 Vogel .............. GOIN 33/582 Chemical Physics Letters, vol. 516, No. 1, pp. 1-11; XP028332451,
+435/6.11 ISSN: 0009-2614, DOI: 10.1016/J.CPLETT.2011.06.091 (retrieved
+2005/0094147 Al* 5/2005 Yaroslavsky .......... A61B 5/444 Jul. 7, 2011).
+356/417 Anastasia Loman et al., “Measuring rotational diffusion of macro-
+2005/0250170 Al* 11/2005 Thompson ......... GOIN 21/6445 molecules by fluorescence correlation spectroscopy”, Photochemi-
+435/196 cal & Photobiological Sciences, vol. 9, No. 5, pp. 627-636 (Jan.
+2007/0109536 Al* 5/2007 Weiss ....... GOL 3/4338 2010); XP055614416, GB, ISSN: 1474-905X, DOI: 10.1039/
+356/318 B9PPO0029A.
+2010/0090127 Al* 4/2010 Yekta ........... GOIN 21/6458
+250/459.1 * cited by examiner
+
+=== СТРАНИЦА 3 ===
+U.S. Patent Jul. 25, 2023 Sheet 1 of 15 US 11,709,136 B2
+100 110] INITIAL COLLECTION OF |
+mo \ FLUOROPHORES |
+120~_| WEAK ORIENTATION SELECTION |
+VIA DIRECTION-SPECIFIC |
+EXCITATION |
+
+130~| DETECT EMISSION FROM |
+
+EXCITED FLUOROPHORES |
+
+£40 ANALYZE EMISSION |
+
+. CURVES TO INFER |
+
+TUMBLING RATES |
+
+FG.)
+(Related Art)
+
+=== СТРАНИЦА 4 ===
+U.S. Patent J
+ul. 25, 2023 Sh
+. 25, eet 2
+of 15 US 11,709,136 B2
+LF we
+A al Ny
+Z | BEREPEEES SOO Ge OBU Cea d
+FIG.2A
+
+=== СТРАНИЦА 5 ===
+U.S. Patent Jul. 25, 2023 Sheet 3 of 15 US 11,709,136 B2
+eee? 5 O SBaIBS 82, ||,
+(Sra) ~Pk Boon Seger |i
+HRS Di Op Co 4 Sees
+EEO LO SOOM ore)
+Yo Geese OS ae O 5 OR OTH
+Baa IO O85 8 O° De SE eee -
+BeOS OOL Oo ® GeO OH
+BOE "TO OC See TH |
+NRG gO cy Beer /
+i Sakis) ee, ? ey <e, rt
+
+FiG.28
+
+=== СТРАНИЦА 6 ===
+U.S. Patent Jul. 25, 2023 Sheet 4 of 15 US 11,709,136 B2
+| cEMISSION DETECTED VERTICAL
+£ — TEMISSION BETECTED HORIZONTAL
+gb vied Sy
+eee OT oO” 9 eae ae '
+ATO 'g Clb OG (OO =e
+ee Ol Lo [7 Po poo Ee
+Ge SOT Oo | BE _ Ce)
+mOOS =F — —_Pol -0 =) So g-oSe
+eS On OT NO | OF GB 7 |
+ea Oa Te I OP Ser)
+BES lope) o'1P 8! eee /
+Shoo 6°) OVATE |,
+Sf 1% lo}| Se i.
+yop eR O° da! ey |
+x
+riG.2C
+
+=== СТРАНИЦА 7 ===
+U.S. Patent Jul. 25, 2023 Sheet 5 of 15 US 11,709,136 B2
+2 oS
+
+es en en ere”. BF AS Q 9 Mw
+SFE Nex
+s nee Pr) = foay ry
+mi ge = Se
+
+ca) SS 2 oS 2S a a, Seoeoovecneoercod &®
+
+oS oS SS m SS SeBmo ea oooeoeana
+
+=== СТРАНИЦА 8 ===
+U.S. Patent Jul. 25, 2023 Sheet 6 of 15 US 11,709,136 B2
+oS coon
+A bs ee | ri
+Of < | bu
+= bho = | = |
+ae =|
+6 f=] G Lig
+PAS a] “Oe | (Seat
+| i a | | OE ge |
+ae Oo | pa e |
+Sha) ZO we | (SBS)
+OT | 255 | pee >)
+OMe Zz eh | iSite ~
+ee | \. y,
+Ls = &f é ; oe Lil = |
+SES | ae | Z>SzZ| S259 |
+3B E | ma | =e Ge ws |
+Qe | SEE) |Se2og) BAMA |
+es | CP a} Bs > Ob | Or 2S |
+os aan pO Eo | SEO |
+(2° ) sete | act La = = |
+a) r=)
+st re af
+of = +
+
+=== СТРАНИЦА 9 ===
+U.S. Patent Jul. 25, 2023 Sheet 7 of 15 US 11,709,136 B2
+een
+es we
+an i
+oe
+oe | SN
+gl oe t NN,
+ee } “TN
+i [ea co Cag.9 eRe. | 2007s
+i _ Pee ; on SL te p H
+1 oe S219) re) a. & OO & page ALR GEN Py H
+| Bt & Oo sates |
+L- Ee JO & Det chen Sere | | L
+H { ish. C3 hae .. i, ce £5 eR Ree | {
+Gree ees) Co Otho Rao Toe Nam, 1]
+AE RATS o.0 bo & “OA eer eaeecenie NH
+. “FRG ROS 18 OOS BP ocho So aac
+Z BB cols ges | & QS 08 we 5g, SREP if
+per Sea S 0 PEO BOER i [
+iia GOO Bo OTRO BO on Oe
+| eorniioes he BECO OB. & oo KS eae |
+SE, Dg OOS” 2 8 & o O Oe
+i Sea OOS 0, UB oo, og \S
+. Seis Qe 8 TO _ 0-565 BF \ |
+° a a ae
+a oe
+— _ .
+Y a ere
+- oe
+— ae
+a oe ms "
+Le
+oe x
+ae
+ae
+FIG.SA
+
+=== СТРАНИЦА 10 ===
+U.S. Patent Jul. 25, 2023 Sheet 8 of 15 US 11,709,136 B2
+ARS
+va ~
+A aan NO 220
+o “ _ SN ie
+| | a re) 2% NN oh | I~ |
+4 a | ae \ cot KI
+LK BR OO oN
+Pp. 2 OX o> as
+7 Re on NN LO _
+FiG.OB
+
+=== СТРАНИЦА 11 ===
+U.S. Patent Jul. 25, 2023 Sheet 9 of 15 US 11,709,136 B2
+| :EMISSION DETECTED VERTICAL
+Z — :EMISSION DETECTED HORIZONTAL
+0° G6 caw ayy)
+ay 3 O On ° S 1
+Y SBGOe 21 oo Do ECE
+oe nn ee el
+wo SO 4 PO ° of @ OTB
+474 |
+x
+
+=== СТРАНИЦА 12 ===
+U.S. Patent Jul. 25, 2023 Sheet 10 of 15 US 11,709,136 B2
+
+| :EMISSION DETECTED VERTICAL
+
+Z “~~ ‘EMISSION DETECTED HORIZONTAL
+ry] ] ld
+Ci e) OO 6 7-940
+
+Y BR@SE go | 0.0 ap. ef RH
+|||
+
+x
+FiG.5D
+
+=== СТРАНИЦА 13 ===
+U.S. Patent Jul. 25, 2023 Sheet 11 of 15 US 11,709,136 B2
+| :EMISSION DETECTED VERTICAL
+Z “~~ ‘EMISSION DETECTED HORIZONTAL
+| oa in |
+4m |
+: FANN = © ° H
+tte Om | [Ga
+Y See a cae |
+Pot Om
+B06 SM | [Pe PL
+ro N | lat
+a I <472 | —O ie
+x
+FIG.OE
+
+=== СТРАНИЦА 14 ===
+U.S. Patent Jul. 25, 2023 Sheet 12 of 15 US 11,709,136 B2
+| :EMISSION DETECTED VERTICAL
+Zé ~~ EMISSION DETECTED HORIZONTAL
+| LATA
+an | a ETE
+X
+FIG.OF
+
+=== СТРАНИЦА 15 ===
+U.S. Patent Jul. 25, 2023 Sheet 13 of 15 US 11,709,136 B2
+ne N Ally. i
+RSC:
+
+2 OES VIE
+=S 8S S& & & 8&8 & &
+e 5 8 &§ 8 8S F SN
+
+aoa S| \P 2 to]
+
+S S S S SS SS SS SS
+DS DS a oS [sti [ti [si (sat
+= 8 8S & R B 2 5
+oo loa SSesesi.,
+ane Sescossss
+wo & oF JH MeSeses
+a Bou DS > ate) oS SS
+Ss > — oS eats > [ata =
+S 8&8 sB 8 8 &
+$ oe nS ont a = =
+
+=== СТРАНИЦА 16 ===
+U.S. Patent Jul. 25, 2023 Sheet 14 of 15 US 11,709,136 B2
+cD or
+.
+oc
+ee
+a,
+SS
+C2
+SI =
+x
+a
+i 2 i
+= C3
+om oS Holla
+nm | i
+a ee
+cam) ON
+ol —
+ro he
+nN
+(te
+ry
+tm
+&
+Fe o5
+=o oe
+2 =
+ei ew
+
+=== СТРАНИЦА 17 ===
+U.S. Patent Jul. 25, 2023 Sheet 15 of 15 US 11,709,136 B2
+a) 2
+pas a en
+Shin] 1 2
+oS ES | re
+Yes | a
+= | 9
+=> |
+aor}
+Zz gl
+o> O10 | 2 , ~
+ron | 4 2s | os be
+cin | HA wy
+BOO | eee | GES
+pO | cae | sor
+zo | moe a S oo
+OE | one & :
+eS | . “ { babe
+wm S|
+lz =z
+sewoneenenenang ze) =z o
+fu = \ pro | Zz i ©
+SxS | fing | ZOn ta be
+eon S| CRE Sieh ze CRE
+Scr ae la} Of] =O Oo = ae z yo
+nd as 3 | [mam | Oat
+Sra | lies Si OftzZze ac pe oS
+Oo. pebyrl FOa Lut | HS
+Co | fm | @ = | mT
+ae pidne << | ZZO = | i be Ga
+goz | [es | Sowa me
+S535 | pao | fe ce oc Bo
+ete | Iw st | ? Li ; se xt
+| te oS ra
+/ |= ” ie) =
+ia) a) =)
+— ou m
+oO ea) oS
+
+=== СТРАНИЦА 18 ===
+US 11,709,136 B2
+1 2
+SYSTEM AND METHOD FOR INFERRING substantially the entire sphere 200. If no particular action is
+PROTEIN BINDING taken, the fluorophores will randomly “walk” on the sphere
+200 as their orientation randomly changes over time. This
+CROSS-REFERENCE TO RELATED process is referred to as rotational diffusion or “tumbling”.
+APPLICATIONS 5 As discussed above, for a given temperature and other
+environmental conditions of the collection of fluorophores,
+. err . satt the rate of tumbling or rotational diffusion depends on the
+This application is a US. national phase application and size/mass of the fluorophore. The larger the fluorophore. the
+claims the benefit of priority under 35 U.S.C. § 371 of :
+. . slower the rate of tumbling.
+International (PCT) Patent Application No. PCT/US2019/ Referring again to FIG. 1, at step 120, a pulse of polarized
+037433, filed on Jun. 17, 2019 and titled “SYSTEM AND 10 light is applied to the initial collection of fluorophores to
+METHOD FOR | INFERRING PROTEIN BINDING selectively excite those fluorophores that have a component
+which, in turn, claims the benefits under 35 U.S.C. § 119(€) of their orientation in the same direction as the polarization
+and PCT Article 8 of U.S. Provisional Patent Application of the applied light pulse. For example, a pulse of light
+No. 62/686,279, filed on Jun. 18, 2018 and titled “SYSTEM polarized in the x-direction selectively excites fluorophores
+AND METHOD FOR INFERRING PROTEIN BINDING,” 15 210x having a component of their orientation in the x-di-
+the contents of which are incorporated herein by reference in rection. An example of the resulting distribution of fluoro-
+their entireties. phores 210x following application of a pulse of light polar-
+ized in the x-direction is shown in FIG. 2B.
+BACKGROUND Over time, the excited fluorophores will decay back to
+20 their unexcited state and emit light during the state transi-
+Proteins in solution “tumble” (change orientation) sto- tion, a process known as spontaneous emission. The emis-
+chastically. The rate of tumbling is approximately propor- sion is polarized based on the orientation of the fluorophore
+tional to the mass of the protein. Thus, when a protein binds at the time it emits the light. FIG. 2C illustrates a distribution
+to or unbinds from some other macromolecule, its rate of of detected x-polarized emissions 220 and y-polarized emis-
+tumbling changes. This means that in certain circumstances, 25 sions 230 from the collection of fluorophores of FIGS. 2A
+protein binding dynamics may be inferred from accurate and _ 2B. The excited fluorophores change orientation over
+measurement of tumbling rates. time by rotational diffusion, and therefore the polarization of
+Fluorescent molecules (fluorophores) emit polarized — the emissions is determined based on both the rate of
+light, with the polarization direction determined by the rotational diffusion and the rate of spontaneous emission.
+fluorophore orientation. Similarly, fluorophores can be 30 For example, if the rate of rotational diffusion is relatively
+excited with laser light, and the probability of excitation slow, and the rate of spontaneous emission is relatively fast,
+depends on the polarization direction of the laser light and the excited fluorophores will not have time to change their
+the orientation of the fluorophore. When the polarization of orientation before spontaneous emission occurs, and the
+the excitation beam corresponds to the fluorophore orienta- emissions will be predominantly polarized along the same
+tion, there is an efficient transfer of energy from the laser 35 direction as the excitation beam. Faster rotational diffusion
+beam to the fluorophore and the fluorophore has a high means that more fluorophores are able to change their
+probability of being excited. In contrast, when the polariza- orientation prior to the occurrence of spontaneous emission.
+tion of the excitation beam is perpendicular to the fluoro- Accordingly, time-resolved detection of the resulting x-po-
+phore orientation, there is a very low probability that the larized and y-polarized emission (step 130) yields a pair of
+fluorophore will be excited. Fluorescent emissions from 40 curves, which can be analyzed to infer tumbling rates (step
+excited fluorophores can be measured using a photosensitive 140).
+detector. Accordingly, by accurately controlling which fluo- FIGS. 3A and 3B are graphs showing a family of simu-
+rophore orientations are excited, and accurately measuring lated measurement curves. FIG. 3A shows plots of parallel
+the polarization of fluorescent emission, fluorophore orien- emission polarization (e.g., x-polarized emission for an
+tation can be inferred. Further, fluorophore tumbling rates 45 x-polarized excitation) as a function of time, and FIG. 3B
+can be inferred from measuring the dynamics of the fluo- shows corresponding plots of perpendicular emission polar-
+rophore orientation. Thus, if the fluorophores are attached to ization (e.g., y-polarized emission for an x-polarized exci-
+proteins of interest, protein binding dynamics can be tation) as a function of time. The scale on the vertical axis
+inferred. is measured in “counts” on a photosensitive detector, which
+Conventionally, time-resolved fluorescent anisotropy 50 is generally proportional to the number of molecules, the
+decay is used to determine tumbling rate via fluorophore brightness of the excitation light, and the efficiency of the
+polarization. This method involves measuring an ensemble detection. Each pair of curves (in FIG. 3A and FIG. 3B)
+average (group of the same molecules) of tumbling based on corresponds to a different protein mass, and therefore a
+polarization-controlled fluorescent emission, as discussed different tumbling rate. The protein mass is represented by
+above. FIG. 1 is a flow diagram illustrating an example of a 55 the ratio of rotational diffusion time to the fluorescent
+process of time-resolved fluorescent anisotropy decay used lifetime (i.e., unitless). For example, a mass of 10 corre-
+to measure rate of tumbling. The process 100 begins at step sponds to the case in which the rotational diffusion time is
+110 with an initial collection of fluorophores. A representa- 10 times longer than the fluorescent lifetime of the molecule.
+tion of the initial collection of fluorophores in shown in FIG. The fluorescent lifetime refers to the average time that the
+2A. Each “dot” on the sphere 200 represents an individual 60 molecule remains in the excited state before emitting a
+fluorophore 210. The position of each fluorophore 210 on _ photon. The rotational diffusion time is the time taken for the
+the sphere 200 represents the orientation (or “pointing molecule to rotate one radian.
+direction”) of the fluorophore in three-dimensional (x, y, z)
+space. In the initial collection of fluorophores, the fluoro- SUMMARY OF INVENTION
+phores have an initial thermal distribution and the orienta- 65
+tion of any given fluorophore is random. Accordingly, as Aspects and embodiments are directed to an improved
+shown in FIG. 2A, the fluorophores 210 are distributed over method to infer protein binding in vivo, via optical mea-
+
+=== СТРАНИЦА 19 ===
+US 11,709,136 B2
+3 4
+
+surements of the orientation of fluorescent tags attached to the first probe pulse being applied between application of the
+these proteins, enhanced by either saturated polarized stimu- depletion light pulse and the second probe pulse.
+lated emission or saturated polarized photoactivation. Another embodiment is directed to a system for measur-
+
+According to one embodiment, a method of inferring a ing rotational diffusion of a collection of fluorophores. The
+rate of rotational diffusion of a collection of fluorophores 5 system comprises a sample chamber configured to hold the
+comprises applying a first pulse of light to the collection of —_gollection of fluorophores, and a light source apparatus
+fluorophores to excite a plurality of fluorophores in the configured to produce a first pulse of light having a first
+collection of fluorophores to produce a plurality of excited polarization, a second pulse of light having a second polar-
+fluorophores, the first pulse of light having a first polariza- ization, and a third pulse of light having the second polar-
+tion and the plurality of excited fluorophores having a 10 .__.. as :
+
+mee . . . ization, the first and second polarizations being orthogonal
+
+component of their orientation aligned with the first polar- to one another, and the second and third pulses of light bein
+ization, applying a second pulse of light to the collection of > P ent pein
+fluorophores to stimulate emission by the plurality of excited temporally separated from one another by a predetermined
+fluorophores, the second pulse of light having a second time delay, the light source apparatus being further config-
+polarization orthogonal to the first polarization, and apply- 15 ured to direct the first, second, and third light pulses to the
+ing a third pulse of light to the collection of fluorophores to Sample chamber. The system further comprises a detector
+further stimulate emission by the plurality of excited fluo- configured to receive polarized emissions from the collec-
+rophores, the third pulse of light having the second polar- tion of fluorophores, the collection of fluorophores emitting
+ization and being applied after a predetermined time delay the polarized emissions in response to being illuminated by
+following application of the second pulse of light. The 20 one of the first, second, and third pulses of light, the detector
+method further comprises detecting polarized emissions being further configured to provide an output representative
+from the plurality of excited fluorophores, and inferring the of the detected polarized emissions, and a controller coupled
+rate of rotational diffusion of the collection of fluorophores to the detector and configured to receive the output from the
+based on the detected polarized emissions. Detecting the detector and to determine an estimated rate of rotational
+polarized emissions from the plurality of excited fluoro- 25 diffusion of the collection of fluorophores based on the
+phores may be performed before and/or after the application output received from the detector.
+of the third pulse of light. In one example the system further comprises optics
+
+In one example the first polarization is in the x-direction disposed between the sample chamber and the detector and
+and the second polarization is in the y-direction. In another configured to direct the polarized emissions to the detector.
+example detecting the polarized emissions includes receiv- 30 In another example the light source apparatus includes a first
+ing the polarized emissions at a photosensitive detector. light source configured to produce the first pulse of light and
+
+According to another embodiment a method of inferring a second light source configured to produce the second and
+protein binding comprises applying an excitation pulse of third pulses of light. In one example the first pulse of light
+light to a sample including proteins of interest and a col- is x-polarized and the second and third pulses of light are
+lection of fluorophores to excite a plurality of fluorophores 35 y-polarized. In one example the first and second light
+in the collection of fluorophores to produce a plurality of sources are lasers. The controller may be further configured
+excited fluorophores, the excitation pulse having a first to display an indication of the estimated rate of rotational
+polarization and the plurality of excited fluorophores having diffusion of the collection of fluorophores. In one example
+a first component of their orientation aligned with the first the sample chamber holds a collection of proteins of interest
+polarization, applying a depletion pulse of light to the 40 in addition to the collection of fluorophores, and the con-
+sample to deplete a first portion of the plurality of excited troller is further configured to infer a degree of protein
+fluorophores, the depletion light pulse having a second binding between the collection of proteins and the collection
+polarization orthogonal to the first polarization and the first of fluorophores based in part on the estimated rate of
+portion of the plurality of excited fluorophores having a rotational diffusion of the collection of fluorophores. In
+second component of their orientation aligned with the 45 another example, individual fluorophores of the collection of
+second polarization, and applying a probe pulse of light to fluorophores are bound to individual carrier proteins of a
+the sample, the probe pulse of light having the second corresponding collection of the carrier proteins, the sample
+polarization and being applied after a predetermined time chamber further holds a collection of proteins of interest,
+delay following application of the depletion pulse of light. and the controller is further configured to infer a degree of
+The method further comprises detecting polarized emissions 50 protein binding between the collection of proteins of interest
+from the plurality of excited fluorophores, inferring an and the collection of carrier proteins based in part on the
+estimated tumbling rate of the collection of fluorophores estimated rate of rotational diffusion of the collection of
+based on the detected polarized emissions, and based on the fluorophores.
+estimated tumbling rate, inferring a degree of protein bind- Another embodiment is directed to a method of inferring
+ing in the sample. Detection of the polarized emissions may 55 a rate of rotational diffusion of a collection of fluorophores
+be performed before and/or after application of the probe using photoactivation and deactivation. The method com-
+pulse of light. prises applying a first pulse of light to the collection of
+
+In one example the first polarization is in the x-direction fluorophores to photoactivate a plurality of fluorophores in
+and the second polarization is in the y-direction. In another the collection of fluorophores to produce a plurality of
+example detecting the polarized emissions includes receiv- 60 activated fluorophores, the first pulse of light having a first
+ing the polarized emissions at a photosensitive detector. The polarization and the plurality of activated fluorophores hav-
+method may further comprise varying the predetermined ing a component of their orientation aligned with the first
+time delay. polarization, applying a second pulse of light to the collec-
+
+In certain examples of the method, applying the probe tion of fluorophores to deactivate at least some of the
+pulse of light to the sample includes applying a first probe 65 plurality of activated fluorophores, the second pulse of light
+pulse of light having the first polarization and applying a having a second polarization orthogonal to the first polar-
+second probe pulse of light having the second polarization, ization, detecting polarized emissions from the plurality of
+
+=== СТРАНИЦА 20 ===
+US 11,709,136 B2
+5 6
+activated fluorophores, and inferring the rate of rotational FIG. 7 is block diagram of one example of a measurement
+diffusion of the collection of fluorophores based on the system according to aspects disclosed herein; and
+detected polarized emissions. FIG. 8 is a flow diagram of another example of a process
+In certain examples, the method further includes applying of inferring protein binding using fluorescent tags according
+at least one excitation pulse of light to the collection of 5 to certain aspects disclosed herein.
+fluorophores after a predetermined time delay following
+application of the second pulse of light to produce a plurality DETAILED DESCRIPTION
+of excited fluorophores, the at least one excitation pulse
+having the first polarization. Detecting the polarized emis- Aspects and embodiments are directed to methods and
+sions from the plurality of activated fluorophores includes 10 apparatus for inferring protein binding using fluorescent
+detecting the polarized emissions from the plurality of tags. As discussed above, time-resolved fluorescent anisot-
+excited fluorophores. In certain examples, the method fur- | ropy decay can be used to determine tumbling rates and
+ther comprises applying at least one depletion pulse to the thereby infer the mass of the associated molecules. How-
+collection of fluorophores after application of the at least one ever, the conventional method is limited in application due
+excitation pulse. In some examples, the at least one excita- 15 to an inability to distinguish tumbling rates, and therefore
+tion pulse includes a plurality of excitation pulses. molecule size, above a certain threshold. For example,
+Still other aspects, embodiments, and advantages of these referring again to FIGS. 3A and 3B, curves 310 correspond-
+exemplary aspects and embodiments are discussed in detail ing to a protein mass of 1, and curves 312 corresponding to
+below. Embodiments disclosed herein may be combined a protein mass of 3 can be at least partially distinguished, but
+with other embodiments in any manner consistent with at 20 the remaining curves 320 representing different molecule
+least one of the principles disclosed herein, and references to sizes become essentially indistinguishable above a mass
+“an embodiment,” “some embodiments,” “an alternate limit of 10. Accordingly, it becomes impractical to infer
+embodiment,” “various embodiments,” “one embodiment” conditions such as protein binding (or lack thereof). For
+or the like are not necessarily mutually exclusive and are example, the green fluorescent protein (GFP), which is a
+intended to indicate that a particular feature, structure, or 25 useful fluorophore in protein binding applications, has a
+characteristic described may be included in at least one mass on its own (before it attaches to a protein of interest)
+embodiment. The appearances of such terms herein are not that already approaches the mass limit for useful time-
+necessarily all referring to the same embodiment. resolved fluorescent anisotropy decay analysis. Further,
+many proteins and protein complexes of interest have
+BRIEF DESCRIPTION OF THE DRAWINGS 30 masses much greater than that of GFP. This severely limits
+the utility of time resolved fluorescence anisotropy decay for
+Various aspects of at least one embodiment are discussed measuring protein binding in-vivo because the mass limit is
+below with reference to the accompanying figures, which are simply too low.
+not intended to be drawn to scale. The figures are included Aspects and embodiments are directed to an improved
+to provide illustration and a further understanding of the 35 method and apparatus for determining molecule mass, and
+various aspects and embodiments, and are incorporated in from there inferring protein binding or other chemical/
+and constitute a part of this specification, but are not biological conditions, based on time-resolved measurements
+intended as a definition of the limits of the invention. In the of polarized emissions from fluorescent tags. As discussed in
+figures, each identical or nearly identical component that is more detail below, certain embodiments use saturated stimu-
+illustrated in various figures is represented by a like numeral. 40 lated emission to measure fluorophore orientation and sig-
+For purposes of clarity, not every component may be labeled nificantly increase the mass limit for inferring tumbling
+in every figure. In the figures: rates, and certain embodiments apply photoactivation and
+FIG. 1 is a flow diagram of an example of a process of photodeactivation to extend the mass limit even further.
+applying time-resolved fluorescent anisotropy decay to infer Referring to FIG. 4, there is illustrated a flow diagram of
+a tumbling rate of a collection of fluorophores; 45 one example of a process of inferring protein binding using
+FIG. 2A is a depiction of an initial thermal distribution of saturated stimulated emission anisotropy according to cer-
+the orientations of fluorophores in a collection of fluoro- tain embodiments. The process 400 begins at step 410 with
+phores; an initial thermal distribution of fluorophores 210, as dis-
+FIG. 2B is a depiction of the distribution of the orienta- cussed above with reference to FIG. 2A. In certain examples
+tions of the fluorophores following application of an exci- 50 the fluorophores are in solution and therefore may have an
+tation pulse in the process of FIG. 1; isotropic initial distribution, as shown in FIG. 2A. However,
+FIG. 2C is a depiction of a distribution of detected in other examples, the fluorophores may be partially
+x-polarized emissions 220 and y-polarized emissions from anchored or otherwise in a state such that their initial
+the collection of fluorophores of FIGS. 2A and 2B; distribution at step 410 is not isotropic. In step 420 a first
+FIGS. 3A and 3B are graphs showing a family of simu- 55 pulse of polarized light is applied to the initial collection of
+lated measurement curves produced from an example of the fluorophores to selectively excite those fluorophores that
+process of FIG. 1; have a component of their orientation in the same direction
+FIG. 4 is a flow diagram of an example of a process of as the polarization of the applied light pulse. For example,
+inferring protein binding using fluorescent tags according to a pulse of light polarized in the x-direction selectively
+certain aspects disclosed herein; 60 excites fluorophores 210x having a component of their
+FIGS. 5A-5F are depictions of an example of the distri- orientation in the x-direction. An example of the resulting
+bution of fluorophore orientations and polarized emissions distribution of fluorophores 210x following application of a
+from the fluorophores corresponding to steps in the process pulse of light polarized in the x-direction is shown in FIG.
+of FIG. 4; 5A. Following application of the first pulse of light, a second
+FIGS. 6A-C are graphs showing a family of simulated 65 pulse of light polarized in an orthogonal direction is applied
+measurement curves of fluorescence signal as a function of to the collection of fluorophores in step 430 and selectively
+probe delay for an example of the process of FIG. 4; depletes excited fluorophores 210x which have some com-
+
+=== СТРАНИЦА 21 ===
+US 11,709,136 B2
+7 8
+
+ponent of the orientation in the same direction as the applied ecules’ masses can be easily distinguished from one another
+second pulse of light. FIG. 5B shows an example of the up to a mass limit of 300 (curves 610-615). By comparison
+resulting distribution remaining excited fluorophores 240 with FIGS. 3A and 3B, it can be seen that the high-mass
+following application of the second pulse of light. In this extreme of the distinguishable mass range is increased
+example, the second pulse of light is polarized in the 5 roughly 30-fold using a process of saturated stimulated
+y-direction. Provided that the second pulse of light is suf- emission anisotropy according to embodiments disclosed
+ficiently strong (saturated), the resulting orientation distri- herein rather than the conventional approach based on
+bution of excited fluorophores 240 is tightly confined to the time-resolved fluorescent anisotropy decay. Thus, by ana-
+x-z plane, as shown in FIG. 5B, which makes changes in lyzing the emission curves to infer tumbling rates and based
+polarization due to tumbling much easier to detect. 10 on a known relationship between tumbling rate and mol-
+
+As discussed above, after a period of time, spontaneous ecule mass, the molecule mass can be inferred, which in turn
+emission causes the excited fluorophores 240 to emit light allows one to infer conditions, such as protein binding, for
+that is polarized according to the orientation of the fluoro- example (step 490) based on known estimates of the mass of
+phore. Rotational diffusion (tumbling) causes the orientation the fluorescent tag (optionally in combination with a carrier
+of the fluorophores to change, and therefore the distribution 15 protein) with and without a bound protein of interest. By
+of the fluorophores may expand off the x-z plane, as shown greatly extending the mass limit, the fundamental limitations
+in FIG. 5C, and the polarization of the emissions changes as of time-resolved fluorescence anisotropy decay are over-
+well, as indicated at block 440 in FIG. 4. Accordingly, the come, providing the ability to perform optical protein bind-
+process 400 may include step 450 of applying a third pulse ing measurements.
+of light having the same polarization as the second pulse of 20 FIG. 7 is a block diagram of one example of a system
+light (y-polarization in the illustrated example) but delayed configured to implement a molecule analysis process using
+in time relative to the second pulse of light. This third pulse saturated stimulated emission anisotropy according to cer-
+of light depletes remaining excited fluorophores 240y that, tain embodiments. The system 700 includes a sample cham-
+due to tumbling, have some component of their orientation ber 710 that contains the collection of fluorophores 210
+in the y-direction, and causes the distribution of the excited 25 along with other ingredients of interest. For example, for a
+fluorophores to be reconstrained in the x-z plane, as shown protein binding detection application, the sample chamber
+in FIG. 5D. Application of the third pulse of light allows a 710 may contain a solution that includes the proteins of
+“pump-probe” measurement of fluorophore orientation to be interest along with the collection of fluorophores, which
+made. Following application of the third pulse of light, may be bound to carrier proteins. The sample chamber may
+rotational diffusion and spontaneous emission continue, as 30 be an artificial chamber or a biological structure, such as one
+indicated at block 460 in FIG. 4 and shown in FIG. 5E. or more cells, for example. The system 700 includes an
+
+FIG. 5F illustrates a distribution of detected x-polarized excitation source 720 that is configured to apply an excita-
+emissions 472 and y-polarized emissions 474 from the tion pulse 722 to the sample chamber 710. The excitation
+collection of fluorophores of FIGS. 5A-5E, at a certain time pulse is the first pulse of light having a first polarization
+period after application of the third pulse of light. As 35 (e.g., x-polarized light as in the example discussed above).
+discussed above, the excited fluorophores change orientation In one example the excitation source is a laser; however,
+over time by rotational diffusion, and therefore the polar- other light sources capable of producing polarized light
+ization of the emissions is determined based on both the rate pulses may be used. The system 700 further includes a
+of rotational diffusion and the rate of spontaneous emission. stimulation source 730 configured to apply the second pulse
+Accordingly, time-resolved detection of the resulting x-po- 40 of light (a quenching pulse) and the third pulse of light (the
+larized and y-polarized emissions (step 470) yields a col- probe) to the sample chamber 710. The second and third
+lection of curves, an example of which is shown in FIGS. light pulses are collectively represented in FIG. 7 as light
+6A-C, which can be analyzed to infer tumbling rates (step beam 732 even though in practice they are temporally
+480). separated from one another. As discussed above, the stimu-
+
+Referring to FIGS. 6A-C there is illustrated a family of 45 lation source 730 is configured to produce the second and
+simulated measurement curves of fluorescence signal as a third pulses of light having a polarization orthogonal to that
+function of probe delay (i.e., delay in application of the third of the excitation pulse (e.g., y-polarized light in the example
+pulse of light relative to application of the second pulse of discussed above). In one example the stimulation source is
+light as discussed above with respect to FIG. 4) correspond- a laser; however, other light sources capable of producing
+ing to the example shown in and discussed with reference to 50 polarized light pulses may be used. In FIG. 7 the excitation
+FIGS. 5A-F. FIG. 6B shows plots of parallel emission source 720 and the stimulation source 730 are shown as
+polarization (e.g., x-polarized emission for an x-polarized separate devices; however, in other examples a single light
+excitation), FIG. 6C shows corresponding plots of perpen- source capable of producing orthogonally polarized light
+dicular emission polarization (e.g., y-polarized emission for pulses may be used. For example, a laser with a configurable
+an x-polarized excitation), and FIG. 6A is the sum of the 55 polarizer may be used. Further, in FIG. 7 the excitation
+parallel and perpendicular emissions. The scale on the source 720 and the stimulation source 730 are schematically
+vertical axis is measured in “counts” on a photosensitive shown on different sides of the sample chamber 710; how-
+detector, which is generally proportional to the number of ever, this is for ease of illustration only; in practical imple-
+molecules, the brightness of the excitation light, and the mentation the sources may be disposed in any arrangement
+efficiency of the detection. Each group of curves, i.e., those 60 relative to the sample chamber 710 and each other.
+having the same reference numeral in FIGS. 6A-C, corre- Responsive to application of the first, second, and third
+sponds to a different molecule mass, and therefore a different pulses of light to the collection of fluorophores in the sample
+tumbling rate. As discussed above with reference to FIGS. chamber, the fluorophores produce the polarized emissions
+3A and 3B, the protein mass is represented by the ratio of 712 as discussed above. These emissions 712 are detected by
+rotational diffusion time to the fluorescent lifetime (1.e., 65 a detector 740. The detector 740 may include one or more
+unitless). As can be seen with reference to FIGS. 6B and 6C photodetectors and associated electronic read-out circuitry
+in particular, the curves corresponding to different mol- that provides an electrical signal representative of the
+
+=== СТРАНИЦА 22 ===
+US 11,709,136 B2
+9 10
+
+detected polarized emissions 712. The system may option- lection). A second pulse of light (the deactivation pulse)
+ally include optics 750 configured to relay the polarized strongly deactivates activated fluorophores which have
+emissions 712 to the detector 740. The optics 750 may some component of their orientation in the same direction as
+include one or more mirrors, lenses, or combination thereof, the polarization of the applied second pulse of light (e.g.,
+and optionally one or more filters, polarizers, beamsplitters, 5 strong y-deselection). In a step 830, a third pulse of light
+or other optical components configured to provide the polar- having the same polarization as the first pulse of light
+ized emissions 712 to the detector 740. The output 742 from applied in step 810 is applied to excite activated fluoro-
+the detector 740 is provided to a controller 760. The output phores having some component of their orientation in the
+742 may be an analog or digital signal, for example, repre- same direction as the polarization of the third pulse of light
+sentative of the polarized emissions detected by the detector 10 (e.g., weak x-selection again). The third pulse of light (the
+740. The controller may include circuitry, optionally includ- excitation pulse) corresponds to the first pulse of light
+ing a processor or other computing components, configured applied in step 420 in the process of FIG. 4. A fourth pulse
+to analyze or otherwise manipulate the output 742 from the of light (corresponding to the third pulse of light in the
+detector 740 to implement the application for which the process of FIG. 4) is then applied in step 840 to strongly
+system 700 is utilized. For example, the controller 760 may 15 deplete excited fluorophores having some component of
+be configured to produce a graph including curves similar to their orientation in the same direction as the polarization of
+one or more of the curves shown in FIGS. 6B and 6C from the applied fourth pulse of light (e.g., strong y-deselection).
+which a system user may infer a tumbling rate of the The time delay 850 between the first two pulses (the
+fluorophores. In another example the controller 760 may be activation and deactivation pulses) and the second two
+configured to produce data corresponding to such a curve or 20 pulses (the excitation and depletion pulses) may be varied.
+set of curves and to analyze the data to produce an output As shown in FIG. 8 (and as applies equally to the process of
+indicative of an inferred tumbling rate. In another example, FIG. 4), detection of the polarized emissions (step 470) can
+the controller 760 may be further configured to analyze the be performed before and/or after the strong deselection in
+data to calculate an estimated tumbling rate, and based on step 840 (step 450 in the process of FIG. 4). The activation
+stored information (such as the correlation between tum- 25 and deactivation pulse pair may be considered as a mea-
+bling rates and molecule mass, known properties of the surement “pump” and the excitation and depletion pulse pair
+collection of fluorophores 210, and known properties of one may be considered as a measurement “probe.” In certain
+or more proteins of interest) and the estimated tumbling rate, example, multiple probe pulse pairs can be applied after the
+produce an output indicative of a degree of protein binding. pump pulse pair, as indicated by arrow 860 in FIG. 8. In
+Given the benefit of this disclosure, those skilled in the art 30 other examples, multiple excitation pulses (step 830) can be
+will appreciate that many variations of the above examples applied and the polarized emissions can be detected (step
+may be implemented and that various embodiments of the 470) after one of more of the excitation pulses are applied.
+system 700 can be configured for a variety of different Thus, in some examples, the depletion pulse (step 840) may
+applications based on the principles and techniques dis- not be necessary and the process 800 can be performed
+closed herein. 35 without step 840.
+
+The above-discussed examples use saturated stimulated Having described above several aspects of at least one
+emission to extend the mass limit of time-resolved fluores- embodiment, it is to be appreciated various alterations,
+cence anisotropy and provide a useful process by which modifications, and improvements will readily occur to those
+optical measurements of molecular conditions such as pro- skilled in the art. Such alterations, modifications, and
+tein binding can be performed. However, other embodi- 40 improvements are intended to be part of this disclosure and
+ments may achieve this result using other implementations are intended to be within the scope of the invention. Accord-
+of on-switching/off-switching photophysics. For example, ingly, it is to be appreciated that embodiments of the
+photoactivation can be used to replace excitation (step 420) methods and apparatuses discussed herein are not limited in
+or in addition to excitation, and photo-deactivation can be application to the details of construction and the arrange-
+used for depletion (steps 430 and 450) or in combination 45 ment of components set forth in the foregoing description or
+with activation prior to excitation and depletion. Similarly, illustrated in the accompanying drawings. The methods and
+in FIG. 7, the excitation source 720 can be replaced with or apparatuses are capable of implementation in other embodi-
+supplemented by another type of photoactivation source, ments and of being practiced or of being carried out in
+and the stimulation source 730 can be replaced with or various ways. Examples of specific implementations are
+supplemented by another type of photodeactivation source. 50 provided herein for illustrative purposes only and are not
+In such cases, the lifetime of the “on” or excited state of the intended to be limiting. Also, the phraseology and terminol-
+fluorophore may be hours, rather than nanoseconds as in ogy used herein is for the purpose of description and should
+case of fluorescent excitation, and the upper mass limit may not be regarded as limiting. The use herein of “including,”
+be completely eliminated because the fluorescent tag can “comprising,” “having,” “containing,” “involving,” and
+remain in the excited/on state long enough to allow mea- 55 variations thereof is meant to encompass the items listed
+surement of even very slow tumbling rates (corresponding to thereafter and equivalents thereof as well as additional
+very large molecules). items. References to “or” may be construed as inclusive so
+
+In certain examples, the process of FIG. 4 discussed that any terms described using “or” may indicate any of a
+above may be modified to include steps of photoactivation single, more than one, and all of the described terms. Any
+and deactivation in combination with the excitation and 60 references to front and back, left and right, top and bottom,
+depletion steps. FIG. 8 illustrates an example of a four-pulse upper and lower, and vertical and horizontal are intended for
+scheme according to certain embodiments. In this example, convenience of description, not to limit the present systems
+a first pulse of light (the activation pulse) selectively acti- and methods or their components to any one positional or
+vates those fluorophores having some component of their spatial orientation. Accordingly, the foregoing description
+orientation in the same direction as the polarization of the 65 and drawings are by way of example only, and the scope of
+first pulse of light (step 810), thereby accomplishing weak the invention should be determined from proper construction
+selection in the first polarization direction (e.g., weak x-se- of the appended claims, and their equivalents.
+
+=== СТРАНИЦА 23 ===
+US 11,709,136 B2
+11 12
+The invention claimed is: 7. The system of claim 5 wherein the light source appa-
+1. A method of inferring a rate of rotational diffusion of ratus includes a first light source configured to produce the
+a collection of fluorophores, the method comprising: first pulse of light and a second light source configured to
+
+applying a first pulse of light to the collection of fluoro- produce the second and third pulses of light.
+
+phores to excite a plurality of fluorophores in the 5  §. The system of claim 7 wherein the first pulse of light
+
+collection of fluorophores to produce a plurality of is x-polarized and the second and third pulses of light are
+
+excited fluorophores, the first pulse of light having a y-polarized.
+
+first polarization and the plurality of excited fluoro- 9. The system of claim 7 wherein the first and second light
+
+phores having a component of their orientation aligned sources are lasers
+
+applying 2 wocand pulse al light to the collection of 10. The system of claim 5 wherein the controller is further
+fluorophores to induce saturated stimulated emission configured to display an indication of the estimated rate of
+by the plurality of excited fluorophores, the second rotational diffusion of the collection of fluorophores.
+pulse of light having a second polarization orthogonal 11. The system of claim 5 Wherein the sample chamber 8
+to the first polarization; 15 configured to hold a collection of proteins of interest in
+
+applying a third pulse of light to the collection of fluo- addition to the collection of fluorophores, and wherein the
+rophores to induce further saturated stimulated emis- controller is further configured to infer a degree of protein
+sion by the plurality of excited fluorophores, the third binding between the collection of proteins and the collection
+pulse of light having the second polarization and being of fluorophores based in part on the estimated rate of
+applied after a predetermined time delay following 20 rotational diffusion of the collection of fluorophores.
+application of the second pulse of light; 12. The system of claim 5 wherein the individual ones of
+
+detecting polarized emissions from the plurality of excited the collection of fluorophores are bound to corresponding
+fluorophores; and individual ones of a collection of carrier proteins, wherein
+inferring the rate of rotational diffusion of the collection the sample chamber further holds a collection of proteins of
+of fluorophores based on the detected polarized emis- 25 interest, and wherein the controller is further configured to
+sions. ; ; oo, infer a degree of protein binding between the collection of
+_ 2. The method of claim 1 wherein the first polarization is proteins of interest and the collection of carrier proteins
+in the x-direction and the second polarization is in the based in part on the estimated rate of rotational diffusion of
+y-direction. . . . . the collection of fluorophores.
+
+3. The method of claim 1 wherein detecting the polarized 30 13. A method of inferring a rate of rotational diffusion of
+
+emissions includes receiving the polarized emissions at a . a
+hotosensitive detector a collection of fluorophores, the method comprising:
+
+, 4. The method of claim 1 further comprising varying the applying a first pulse of light to the collection of fluoro-
+
+predetermined time delay between application of the second on ae photoactivate . plurality in Hnorophores ae
+
+pulse of light and application of the third pulse of light. 35 the collection of Huorophores to produce a plurality o
+
+5. A system for measuring rotational diffusion of a col- activated fluorophores, the first pulse of light having a
+
+lection of fluorophores, the system comprising: first polarization and the plurality of activated fluoro-
+
+a sample chamber co figured to hold the collection of phores having a component of their orientation aligned
+fluorophores: with the first polarization;
+
+a light source apparatus configured to produce a first pulse 40 applying a second pulse of light to the collection of
+of light having a first polarization, a second pulse of fluorophores to deactivate at least some of the plurality
+light having a second polarization, and a third pulse of of activated fluorophores, the second pulse of light
+light having the second polarization, the first and sec- having a second polarization orthogonal to the first
+ond polarizations being orthogonal to one another, and » farization: 4 pulse of lich he collecti ffi
+the second and third pulses of light being for inducing 45 “PP ne a third pulse 0 1 ight to the " " ae a oe
+saturated stimulated emission by the fluorophores and rophores to excite at least some of the plurality o
+temporally separated from one another by a predeter- activated fluorophores to produce a plurality of excited
+mined time delay, the light source apparatus being fluorophores, the thi rd pulse of light having the first
+further configured to direct the first, second, and third polarization and being applied after a predetermined
+light pulses to the sample chamber: ; 50 time delay following application of the second pulse of
+
+a detector configured to receive polarized emissions from light; . . . .
+the collection of fluorophores, the collection of fluoro- detecting polarized emissions from the plurality of excited
+phores emitting the polarized emissions in response to . fluorophores; and . ops .
+being illuminated by of the first, second, and third inferring the rate of rotational diffusion of the collection
+pulses of light, the detector being further configured to 55 of fluorophores based on the detected polarized emis-
+
+id tput tative of the detected polar- S1Ons.
+ped emissions and. Ne ON LEE DPE 14. The method of claim 13 further comprising, after
+
+a controller couple d to the detector and configured to application of the third pulse of light, applying a fourth pulse
+receive the output from the detector and to determine of light to the collection of fluorophores to stimulate emis-
+an estimated rate of rotational diffusion of the collec- 60 sion by the plurality ofexcited fluorophores, the fourth pulse
+tion of fluorophores based on the output received from of light having the second polarization orthogonal to the first
+the detector. polarization. . os .
+
+6. The system of claim 5 further comprising optics 15. The method of claim 13 further comprising varying
+
+disposed between the sample chamber and the detector and the predetermined time delay.
+configured to direct the polarized emissions to the detector. ee Rk

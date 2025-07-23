@@ -1,0 +1,711 @@
+=== СТРАНИЦА 1 ===
+US011620567B2
+a2) United States Patent (10) Patent No.: US 11,620,567 B2
+Zhang et al. (45) Date of Patent: Apr. 4, 2023
+(54) METHOD, APPARATUS, DEVICE AND (52) U.S. Cl.
+STORAGE MEDIUM FOR PREDICTING CPC wee GO6N 20/00 (2019.01); GO6N 5/04
+PROTEIN BINDING SITE (2013.01); GI6B 20/30 (2019.02); G16B
+30/00 (2019.02); GI6B 40/00 (2019.02)
+(71) Applicants:SHENZHEN UNIVERSITY, (58) Field of Classification Search
+Guangdong (CN); HARBIN CPC ........ G16B 30/00; G16B 20/00; G16B 30/10;
+INSTITUTE OF TECHNOLOGY G16B 40/00; G16B 20/30; G16B 40/20;
+SHENZHEN GRADUATE SCHOOL, (Continued)
+Guangdong (CN)
+(56) References Cited
+(72) Inventors: Yong Zhang, Guangdong (CN); Wei
+He, Guangdong (CN); Yong Xu, U.S. PATENT DOCUMENTS
+Guangdong (CN): Dongning Zhao, 2016/0148074 AL* 5/2016 Jean veccccsssssseue. GOOF 16/5854
+Guangdong (CN) 382/190
+(73) Assignees: SHENZHEN UNIVERSITY, Shenzhen
+(CN); HARBIN INSTITUTE OF OTHER PUBLICATIONS
+TECHNOLOGY SHENZHEN Zhou et al., PDNAsite: Identification of DNAbinding Site from
+GRADUATE SCHOOL, Shenzhen Protein Sequence by Incorporating Spatial and Sequence Context,
+(CN) Jun. 10, 2016 [retrieved Aug. 22, 2022], Scientific Reports, vol. 6,
+Article No. 27653 (2016), pp. 1-15. Retrieved: https://www.nature.
+(*) Notice: Subject to any disclaimer, the term of this com/articles/srep27653 (Year: 2016).*
+patent is extended or adjusted under 35 (Continued)
+U.S.C. 154(b) by 1107 days.
+Primary Examiner — Matthew C Bella
+(21) Appl. No.: 16/255,857 Assistant Examiner — Dennis Rosario
+(22) Filed: Jan. 24, 2019 (57) ABSTRACT
+(65) Prior Publication Data The invention provides a method, apparatus, device and
+storage medium for predicting a protein binding site. The
+US 2019/0156915 Al May 23, 2019 method comprises the steps of: receiving a protein sequence
+. to be predicted, dividing the protein sequence by using a
+Related U.S. Application Data preset sliding window and sliding step to obtain a plurality
+(63) Continuation of application No. of amino acid sub-sequences, building word vectors for the
+PCT/CN2017/100314, filed on Sep. 4, 2017. protein sequence according to the amino acid sub-se-
+quences, extracting document features from word elements,
+(30) Foreign Application Priority Data building document feature vectors for the protein sequence
+according to the extracted document features, extracting
+Aug. 31, 2017 9 (CN) weeeeeeeeeesess 201710770933 .2 protein chain biological features from the amino acid sub-
+sequences, building biological feature vectors for the protein
+(51) Int. CL sequence according to the extracted biological features,
+GI16B 40/00 (2019.01) classifying the amino acid sub-sequences expressed with the
+GO6N 20/00 (2019.01) document feature vectors and the biological feature vectors
+(Continued) (Continued)
+- - - — - S101
+Reecive a proicin scquence to be predicted, and divide the protein
+plurality of amino acid sub-sequences forming the protein sequence to
+be predicted
+:
+amino acid sub-sequences, with the word vectors having word elements to
+express the respective amino acid sub-sequences, extract document features
+trom the word elements, and build document feature vectors for the protein
+sequence according to the extracted document features
+$103
+Extract protein chain biological features from the amino acid sub-
+feature vectors for the protein sequence according to the extracted
+biological features
+$104
+Classify the amino acid sub-sequences expressed with the document
+feature vectors and the biological feature vectors by using a preset
+amino acid residue classification model to obtain amino acid residue
+types for the protein sequence
+
+=== СТРАНИЦА 2 ===
+US 11,620,567 B2
+Page 2
+by using a preset amino acid residue classification model to incorporating evolutionary_information_into_pseudo_amino_acid_
+obtain amino acid residue types for the protein sequence. composition_via_the_top-n-gram_approach (Year: 2014).*
+Firdaus et al., Protein Structural Class Prediction Using Predicted.
+9 Claims, 3 Drawing Sheets Secondary Structure and Hydropathy Profile, Jul. 2013 [retrieved
+Aug. 22, 2022], C3S2E ’13: Proceedings of the International C
+Conference on Computer Science and Software Engineering, pp.
+49-57. Retrieved: https://dl.acm.org/doi/abs/10.1145/2494444.
+(51) Int. Cl. 2494459 (Year: 2013).* cee |
+GOGN 5/04 (2023.01) Lin et al., Classification and differential metabolite discovery of
+liver diseases based on plasma metabolic profiling and support
+G16B 30/00 (2019.01) vector machines, Sep. 15, 2011 [retrieved Aug. 22, 2022], Journal
+G16B 20/30 (2019.01) of Separation Science, vol. 34, Issue 21. pp. 3029-3036. Retrieved:
+(58) Field of Classification Search https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/full/10.
+CPC wee GI6B 40/30; GO6T 7/0012; GO6T 1002/jssc.201100408 (Year: 2011).*
+2207/30004: GO6T 2207/20081: GO6T Cheng et al., Predicting RNA-binding sites of proteins using support
+2207 /20021: GO06V 2201/03 . GO6V vector machines and evolutionary information, Dec. 12, 2008
+20/698; GO6N 3/08; GO6N 20/00; GO6K [retrieved Aug. 22, 2022], BMC Bioinformatics: Seventh Interna-
+9/6267; A61B 5/7267; A61B 5/7264 tional Conference on Bioinformatics, vol. 9, Supplement 12, 19
+. : pages. (Year: 2005) Retrieved: https://obmcbioinformatics.biomedcentral.
+See application file for complete search history. comVarticles/10.1186/1471-2105-9-S12-S6 (Year: 2008).*
+. Dong et al., Application of latent semantic analysis to protein
+(56) References Cited remote homology detection, Nov. 29, 2005 [retrieved Aug. 22,
+2022], Bioinformatics, vol. 22, Issue 3, pp. 285-290. Retrieved:
+OTHER PUBLICATIONS 200 NP Comin or ai aS a208 (Year:
+Xu etal, Identification of DNA-binding proteins by incorporating Sy ¥ictor Machine with PSSM Profiles, May 20-22, 2016 [retrieved
+evolutionary information into pseudo amino acid composition via Nov. 18, 2022], 2016 IEEE Information Technology, Networking,
+the top-n-gram approach, Oct. 28, 2014 [retrieved Aug. 22, 2022], Elect and Auto Control Conf, pp. 502-505. Retrieved: https://
+Journal of Biomolecular Structure and Dynamics, vol. 33, Issue 8, ieeexplore.ieee.org/abstract/document/7560411 (Year: 2016).*
+13 pages. Retrieved: https://www.researchgate.net/publication/
+266152208 _Identification_of_DNA-binding proteins_by_ * cited by examiner
+
+=== СТРАНИЦА 3 ===
+U.S. Patent Apr. 4, 2023 Sheet 1 of 3 US 11,620,567 B2
+; ; ; — : S101
+Receive a protein sequence to be predicted, and divide the protein
+sequence by using a preset sliding window and sliding step to obtain a
+plurality of amino acid sub-sequences forming the protein sequence to
+be predicted
+: : : $102
+Build word vectors for the protein sequence according to the plurality of
+amino acid sub-sequences, with the word vectors having word elements to
+express the respective amino acid sub-sequences, extract document features
+from the word elements, and build document feature vectors for the protein
+sequence according to the extracted document features
+. * . . . 7 Ss 1 03
+Extract protein chain biological features from the amino acid sub-
+sequences expressed with the word elements, and build biological
+feature vectors for the protein sequence according to the extracted
+biological features
+$104
+Classify the amino acid sub-sequences expressed with the document
+feature vectors and the biological feature vectors by using a preset
+amino acid residue classification model to obtain amino acid residue
+types for the protein sequence
+FIG. 1
+21
+Sequence Division
+Unit
+22
+First Vector Building
+Unit
+23
+Second Vector Building
+Unit
+24
+Result Acquisition Unit
+FIG. 2
+
+=== СТРАНИЦА 4 ===
+U.S. Patent Apr. 4, 2023 Sheet 2 of 3 US 11,620,567 B2
+31
+Trained Sequence
+Division Unit
+32
+First Feature Processing
+Unit
+33
+Second Feature
+Processing Unit
+34
+Model Training Unit
+35
+Sequence Division Unit
+36
+First Vector Building
+Unit
+37
+Second Vector Building
+Unit
+38
+Result Acquisition Unit
+Feature Merging 381
+Unit
+Feature 382
+Classification Unit
+FIG. 3
+
+=== СТРАНИЦА 5 ===
+U.S. Patent Apr. 4, 2023 Sheet 3 of 3 US 11,620,567 B2
+4
+Computing Device
+4] 40
+Storage
+42 Processor
+Computer
+Program
+FIG. 4
+
+=== СТРАНИЦА 6 ===
+US 11,620,567 B2
+1 2
+METHOD, APPARATUS, DEVICE AND information among amino acid residues, leading to low
+STORAGE MEDIUM FOR PREDICTING accuracy and generality in the prediction of the protein
+PROTEIN BINDING SITE binding sites.
+CROSS REFERENCE TO RELATED 5 BRIEF SUMMARY OF THE INVENTION
+APPLICATION
+An object of the invention is to provide a method,
+The present application is a Continuation Application of | apparatus, computing device and storage medium for pre-
+PCT application No. PCT/CN2017/100314 filed on Sep. 4, dicting a protein binding site, intended to solve the problems
+2017, which claims the benefit of Chinese patent application 10 of low accuracy and generality in the prediction of the
+No. 201710770933.2 filed on Aug. 31, 2017. All the above protein binding site in the prior art.
+are hereby incorporated by reference. In one aspect, the invention provides a method for pre-
+dicting a protein binding site, which comprises the following
+BACKGROUND OF THE INVENTION steps of:
+15 receiving a protein sequence to be predicted, and dividing
+1. Technical Field the protein sequence by using a preset sliding window and
+sliding step to obtain a plurality of amino acid sub-se-
+The invention belongs to the technical field of biological quences forming the protein sequence;
+information, and in particular relates to a method, apparatus, building word vectors for the protein sequence according
+device and storage medium for predicting a protein binding 20 to the plurality of amino acid sub-sequences, with the word
+site. vectors having word elements to express the respective
+amino acid sub-sequences, extracting document features
+2. Description of Related Art from the word elements, and building document feature
+vectors for the protein sequence according to the extracted
+In recent years, bioinformatics has received widespread 25 document features;
+attention from people, and more and more researchers in extracting protein chain biological features from the
+different fields have devoted themselves to the research amino acid sub-sequences expressed with the word ele-
+work on the bioinformatics. As a comprehensive discipline ments, and building biological feature vectors for the protein
+that studies information content and information flow in the sequence according to the extracted biological features; and
+biology and biology related systems, the bioinformatics has 30 classifying the document feature vectors and the biologi-
+a knowledge system incorporating the knowledge from cal feature vectors by using a preset amino acid residue
+many different disciplines, such as biology (genetics, bio- classification model to obtain amino acid residue types for
+chemistry, etc.), mathematics (probability theory and math- the protein sequence.
+ematical statistics, algorithms, etc.), computer science (ma- In another aspect, the invention provides an apparatus for
+chine learning, computational theory, etc.), and physical 35 predicting a protein binding site, which comprises:
+chemistry (molecular modeling, thermodynamics, etc.). a sequence division unit for receiving a protein sequence
+As an embodiment of life activities and the most impor- to be predicted, and dividing the protein sequence by using
+tant basic unit by which all living beings express life, a preset sliding window and sliding step to obtain a plurality
+proteins can be regarded as the smallest automatic machine of amino acid sub-sequences forming the protein sequence;
+in nature, and have an irreplaceable role in the operation of 40 a first vector building unit for building word vectors for
+biological systems. Different roles played by the proteins in the protein sequence according to the plurality of amino acid
+cells are regulated by interactions between proteins, between sub-sequences, with the word vectors having word elements
+proteins and DNAs, between proteins and RNAs, and to express the respective amino acid sub-sequences, extract-
+between proteins and ligands. The protein-protein interac- ing document features from the word elements, and building
+tions involve the association of protein molecules, which 45 document feature vectors for the protein sequence according
+plays a critical role in every biological process of living to the extracted document features;
+cells, such as DNA synthesis, gene transcriptional activa- a second vector building unit for extracting protein chain
+tion, protein translation, modification and localization, and biological features from the amino acid sub-sequences
+information transmission. All of these important biological expressed with the word elements, and building biological
+processes involve the protein-protein interactions. Thus, 50 feature vectors for the protein sequence according to the
+exploring the sequence and structural properties for the extracted biological features; and
+protein-protein interactions is of great importance for under- a result acquisition unit for classifying the document
+standing cellular activities. feature vectors and the biological feature vectors by using a
+With the continuous development of the next-generation preset amino acid residue classification model to obtain
+sequencing technology, the measured protein sequence data 55 amino acid residue types for the protein sequence.
+is increasing. As a result, there is a growing demand of In another aspect, the invention further provides a com-
+people for computational tools that can quickly and reliably puting environment for dividing the sequence and building
+recognize protein binding sites. The localization of the the classification model, as well as a computer program
+protein binding sites is of great importance for the analysis runnable in the environment, where the steps of the method
+and understanding of the molecular details of protein inter- 60 for predicting the protein binding site as described are
+actions and the protein functions. At present, the researches accomplished when the processor executes the computer
+and predictions on the protein binding sites at home and program.
+abroad are mostly based on the physical and chemical In another aspect, the invention further provides a com-
+features obtained by technically determining a single site, puter-readable storage medium, which stores a computer
+and the inter-site sequence features obtained by analyzing 65 program executed by a processor to accomplish the steps of
+and calculating protein chains. This neglects the clustering the method for predicting the protein binding site as
+property of the protein binding sites and the association described.
+
+=== СТРАНИЦА 7 ===
+US 11,620,567 B2
+3 4
+
+The invention involves the steps of: receiving a protein acid sub-sequences forming the protein sequence to be
+sequence to be predicted, and dividing the protein sequence predicted, thereby taking local blocks of the protein
+by using a preset sliding window and sliding step to obtain | sequence as subsequent analysis units.
+
+a plurality of amino acid sub-sequences forming the protein In this embodiment of the invention, preferably, the
+sequence to be predicted; building word vectors for the 5 sliding window has the size of (2*window+1-2*b), wherein
+protein sequence according to the plurality of amino acid window 1s a preset value, and bisa randomly generated
+sub-sequences, with the word vectors having word elements variable ranging from 0 to window-1. This sliding window
+to express the respective amino acid sub-sequences, extract- includes window-b neighborhood residues at each side of a
+ing document features from word elements, and building target residue, and as the window slides on the amino acid
+document feature vectors for the protein sequence according 1° sequence, its size randomly changes between 3(b—window-
+to the extracted document features; extracting protein chain 1) and 2*window+ 1(b=0) to obtain protein blocks formed by
+biological features from the amino acid sub-sequences, and several amino acid residues, thereby facilitating subsequent
+building biological feature vectors for the protein sequence analysis in which the protein blocks are taken as the basic
+according to the extracted biological features; and classify- units, which fully demonstrates the clustering property of
+ing the amino acid sub-sequences expressed with both the 15 the protein binding site and further improves the subsequent
+document feature vectors and the biological feature vectors feature expression ability, prediction precision and general-
+
+by using a preset amino acid residue classification model to ily. . . . . . .
+obtain amino acid residue types for the protein sequence, Preferably, an amino acid residue classification model is
+thereby improving the accuracy and generality in the pre- obtained by training with machine learning before the pro-
+diction of the protein binding site. 20 tein sequence to be predicted is received. Preferably, a
+Stacking ensemble learning algorithm can be used for
+BRIEF DESCRIPTION OF THE SEVERAL machine learning to improve the classification accuracy and
+VIEWS OF THE DRAWINGS generalization ability of the amino acid residue classification
+
+model.
+
+FIG. 1 is a flow chart showing the implementation of a 25 Preferably, when the amino acid residue classification
+method for predicting a protein binding site according to | model is obtained by training with machine learning, a
+Embodiment 1 of the invention; trained protein sequence in a preset training set is first
+
+FIG. 2 is a schematic view showing the structure of an _ divided by using a preset sliding window and sliding step to
+apparatus for predicting a protein binding site according to obtain a plurality of trained amino acid sub-sequences
+Embodiment 2 of the invention; 30 forming the trained protein sequence; then trained word
+
+FIG. 3 is a schematic view showing the structure of an vectors for the trained protein sequence are built according
+apparatus for predicting a protein binding site according to 10 _ the obtained plurality of trained amino acid sub-se-
+Embodiment 3 of the invention; and quences, with the trained word vectors having trained word
+
+FIG. 4 is a schematic view showing the structure of a elements to express the respective trained amino acid sub-
+computing device provided by Embodiment 4 of the inven- 35 sequences, document features are extracted from the trained
+tion. word elements, and trained document feature vectors are
+
+built for the trained protein sequence according to the
+
+DETAILED DESCRIPTION OF THE extracted document features; protein chain biological fea-
+INVENTION tures are extracted from the trained amino acid sub-se-
+
+40 quences expressed with the trained word elements, and
+
+To make the objects, technical solutions and advantages trained biological feature vectors are built for the trained
+of the invention more clear and explicit, the invention will protein sequence according to the extracted biological fea-
+be further illustrated in detail with reference to the accom- __ tures; and finally, a pre-built classification model is trained
+panying drawings and embodiments. It should be under- by using the trained amino acid sub-sequences expressed
+stood that the embodiments as described herein are only 45 with the trained document feature vectors and the trained
+intended to explain, instead of limiting, the invention. biological feature vectors, and when a preset training ter-
+
+The specific implementation of the invention is described mination condition is met, the classification model obtained
+in detail below in conjunction with particular embodiments. from the training is set as the amino acid residue classifi-
+
+cation model. Therefore, the classification model is provided
+Embodiment 1 50 for the subsequent amino acid residue classification, which
+increases the classification efficiency of the classification
+
+FIG. 1 shows a process flow for implementing a method model. Moreover, the training termination condition can be
+for predicting a protein binding site provided by Embodi- set as a preset number of times that the number of training
+ment 1 of the invention, which only shows sections related times is to reach or a preset value that losses are to reach
+to the embodiment of the invention for the convenience of 55 during training.
+illustration, with the details described as follows. Specifically, a Stacking ensemble learning algorithm is
+
+At $101, receive a protein sequence to be predicted, and used to train a preset model after many types of features are
+divide the protein sequence by using a preset sliding window obtained, so as to obtain an amino acid residue classification
+and sliding step to obtain a plurality of amino acid sub- model. At a first layer of the Stacking model, different types
+sequences forming the protein sequence to be predicted. 60 of protein chain biological features are used respectively to
+
+This embodiment of the invention is suitable for a system train multiple base classifiers, and then, prediction results of
+for predicting a protein binding site. In this embodiment of the multiple base classifiers are merged with the document
+the invention, to embody the clustering property of a pro- feature vectors to serve as a final feature vector for training,
+tein-protein binding site, the sliding window is started after thereby obtaining the amino acid residue classification
+the protein sequence to be predicted is received, the protein 65 model.
+sequence is divided by adjusting the size of the sliding At $102, build word vectors for the protein sequence
+window and the sliding step to obtain a plurality of amino according to the plurality of amino acid sub-sequences, with
+
+=== СТРАНИЦА 8 ===
+US 11,620,567 B2
+5 6
+the word vectors having word elements to express the invention, which only shows sections related to the embodi-
+respective amino acid sub-sequences, extract document fea- ment of the invention for the convenience of illustration,
+tures from the word elements, and build document feature wherein the apparatus comprises:
+vectors for the protein sequence according to the extracted a sequence division unit 21 for receiving a protein
+document features. . . . 5 sequence to be predicted, and dividing the protein sequence
+
+In this embodiment of the invention, after a plurality of by usi lidj ind d sliding step to obtai
+amino acid sub-sequences are obtained by dividing the y using a Preset Shans Window anc sizang step to obtain
+sequence, word vectors are first built for the protein a plurality of amino acid sub-sequences forming the protein
+sequence according to the plurality of amino acid sub- sequence to be predicted;
+sequences, with the word vectors having word elements to 10 a first vector building unit 22 for building word vectors for
+express the respective amino acid sub-sequences, document the protein sequence according to the plurality of amino acid
+features are then extracted from the word elements, and sub-sequences, with the word vectors having word elements
+finally, document feature vectors are built for the protein to express the respective amino acid sub-sequences, extract-
+sequence according to the extracted document features. ing document features from the word elements, and building
+Moreover, the extracted document features include a TFIDF document feature vectors for the protein sequence according
+sequence feature and a N-gram sequence feature and others. 15 to the extracted di t features:
+
+Preferably, when the word vectors are built for the protein ONE CREAN COCEMIEDE TAUTES . .
+sequence according to the amino acid sub-sequences, a a second vector building unit 23 for extracting protein
+unique number is allocated to every type of amino acid chain biological features from the amino acid sub-sequences
+sub-sequence, and a word2vec algorithm is used to map the expressed with the word elements, and building biological
+original unique numbers of the sub-sequences to a K-di- 20 feature vectors for the protein sequence according to the
+mensional vector space to obtain the word vectors of the extracted biological features; and
+protein sequence. In this way, the feature dimension can be a result acquisition unit 24 for classifying the amino acid
+effectively reduced to seek feature expression at a deeper sub-sequences expressed with the document feature vectors
+layer for the document data, and all the data in the high- and the biological feature vectors by using a preset amino
+dimensional word vectors are leveraged to make the data 25 acid residue classification model to obtain amino acid resi-
+scale greater, which facilitates the subsequent classification due types for the protein sequence.
+effect. In this embodiment of the present, the sequence division
+
+At $103, extract protein chain biological features from the : : : , .
+
+. : : unit 21 receives a protein sequence to be predicted, and
+amino acid sub-sequences expressed with the word ele- divides the tej b . + slidi
+ments, and build biological feature vectors for the protein 30 wi Protein sequence Sy using a preset sine
+sequence according to the extracted biological features. window and sliding step to obtain a plurality of anno acid
+
+In this embodiment of the invention, the protein chain SUb-sequences forming the protein sequence to be predicted;
+biological features are first extracted from the amino acid _ the first vector building unit 22 builds word vectors for the
+sub-sequences obtained by dividing the sequence, and then — protein sequence according to the plurality of amino acid
+the biological feature vectors are built for the protein sub-sequences, with the word vectors having word elements
+sequence according to the extracted biological features, 35 to express the respective amino acid sub-sequences, extracts
+where the extracted biological features include features such document features from word elements, and builds docu-
+as a location specific scoring matrix feature and a pseudo ment feature vectors for the protein sequence according to
+amino acid composition feature, therefore, local information the extracted document features; the second vector building
+such as the order of appearance of the amino acid in the unit 23 extracts protein chain biological features from the
+sequence is expressed effectively, enhancing the ability of 40 amino acid sub-sequences, and builds biological feature
+the feature vectors for expressing the protein sequence vectors for the protein sequence according to the extracted
+information and further increasing the comprehensiveness biological features; and the result acquisition unit 24 clas-
+of the biological features in the biological feature vectors. sifies the amino acid sub-sequences expressed with both the
+
+At $104, classify the amino acid sub-sequences expressed document feature vectors and the biological feature vectors
+with the document feature vectors and the biological feature 45 by using a preset amino acid residue classification model to
+vectors by using a preset amino acid residue classification obtain amino acid residue types for the protein sequence,
+model to obtain amino acid residue types for the protein thereby improving the accuracy and generality in the pre-
+sequence. diction of the protein binding site.
+
+In this embodiment of the invention, the types of the In this embodiment of the invention, the respective units
+amino acid residues are used to illustrate whether the amino 50 ofthe apparatus for predicting the protein binding site can be
+acid residues are binding sites of the protein sequence. implemented with corresponding hardware or software
+Preferably, when the document feature vectors and the units, and every unit may be either an independent software
+biological feature vectors are classified, the biological fea- or hardware unit or an integrated software or hardware unit,
+ture vectors are first predicted, prediction results as predicted which is not intended to limit the invention herein. The
+are then merged with the document feature vectors, and 55 description of foregoing Embodiment 1 can be referred to
+finally, the merged feature vectors obtained by feature for the particular implementations of respective units, which
+merging are classified to further improve the accuracy in the will not be repeated here.
+prediction of the protein binding site. Moreover, the preset
+amino acid residue classification model is the amino acid Embodiment 3
+residue classification model obtained through the foregoing 60
+training so that the accuracy in the prediction of the binding FIG. 3 shows a structure of an apparatus for predicting a
+site of the protein sequence is improved. protein binding site provided by Embodiment 3 of the
+
+invention, which only shows sections related to the embodi-
+Embodiment 2 ment of the invention for the convenience of illustration,
+65 wherein the apparatus comprises:
+
+FIG. 2 shows a structure of an apparatus for predicting a a trained sequence division unit 31 for dividing a trained
+
+protein binding site provided by Embodiment 2 of the protein sequence in a preset training set by using a preset
+
+=== СТРАНИЦА 9 ===
+US 11,620,567 B2
+7 8
+sliding window and sliding step to obtain a plurality of model. At a first layer of the Stacking model, different types
+trained amino acid sub-sequences forming the trained pro- of protein chain biological features are used respectively to
+tein sequence; train multiple base classifiers, and then, prediction results of
+
+a first feature processing unit 32 for building trained word the multiple base classifiers are merged with the document
+vectors for the trained protein sequence according to the 5 feature vectors to serve as a final feature vector for training,
+plurality of trained amino acid sub-sequences, with the thereby obtaining the amino acid residue classification
+trained word vectors having trained word elements to model.
+express the respective trained amino acid sub-sequences, A sequence division unit 35 is used for receiving a protein
+extracting document features from the trained word ele- sequence to be predicted, and dividing the protein sequence
+ments, and building trained document feature vectors for the 10 by using a preset sliding window and sliding step to obtain
+trained protein sequence according to the extracted docu- a plurality of amino acid sub-sequences forming the protein
+ment features; sequence to be predicted.
+
+a second feature processing unit 33 for extracting protein In this embodiment of the invention, to embody the
+chain biological features from the trained amino acid sub- clustering property of a protein-protein binding site, the
+sequences expressed with the trained word elements, and 15 sequence division unit 35 starts the sliding window after the
+building trained biological feature vectors for the trained protein sequence to be predicted is received, the protein
+protein sequence according to the extracted biological fea- sequence is divided by adjusting the size of the sliding
+tures; and window and the sliding step to obtain a plurality of amino
+
+a model training unit 34 for training a pre-built classifi- acid sub-sequences forming the protein sequence to be
+cation model by using the trained amino acid sub-sequences 20 predicted, thereby taking local blocks of the protein
+expressed with the trained document feature vectors and the sequence as subsequent analysis units.
+trained biological feature vectors, and when a preset training In this embodiment of the invention, preferably, the
+termination condition is met, setting the classification model sliding window has the size of (2*window+1-2*b), wherein
+obtained from the training as the amino acid residue clas- window is a preset value, and b is a randomly generated
+sification model. 25 variable ranging from 0 to window-1. This sliding window
+
+In this embodiment of the invention, the amino acid includes window-b neighborhood residues at each side of a
+residue classification model is obtained by training with target residue, and as the window slides on the amino acid
+machine learning before the protein sequence to be predicted sequence, its size randomly changes between 3(b=window-
+is received. Preferably, a Stacking ensemble learning algo- 1) and 2*window+1(b=0) to obtain protein blocks formed by
+rithm can be used for machine learning to improve the 30 several amino acid residues, facilitating subsequent analysis
+classification accuracy and generalization ability of the in which the protein blocks are taken as the basic units,
+amino acid residue classification model. which fully demonstrates the clustering property of the
+
+Specifically, when the amino acid residue classification protein binding site and further improves the subsequent
+model is obtained by training with machine learning, the feature expression ability, prediction precision and general-
+trained sequence division unit 31 first divides a trained 35 ity.
+protein sequence in a preset training set by using a preset A first vector building unit 36 is used for building word
+sliding window and sliding step to obtain a plurality of vectors for the protein sequence according to the plurality of
+trained amino acid sub-sequences forming the trained pro- amino acid sub-sequences, with the word vectors having
+tein sequence; then the first feature processing unit 32 builds word elements to express the respective amino acid sub-
+trained word vectors for the trained protein sequence accord- 40 sequences, extracting document features from the word
+ing to the obtained plurality of trained amino acid sub- elements, and building document feature vectors for the
+sequences, with the trained word vectors having trained protein sequence according to the extracted document fea-
+word elements to express the respective trained amino acid tures.
+sub-sequences, extracts document features from the trained In this embodiment of the invention, after a plurality of
+word elements, and builds trained document feature vectors 45 amino acid sub-sequences are obtained by dividing the
+for the trained protein sequence according to the extracted sequence, the first vector building unit 36 first builds word
+document features; the second feature processing unit 33 vectors for the protein sequence according to the plurality of
+extracts protein chain biological features from the trained amino acid sub-sequences, with the word vectors having
+amino acid sub-sequences expressed with the trained word word elements to express the respective amino acid sub-
+elements, and builds trained biological feature vectors for 50 sequences, then extracts document features from the word
+the trained protein sequence according to the extracted elements, and finally builds document feature vectors for the
+biological features; and finally, the model training unit 34 protein sequence according to the extracted document fea-
+trains a pre-built classification model by using the trained tures. Moreover, the extracted document features include a
+amino acid sub-sequences expressed with the trained docu- TFIDF sequence feature and an N-gram sequence feature
+ment feature vectors and the trained biological feature 55 and others.
+vectors, and when a preset training termination condition is Preferably, when the word vectors are built for the protein
+met, sets the classification model obtained from the training sequence according to the amino acid sub-sequences, a
+as the amino acid residue classification model. Therefore, unique number is allocated to every type of amino acid
+the classification model is provided for the subsequent sub-sequence, and a word2vec algorithm is used to map the
+amino acid residue classification, which increases the clas- 60 original unique numbers of the sub-sequences to a K-di-
+sification efficiency of the classification model. Moreover, mensional vector space to obtain the word vectors of the
+the training termination condition can be set as a preset protein sequence. In this way, the feature dimension can be
+number of times that the number of training times is to reach effectively reduced to seek feature expression at a deeper
+or a preset value that losses are to reach during training. layer for the document data, and all the data in the high-
+
+Specifically, a Stacking ensemble learning algorithm is 65 dimensional word vectors are leveraged to make the data
+used to train a preset model after many types of features are scale greater, which facilitates the subsequent classification
+obtained, so as to obtain an amino acid residue classification effect.
+
+=== СТРАНИЦА 10 ===
+US 11,620,567 B2
+9 10
+A second vector building unit 37 is used for extracting each apparatus above, for example, the functions of the units
+protein chain biological features from the amino acid sub- 21 to 24 shown in FIG. 2 and the units 31 to 38 shown in
+sequences expressed with the word elements, and building FIG. 3.
+biological feature vectors for the protein sequence according In this embodiment of the invention, when the processor
+to the extracted biological features. 5 40 executes the computer program 42 to accomplish the
+In this embodiment of the invention, the second vector steps in the embodiment of the method for predicting the
+building unit 37 first extracts the protein chain biological respective protein binding site above, a protein sequence to
+features from the amino acid sub-sequences obtained by _e predicted is received divided by using a preset sliding
+dividing the sequence, and then builds the biological feature window and sliding step to obtain a plurality of amino acid
+vectors for the protein sequence according to the extracted 10 sub-sequences forming the protein sequence to be predicted:
+biological features, where the extracted biological features word vectors are built for the protein sequence according to
+include features such as a location specific scoring matrix the plurality of amino acid sub-sequences. with the word
+feature and a pseudo amino acid composition feature, there- P ty qhences, .
+fore, local information such as the order of appearance of the vectors having word elements expressing the respective
+amino acid in the sequence is expressed effectively, enhanc- 15 amino acid sub-sequences, document features are extracted
+ing the ability of the feature vectors for expressing the from word elements, and document feature vectors are built
+protein sequence information and further increasing the for the protein sequence according to the extracted docu-
+comprehensiveness of the biological features in the biologi- ment features; protein chain biological features are extracted
+cal feature vectors. from the amino acid sub-sequences, and biological feature
+A result acquisition unit 38 is used for classifying the 20 vectors are built for the protein sequence according to the
+amino acid sub-sequences expressed with the document extracted biological features; and the amino acid sub-se-
+feature vectors and the biological feature vectors by using a | quences expressed with both the document feature vectors
+preset amino acid residue classification model to obtain and the biological feature vectors are classified by using a
+amino acid residue types for the protein sequence. preset amino acid residue classification model to obtain
+In this embodiment of the invention, the types of the 25 amino acid residue types for the protein sequence, thereby
+amino acid residues are used to illustrate whether the amino improving the accuracy and generality in the prediction of
+acid residues are binding sites of the protein sequence. the protein binding site. The method described in this
+Preferably, when the document feature vectors and the Embodiment can be referred to Embodiment 1 for the details
+biological feature vectors are classified, the biological fea- of the steps accomplished when the processor 40 in the
+ture vectors are first predicted, prediction results as predicted 30 computing device 4 executes the computer program, which
+are then merged with the document feature vectors, and will not be repeated here.
+finally, the merged feature vectors obtained by feature
+merging are classified to further improve the accuracy in the Embodiment 5
+prediction of the protein binding site. Moreover, the preset
+amino acid residue classification model is the amino acid 35 ‘In this embodiment of the invention, a computer-readable
+residue classification model obtained through the foregoing storage medium is provided, which stores a computer pro-
+training so that the accuracy in the prediction of the binding gram executed by a processor to accomplish the steps in the
+site of the protein sequence is improved. embodiment of the method for predicting the protein binding
+Therefore, preferably, the result acquisition unit 38 com- site above, for example, S101 to $104 shown in FIG. 1. Or,
+prises: 40 the computer program is executed by the processor to
+a feature merging unit 381 for predicting the biological accomplish the functions of respective units in the embodi-
+feature vectors and performing feature merging on predic- ments of each apparatus above, for example, the functions of
+tion results predicted and the document feature vectors; and ‘the units 21 to 24 shown in FIG. 2 and the units 31 to 38
+a feature classification unit 382 for classifying merged shown in FIG. 3.
+feature vectors obtained through the feature merging. 45 This embodiment of the invention involves the steps of:
+In this embodiment of the invention, the respective units receiving a protein sequence to be predicted, and dividing
+of the apparatus for predicting the protein binding sitecanbe the protein sequence by using a preset sliding window and
+implemented with corresponding hardware or software sliding step to obtain a plurality of amino acid sub-se-
+units, and every unit may be either an independent software | quences forming the protein sequence to be predicted;
+or hardware unit or an integrated software or hardware unit, 50 building word vectors for the protein sequence according to
+which is not intended to limit the invention herein. the plurality of amino acid sub-sequences, with the word
+vectors having word elements to express the respective
+Embodiment 4 amino acid sub-sequences, extracting document features
+from word elements, and building document feature vectors
+FIG. 4 shows a structure of a computing device provided 55 for the protein sequence according to the extracted docu-
+in Embodiment 4 of the invention, which only shows ment features; extracting protein chain biological features
+sections related to the embodiment of the invention for the from the amino acid sub-sequences expressed with the word
+convenience of illustration. elements, and building biological feature vectors for the
+The computing device 4 in the embodiment of the inven- protein sequence according to the extracted biological fea-
+tion comprises a processor 40, a storage 41 and a computer 60 tures; and classifying the amino acid sub-sequences
+program 42 stored in the storage 41 and runnable on the expressed with the document feature vectors and the bio-
+processor 40. The processor 40 executes the computer logical feature vectors by using a preset amino acid residue
+program 42 to accomplish the steps in the embodiment of the classification model to obtain amino acid residue types for
+method for predicting the protein binding site as described the protein sequence, thereby improving the accuracy and
+above, for example, $101 to S104 shown in FIG. 1. Or, the 65 generality in the prediction of the protein binding site. The
+processor 40 executes the computer program 42 to accom- steps described in the embodiment of the method can be
+plish the functions of respective units in the embodiments of further referred to for the method for predicting the protein
+
+=== СТРАНИЦА 11 ===
+US 11,620,567 B2
+11 12
+binding site as accomplished when the computer program is sification model obtained from the training as the
+executed by the processor, which will not be repeated here. amino acid residue classification model.
+
+The computer readable storage medium of the embodi- 3. The method according to claim 2, wherein the docu-
+ment of the invention may include any entity or apparatus ment features comprise a Term Frequency-Invers Document
+capable of carrying computer program codes and recording 5 Frequency (TFIDF) sequence feature and a N-gram
+medium, for example, storages such as ROM/RAM, disks, sequence feature, and the protein chain biological features
+optical disks and flash memories. ; comprise a location specific scoring matrix feature and a
+
+The description above provides only preferred emibodi- pseudo amino acid composition feature.
+ments of the invention, but 1s not intended to limit the 4. The method according to claim 1, wherein the docu-
+invention. Any modifications, equivalent substitutions, 10 .
+
+: : wae . ment features comprise a Term Frequency-Invers Document
+improvements and the like made within the spirit and
+
+a . . : Frequency (TFIDF) sequence feature and a N-gram
+principle of the invention are construed to be incorporated . toa .
+
+wpe : : : sequence feature, and the protein chain biological features
+within the protection scope of the invention. : locati fi . x f d
+
+What is claimed is: comprise a location specific scoring matrix feature and a
+
+1. A method for predicting a protein binding site, com- 15 pseudo amino acid composition feature. :
+prising the following steps of: 5. The method according to claim 1, wherein the step of
+
+receiving a protein sequence to be predicted, and dividing _ Classifying the document feature vectors and the biological
+
+the protein sequence by using a preset sliding window feature vectors by using a preset amino acid residue classi-
+
+and sliding step to obtain a plurality of amino acid _ fication model comprises the sub-steps of:
+
+sub-sequences forming the protein sequence; 20 -predicting the biological feature vectors and performing
+building word vectors for the protein sequence according feature merging on prediction results predicted and the
+
+to the plurality of amino acid sub-sequences, with the document feature vectors; and
+
+word vectors having word elements to express the classifying merged feature vectors obtained through the
+
+respective amino acid sub-sequences, extracting docu- feature merging.
+
+ment features from the word elements, and building 25 6. An apparatus for predicting a protein binding site,
+
+document feature vectors for the protein sequence comprising:
+
+according to the extracted document features; a sequence division unit for receiving a protein sequence
+extracting protein chain biological features from the to be predicted, and dividing the protein sequence by
+
+amino acid sub-sequences expressed with the word using a preset sliding window and sliding step to obtain
+
+elements, and building biological feature vectors for 30 a plurality of amino acid sub-sequences forming the
+
+the protein sequence according to the extracted protein protein sequence;
+
+chain biological features; and a first vector building unit for building word vectors for
+classifying the amino acid sub-sequences expressed with the protein sequence according to the plurality of amino
+
+the document feature vectors and the biological feature acid sub-sequences, with the word vectors having word
+
+vectors by using a preset amino acid residue classifi- 35 elements to express the respective amino acid sub-
+
+cation model to obtain amino acid residue types for the sequences, extracting document features from the word
+
+protein sequence; elements, and building document feature vectors for the
+wherein the preset sliding window has the size of (2*win- protein sequence according to the extracted document
+
+dow+1-2*b), the window is a preset value, and b is a features;
+
+randomly generated variable ranging from 0 to win- 40 a second vector building unit for extracting protein chain
+
+dow-1. biological features from the amino acid sub-sequences
+
+2. The method according to claim 1, wherein before the expressed with the word elements, and building bio-
+step of receiving a protein sequence to be predicted, the logical feature vectors for the protein sequence accord-
+method further comprises the steps of: ing to the extracted protein chain biological features;
+
+dividing a trained protein sequence in a preset training set 45 and
+
+by using a preset sliding window and sliding step to a result acquisition unit for classifying the amino acid
+obtain a plurality of trained amino acid sub-sequences sub-sequences expressed with the document feature
+forming the trained protein sequence; vectors and the biological feature vectors by using a
+building trained word vectors for the trained protein preset amino acid residue classification model to obtain
+sequence according to the plurality of amino acid 50 amino acid residue types for the protein sequence;
+sub-sequences, with the trained word vectors having wherein the preset sliding window has the size of (2*win-
+trained word elements to express the respective trained dow+1-2*b), the window is a preset value, and b is a
+amino acid sub-sequences, extracting document fea- randomly generated variable ranging from 0 to win-
+tures from the trained word elements, and building dow-1.
+trained document feature vectors for the trained protein 55 7. The apparatus according to claim 6, further comprising:
+sequence according to the extracted document features; a trained sequence division unit for dividing a trained
+extracting protein chain biological features from the protein sequence in a preset training set by using a
+trained amino acid sub-sequences expressed with the preset sliding window and sliding step to obtain a
+trained word elements, and building trained biological plurality of trained amino acid sub-sequences forming
+feature vectors for the trained protein sequence accord- 60 the trained protein sequence;
+ing to the extracted protein chain biological features; a first feature processing unit for building trained word
+and vectors for the trained protein sequence according to
+training a pre-built classification model by using the the plurality of amino acid sub-sequences, with the
+trained amino acid sub-sequences expressed with the trained word vectors having trained word elements to
+trained document feature vectors and the trained bio- 65 express the respective trained amino acid sub-se-
+logical feature vectors, and when a preset training quences, extracting document features from the trained
+termination condition is met, setting the pre-built clas- word elements, and building trained document feature
+
+=== СТРАНИЦА 12 ===
+US 11,620,567 B2
+13 14
+vectors for the trained protein sequence according to
+the extracted document features;
+
+a second feature processing unit for extracting protein
+chain biological features from the trained amino acid
+sub-sequences expressed with the trained word ele- 5
+ments, and building trained biological feature vectors
+for the trained protein sequence according to the
+extracted protein chain biological features; and
+
+a model training unit for training a pre-built classification
+model by using the trained amino acid sub-sequences 10
+expressed with the trained document feature vectors
+and the trained biological feature vectors, and when a
+preset training termination condition is met, setting the
+pre-built classification model obtained from the train-
+ing as the amino acid residue classification model. 15
+
+8. The apparatus according to claim 6, wherein the result
+
+acquisition unit comprises:
+
+a feature merging unit for predicting the biological feature
+vectors and performing feature merging on prediction
+results predicted and the document feature vectors; and 20
+
+a feature classification unit for classifying merged feature
+vectors obtained through the feature merging.
+
+9. Acomputing device, comprising a storage, a processor
+
+and a computer program stored in the storage and runnable
+on the processor, wherein the processor executes the com- 25
+puter program to accomplish the steps of the method of
+claim 1.
+
+* * * * *

@@ -1,17 +1,8 @@
-import os
-import dotenv
-from loguru import logger
-from src.orchestrator import Orchestrator
+from pathlib import Path
+from src.orchestration import create_patent_orchestrator
+from src.constants import PATENTS_PER_BATCH
 
-dotenv.load_dotenv()
-
-USPT_API_KEY = os.getenv("USPT_API_KEY")
-
-if not USPT_API_KEY:
-    logger.error("USPT_API_KEY is not set")
-    exit(1)
-        
 
 if __name__ == "__main__":
-    orchestrator = Orchestrator()
-    orchestrator.run()
+    orchestrator = create_patent_orchestrator(patent_per_batch=PATENTS_PER_BATCH)
+    orchestrator.run(initial_context={"documents_path": Path("patents")})

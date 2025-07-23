@@ -1,0 +1,6 @@
+page_number,ligand,protein,interaction_type,context,Ki,IC50,Kd,EC50
+2,,,,,,,,
+4,,,,,,,,
+5,unknown,unknown,unknown,The input text does not appear to be biological data and contains non-sequiturs. It seems to be a patent document with irrelevant text. There are no ligand-protein interaction entries in the provided output.,,,,
+20,,,,,,,,
+23,,,,,,,,

@@ -9,6 +9,11 @@ _custom_llama_server = AsyncOpenAI(base_url=LLAMA_API_ENDPOINT, api_key="dummy-k
 
 _client = _ollama_client # _custom_llama_server
 
+Qwen3 = OpenAIChatCompletionsModel(
+    model="qwen3",
+    openai_client=_client
+)
+
 Llama32 = OpenAIChatCompletionsModel( 
     model="llama3.2",
     openai_client=_client
@@ -29,4 +34,4 @@ Gpt4oMini = OpenAIChatCompletionsModel(
     openai_client=_client
 )
 
-DEFAULT_MODEL = Llama32
+DEFAULT_MODEL = Qwen3

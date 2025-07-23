@@ -1,0 +1,823 @@
+=== СТРАНИЦА 1 ===
+US011548878B2
+a2) United States Patent (10) Patent No.: US 11,548,878 B2
+Yano et al. (45) Date of Patent: Jan. 10, 2023
+(54) EMOPAMIL BINDING PROTEIN BINDING re Sean : Ni 1 Bere eon e al.
+ohda et al.
+AGENT AND USE THEREOF 2017/0165227 Al 6/2017 Takahashi et al.
+: . 2018/0153855 Al 6/2018 Yano
+(71) Applicant: FUJIFILM Toyama Chemical Co., 2018/0369194 Al 12/2018 Kano et al.
+Ltd., Tokyo (JP) 2020/0085787 Al 3/2020 Kobayashi et al.
+2020/0108048 Al* 4/2020 Kobayashi tee AGIP 25/28
+(72) Inventors: Takeaki Yano, Toyama (IP); Kaori 2020°0137880 AL* 412020 Li vensginnnnnn HOSK VO28
+. ; + . obayashi ...........
+Miyamoto, Ashigarakami-gun (JP); 2020/0215030 Al* 7/2020 Kobayashi ........... AGIK 9/0053
+Koichi Saito, Ashigarakami-gun (JP) 2021/0137880 Al 5/2021 Kobayashi et al.
+(73) Assignee: FUJIFILM Toyama Chemical Co., FOREIGN PATENT DOCUMENTS
+Ltd., Tokyo (JP)
+EP 1 437 353 Al 7/2004
+(*) Notice: Subject to any disclaimer, the term of this EP 3 100 725 Al 12/2016
+patent is extended or adjusted under 35 EP 3 632 431 Al ; 4/2020
+U.S.C. 154(b) by 0 days. (Continued)
+(21) Appl. No.: 16/760,512 OTHER PUBLICATIONS
+(22) PCT Filed: Oct. 30, 2018 Chemical Abstracts Registry No. 519187-30-5, indexed in the
+Registry file on STN CAS Online May 23, 2003. (Year: 2003).*
+(86) PCT No.: PCT/JP2018/040283 Marquer et al., Increasing membrane cholesterol of neurons in
+culture recapitulates Alzheimer’s disease early phenotypes. Mol
+§ 371 (©)(), Neurodegeneration 9, 60 (2014). https://doi.org/10.1186/1750-1326-
+(2) Date: Apr. 30, 2020 9-60. (Year: 2014).*
+Extended European Search Report dated Jul. 3, 2020, from the
+(87) PCT Pub. No.: WO2019/088083 European Patent Office in European application No. 18873445.3.
+. Silve et al., “Emopamil-binding Protein, a Mammalian Protein That
+PCT Pub. Date: May 9, 2019 Binds a Series of Structurally Diverse Neuroprotective Agents,
+. ous Exhibits A8-A7 Sterol Isomerase Activity in Yeast”, The Journal of
+(65) Prior Publication Data Biological Chemistry, Sep. 13, 1996, vol. 271, No. 37, pp. 22434-
+US 2021/0198245 Al Jul. 1, 2021 22440 (8 pgs. total).
+(Continued)
+(30) Foreign Application Priority Data
+Oct. 30, 2017 (IP) veessssseseseseeeee JP2017-209391 Primary Examiner — Laura L Stockton
+, (74) Attorney, Agent, or Firm — Sughrue Mion, PLLC
+(51) Int. Cl.
+CO7D 409/12 (2006.01)
+AGIK 31/397 (2006.01) (67) ABSTRACT
+(52) U.S. Cl. Required are: a compound having high affinity for an
+CPC ......... CO7D 409/12 (2013.01); CO7B 2200/05 emopamil binding protein; and a method for activating or
+(2013.01) inhibiting the emopamil binding protein, using such a com-
+(58) Field of Classification Search pound. According to the present invention, provided is an
+CPC. veiececeeeseeeess COTD 409/12; AGIK 31/397 emopamil binding protein binding agent comprising an alkyl
+See application file for complete search history. ether derivative represented by the following formula [1] or
+a salt thereof:
+(56) References Cited
+U.S. PATENT DOCUMENTS
+(1)
+R R
+6,489,481 Bl 12/2002 Keith et al. R! vf S%\
+7,087,594 B2* 8/2006 Saitoh 0... A6IP 25/00 is | S Cre O* CHEN. >
+$14/210.17
+8,119,625 B2* 2/2012 Iwakami .............. A6LK 31/397 Q a
+§14/210.19 8
+10,238,632 B2* 3/2019 Yano we AGIP 9/10
+2005/0070521 Al 3/2005 Saitoh et al. . 1 3 . .
+2005/0250843 Al 11/2005 Nakada et al. wherein R° and R*, which are the same or different, each
+2006/0194781 Al 8/2006 Saitoh et al. represent a hydrogen atom, a halogen atom, an option-
+se booaaes Ni 2 soos Kimura a ally substituted C,_, alkyl group, an optionally substi-
+3011/0224180 Al 9/2011 a , tuted aryl group, etc.; R* represents an optionally pro-
+2012/0028953 Al 2/2012 Roughley et al. tected hydroxyl group, etc.; and m and n, which are the
+2015/0045345 Al 2/2015 Inaba et al. same or different, each represent an integer of 1 to 6.
+2015/0166472 AL* 6/2015 Kim ww. AGIK 9/06
+514/64
+2015/0203472 Al 7/2015 Ceccarelli et al. 5 Claims, 1 Drawing Sheet
+
+=== СТРАНИЦА 2 ===
+US 11,548,878 B2
+Page 2
+(56) References Cited Communication dated Dec. 9, 2020, issued by the Korean Intellec-
+tual Property Office in Korean Application No. 10-2019-7035350.
+Communication dated Feb. 3, 2021 issued by the Indian Patent
+FOREIGN PATENT DOCUMENTS Office in Application No. 201947049390.
+Ip 2002-528480 A 9/2002 Communication dated Feb. 3, 2021 issued by the Indian Patent
+Ip 2011-513374 A 4/2011 Office in Application No. 201947049400.
+KR 10-2008-0111131 A 12/2008 Communication dated Jan. 27, 2021 issued by the Canadian Patent
+RU 2496784 C2. 10/2013 Office in Application No. 3,067,453.
+RU 9015112914 A 11/2016 Communication dated Jan. 27, 2021 issued by the Canadian Patent
+WO WO-99/11293 Al * 3/1999 wu... AIK 48/00 Office in Application No. 3,067,455.
+WO 03/035647 Al 5/2003 Communication dated Jan. 27, 2021 issued by the Canadian Patent
+Wo 03/105830 Al = 12/2003 Office in Application No. 3,067,456.
+WO 2007/125913 AL 11/2007 Communication dated Jan. 29, 2021 issued by the Canadian Patent
+WoO 2011/057199 Al 5/2011 Office in Application No. 3,067,458.
+WO 2013/125617 Al 8/2013 Communication dated Jan. 8, 2021 issued by the Indian Patent
+wo 201S/115582 Al 8/2015 Office in application No. 201947049392
+pplication No. .
+Wo 2015/191506 A2 12/2015 Communication dated Jan. 8, 2021, issued by the Indian Intellectual
+WO 2016/051799 Al 4/2016 Gabe” sa. yeahs y te netan “nremecmaa
+WO 2016/124508 Al 8/2016 Property Office in Indian Application No. 201947049401.
+Wo 2016/199878 Al 12/2016 Communication dated May 11, 2020 from European Patent Office
+WoO 2017/111005 Al 6/2017 in EP Application No. 18810759.3.
+Communication dated May 7, 2020 from European Patent Office in
+EP Application No. 18810520.9.
+OTHER PUBLICATIONS Decision under section 15 dated Feb. 23, 2021, issued in Indian
+Application No. 201947049401.
+Derry et al., “Mutations in a A8-A7 sterol isomerase in the tattered Decision under section 15 dated Mar. 22, 2021 issued in the Indian
+mouse and X-linked dominant chondrodysplasia punctata”, Nature patent application No. 201947049390.
+Genetics, Jul. 1999, vol. 22, pp. 286-290. Decision under section 15 dated Mar. 22, 2021 issued in the Indian
+Bae et al., “Cholesterol biosynthesis from lanosterol: molecular patent application No. 201947049392.
+cloning, chromosomal localization, functional expression and liver- “Epidemiological studies on Alzheimer’s disease in Japan”, Japa-
+specific gene regulation of rat sterol A8-isomerase, a cholesterogenic nese Journal of Clinical Medicine, 2008, vol. 66 (Extra ed. 1), pp.
+enzyme with multiple functions”, Biochem. J., 2001, vol. 353, pp. 23-27 (5 pages total).
+689-699. Extended European Search Report dated May 11, 2020 in European
+Moebius et al., “Identification of a 27-«kDa High Affinity Application No. 18809579.8.
+Phenylalkylamine-Binding Polypeptide as the sigma | Binding Site Extended European Search Report dated May 11, 2020 in European
+by Photoaffinity Labeling and Ligand-Directed Antibodies”, Molecu- Application No. 18809739.8.
+lar Pharmacology, 1993, vol. 44, No. 5, pp. 966-971 (8 pgs. total). Extended European Search Report dated May 13, 2020 in European
+Laggner et al., “Discovery of High-Affinity Ligands of sigmal Application No. 18809110.2.
+Receptor, ERG2, and Emopamil Binding Protein by Pharmacophore Fujifilm Corp., “II stage clinical experiment in the United States for
+Modeling and Virtual Screening”, J. Med. Chem., 2005, vol. 48, No. Alzheimer’s dementia therapeutic drug “T-817MA’: drastically restrict-
+15, pp. 4754-4764. ing, with statistical significant difference, progress of deterioration
+Berardi et al., “Novel 4-(4-Aryl)cyclohexyl-1-(2-pyridyl)piperazines in cognitive function with respect to patient group having this
+as A8-A7 Sterol Isomerase (Emopamil Bonding Protein) Selective innovative two effects of reducing phosphorylation tau in cerebro-
+Ligands with Antiproliferative Activity”, J. Med. Chem., 2008, vol. spinal fluid and restricting hippocampal atrophy in brain”, News
+51, No. 23, pp. 7523-7531. release, Jul. 19, 2017 (1 page total).
+International Search Report dated Jan. 29, 2019, issued by the Fukushima et al., “T-817MA, a neuroprotective agent, attenuates the
+International Searching Authority in application No. PCT/JP2018/ motor and cognitive impairments associated with neuronal degen-
+040283. eration in P301L tau transgenic mice”, Biochemical and Biophysi-
+Written Opinion dated Jan. 29, 2019, issued by the International cal Research Communications, 2011, vol. 407, pp. 730-734 (5 pages
+Searching Authority in application No. PCT/JP2018/040283. total).
+International Preliminary Report on Patentability dated May 5, Fukushima, “Pharmacological properties of T-817MA, a novel
+2020, issued by the International Bureau in application No. PCT/ neurotrophic agent, for treatment of Alzheimer’s disease”, Folia
+JP2018/040283. Pharmacologica Japonica, 2010, vol. 136, pp. 11-14 (2 pages total).
+“2012 Alzheimer’s Disease Facts and Figures”, Alzheimer’s Asso- Grimmer et al., “Beta Amyloid in Alzheimer’s Disease: Increased
+ciation, 2012 (72 pages total); http://www.alz.org/downloads/facts_ Deposition in Brain Is Reflected in Reduced Concentration in
+figures_2012.pdf. Cerebrospinal Fluid”, Biol. Psychiatry, 2009, vol. 65, No. 11, pp.
+Colovic et al., “Acetylcholinesterase inhibitors: Pharmacology and 927-934 (17 pages total).
+Toxicology”, Current Neuropharmacology, 2013, vol. 11, pp. 315- Healthline, “Brain Atrophy (Cerebral Atrophy)”, updated Mar. 29,
+335. 2019 https://www.healthline.com/health/brain-atrophy.
+Communication dated Aug. 11, 2021 from the Canadian Patent Hirata et al., “A Novel Neurotrophic Agent, T-817MA [1-{3-[2-(1-
+Office in Canadian Application No. 3,067,458, corresponds to U.S. Benzothiopen-5-yl) Ethoxy] Propyl}-3-azetidinol Maleate], Attenu-
+Appl. No. 16/617,607. ates Amyloid-beta-Induced Neurotoxicity and Promotes Neurite
+Communication dated Aug. 17, 2021 from the Mexican Patent Outgrowth in Rat Cultured Central Nervous System Neurons”, The
+Office in Mexican Application No. MX/a/2019/014306, corre- Journal of Pharmacology and Experimental Therapeutics, vol. 314,
+sponds to U.S. Appl. No. 16/617,607. No. 1, pp. 252-259, 2005 (8 pages total).
+Communication dated Aug. 4, 2021 from the Canadian Patent Office Horig et al., “From bench to clinic and back: Perspective on the Ist
+in Canadian Application No. 3,067,456, corresponds to U.S. Appl. IQPC Translational Research conference”, Journal of Translational
+No. 16/617,552. Medicine, 2004, vol. 2, No. 44, pp. 1-8.
+Communication dated Dec. 8, 2020, issued by the Korean Intellec- International Preliminary Report on Patentability dated Dec. 3, 2019
+tual Property Office in Korean Application No. 10-2019-7035347. in International Application No. PCT/JP2018/021222.
+Communication dated Dec. 8, 2020, issued by the Korean Intellec- International Preliminary Report on Patentability dated Dec. 3, 2019
+tual Property Office in Korean Application No. 10-2019-7035348. in International Application No. PCT/JP2018/021223.
+Communication dated Dec. 9, 2020, issued by the Korean Intellec- International Preliminary Report on Patentability dated Dec. 3, 2019
+tual Property Office in Korean Application No. 10-2019-7035349. in International Application No. PCT/JP2018/021224.
+
+=== СТРАНИЦА 3 ===
+US 11,548,878 B2
+Page 3
+(56) References Cited Office Action dated Apr. 27, 2020 from Russian Patent Office in RU
+Application No. 2019138166/04.
+OTHER PUBLICATIONS Office Action dated Feb. 17, 2021, issued in Russian Application
+. . i No. 2019138166/04.
+
+International Preliminary Report on Patentability dated Dec. 3, 2019 Office Action dated Jun. 1, 2021 issued in the Singapore patent
+in International Application No. PCT/JP2018/021225. application No. 112019115128.
+International Preliminary Report on Patentability dated Dec. 3, 2019 Office Action dated Jun. 1, 2021 issued in the Singapore patent
+in International Application No. PCT/IP2018/021226. application No. 11201911515Q.
+International Search Report dated Jul. 24, 2018 in International Office Action dated Jun. 1, 2021 issued in the Singapore patent
+Application No. PCT/JP2018/02 1223. ; ; application No. 11201911519U.
+International Search Report dated Jul. 24, 2018 in International Office Action dated Jun. 1, 2021 issued in the Singapore patent
+Application No. PCT/JP2018/02 1224. ; ; application No. 11201911520U.
+International Search Report dated Jul. 24, 2018 in International Office Action dated Oct. 23, 2020 in Russian Application No.
+International Search Report dated Jul. 24, 2018 in International Office Action dated Sep. 25, 2020 in Russian Application No.
+International Search Report dated Sep. 4, 2018 in International Office Action dated Aug. 10, 2020 in Australian Application No.
+Jack Jr. et al., “Tracking pathophysiological processes in Alzheim- Office Action dated Aug. 14, 2020 in Australian Application No.
+er’s disease: an updated hypothetical model of dynamic biomark- 2018277981.
+ers”, Lancet Neurology, Feb. 2013, vol. 12, No. 2, pp. 207-216 (10 Office Action dated Aug. 17, 2020 in Australian Application No.
+pages total). 2018277983.
+Jagust, “Is amyloid-B hamiful to the brain? Insights from human Office Action dated Aug. 19, 2021 in U.S. Appl. No. 16/617,584.
+imaging studies”, Brain, 2016, vol. 139, pp. 23-30. Office Action dated Aug. 21, 2020 in Australian Application No.
+Japanese Journal of Clinical Psychopharmacology, 2011, vol. 14, 2018277982.
+No. 7, pp. 1123-1129. Office Action dated Jul. 21, 2021 in New Zealand Application No.
+Japanese Journal of Clinical Psychopharmacology, 2012, vol. 15, 759585, corresponds to U.S. Appl. No. 16/617,739.
+eee eee Geriatrics 2013. vol. 50, No. 1 1-8 (8 pages Office Action dated Jul. 21, 2021 in New Zealand Application No.
+total) 1 RDI VON Mey NOW PP pag 759647, corresponds to U.S. Appl. No. 16/617,660.
+Kawasaki et al., “A Neuroprotective Agent, T-817MA (1-(3-[2-(1- Office Action dated Jul. 21, 2021 in New Zealand Application No.
+benzothiophen-5-yl)ethoxy]propyl} azetidin-3-ol Maleate), Pre- 759657, corresponds to US. Appl. No. 16/617,552. on
+vents 1-methyl-4-pheny]-1,2,3,6-tetrahydropyridine-induced Neurotoxic- Office Action dated Jul. 22, 2021 in New Zealand Application No.
+ity in Mice”, Neuropharmacology, vol. 55, Issue 5, Oct. 2008, pp. 759662, corresponds to U.S. Appl. No. 16/617,607.
+654-660, Abstract only. Office Action dated Jul. 3, 2020 in Russian Application No. 2019138699.
+Kimura et al., “T-817MA, a neurotrophic agent, ameliorates the Office Action dated Jun. 10, 2021 in U.S. Appl. No. 16/617,660.
+deficits in adult neurogenesis and spatial memory in rats infused Office Action dated Jun. 23, 2021 in U.S. Appl. No. 16/617,607.
+i.c.v. with amyloid-beta peptide”, British Journal of Pharmacology, Office Action dated Jun. 23, 2021 in U.S. Appl. No. 16/617,739.
+2009, vol. 157, pp. 451-463 (13 pages total). Office Action dated Jun. 25, 2021 in Korean Application No.
+Kolobov et al., “Modern Pharmacological Models of Alzheimer’s 10-20 19-7035347.
+Disease”, Original Articles, Experimental Neurology, 2014, vol. 8, Office Action dated Mar. 2, 2020 in Russian Application No.
+No. 3, pp. 38-44 (32 pages total). 2019138164.
+Lo et al., “Longitudinal Change of Biomarkers in Cognitive Decline”, Office Action dated May 26, 2020 in Indian Application No.
+Archives of Neurology, 2011, vol. 68, No. 10, pp. 1257-1266 (10 201947049390.
+pages total). Office Action dated May 26, 2020 in Indian Application No.
+Mascalchi et al., “Progression of Brain Atrophy in Spinocerebellar 201947049392.
+Ataxia Type 2: A Longitudinal Tensor-Based Morphometry Study”, Office Action dated May 26, 2020 in Indian Application No.
+PLOS One, 2014, vol. 9, Issue 2, pp. 1-7, e89410. 201947049400.
+McKhann et al., “The diagnosis of dementia due to Alzheimer’s Office Action dated May 26, 2020 in Indian Application No.
+disease: Recommendations from the National Institute on Aging- 201947049401.
+Alzheimer’s Association workgroups on diagnostic guidelines for Office Action dated May 29, 2020 in Russian Application No.
+Alzheimer’s disease”, Alzheimer’s Dement., May 2011, vol. 7, No. 2019138538.
+3, pp. 263-269, (52 pages total). Press Release by Seed Planning (Dec. 28, 2010) (3 pages total);
+Moreno et al., “Blocking effects of human tau on squid giant http://www.seedplanning.co jp/press/2010/2010122801 html.
+synapse transmission and its prevention by T-817MA”, Frontiers in Proceedings of the Annual Meeting of the Japanese Research Group
+Synaptic Neuroscience, May 2011, vol. 3, Article 3, pp. 1-8 (8 pages on Senile Dementia, 2010, vol. 15, pp. 79-81 (3 pages total).
+total). Quinti et al., “A Novel Drug-Screening Platform in Microglial Cells
+Nakagawa et al., “T-817MA, A Newly Developing Anti- Identifies Potential AD Drugs”, Alzheimer’s & Dementia: The
+Alzheimer’s Agent, Protects Neurons and Recovers Memory Impair- journal of the Alzheimer’s Association, Jul. 19, 2017, XP0852 18817,
+ment in Amyloid B-Infused Rats and P301L Tau mutated Mice”, p. 4-404, vol. 1, No. 13, p. P1485 (total | page).
+Alzheimer’s & Dementia: The Journal of the Alzheimer’s Associa- Sarva et al., “Treatment Options in Degenerative Cerebellar Ataxia:
+tion, Jul. 1, 2005, XP027823394, p. 193, vol. 1, No. 1, p. S69-S70 A Systematic Review’, Movement Disorders Clinical Practice,
+(total 2 pages). 2014, vol. 1, pp. 291-298.
+Nguyen et al., “Ameliorative Effects of a Neuroprotective Agent, Schafer et al., “Failure is an option: learning from unsuccessful
+T-817MA, on Place Learning Deficits Induced by Continuous proof-of concept trials”, Drug Discovery Today, 2008, Vo. 13, pp.
+Infusion of Amyloid-B Peptide (1-40) in Rats”, Hippocampus, 2007, 913-916.
+vol. 17, pp. 443-455. Schneider et al., “A Phase 2 Multicenter, Randomized, Placebo-
+Notice of Allowance dated Sep. 28, 2021 in U.S. Appl. No. Controlled Trial to Evaluate the Efficacy and Safety of Edonerpic
+16/617,660. (T-817) in Patients with Mild to Moderate Alzheimer’s Disease”,
+Notice of Final Rejection dated Aug. 24, 2021 by the Korean Patent Alzheimer’s & Dementia: The journal of the Alzheimer’s Associa-
+Office in Korean Application No. 10-2019-7035348, corresponds to tion, Jul. 19, 2017, p. 4-573. vol. 13, No. 7, XP085218926, p. P1572
+U.S. Appl. No. 16/617,660. (total 1 page).
+
+=== СТРАНИЦА 4 ===
+US 11,548,878 B2
+Page 4
+(56) References Cited Office Action dated Jun. 24, 2021 in Korean Application No.
+10-2019-7035349.
+OTHER PUBLICATIONS Office Action dated Jun. 24, 2021 in Korean Application No.
+10-20 19-7035350.
+Shigemori et al., “The factorial structure of the mini mental state Office Action dated Jun. 25, 2021 in Korean Application No.
+examination (MMSE) in Japanese dementia patients”, BMC Geri- 10-20 19-7035348.
+atrics, 2010, vol. 10, Issue 36, pp. 1-7. Busciglio et al., “Altered Metabolism of the Amyloid 6 Precursor
+SIM integrated internal medicine understood through anatomy and. Protein Is Associated with Mitochondrial Dysfunction in Down’s
+pathophysiology 10 : Neurology Spinocerebellar Degeneration, Syndrome”, Neuron, 2002, vol. 33, pp. 677-688 (12 pages total).
+May 30, 2013 (12 pages total). Chetelat et al., “Relationship between Atrophy and B-Amyloid
+Written Opinion dated Jul. 24, 2018 in International Application No. Deposition in Alzheimer Disease”, Ann Neurol, 2010, vol. 67, pp.
+PCT/JP2018/021223. 317-324 (8 pages total).
+Written Opinion dated Jul. 24, 2018 in International Application No. Office Action dated Dec. 14, 2021 in Korean Application No.
+PCT/JP2018/021224. 10-2019-7035349, corresponds to U.S. Appl. No. 16/617,552.
+Written Opinion dated Jul. 24, 2018 in International Application No. Office Action dated Dec. 14, 2021 in Korean Application No.
+PCT/JP2018/021225. 10-2019-7035350, corresponds to U.S. Appl. No. 16/617,607.
+Written Opinion dated Jul. 24, 2018 in International Application No. Office Action dated Dec. 20, 2021 in Korean Application No.
+PCT/JP2018/021226. 10-2019-7035347, corresponds to U.S. Appl. No. 16/617,739.
+Written Opinion dated Sep. 4, 2018 in International Application No. Aisen et al., “On the path to 2025: understanding the Alzheimer’s
+PCT/JP20 18/02 1222. disease continuum”, Alzheimer’s Research & Therapy, 2017, vol. 9,
+Yamaguchi et al., “T-817MA, a neurotrophic compound, reverses No. 60, pp. 1-10 (10 pages total).
+Af neurotoxicity and promotes neurite outgrowth through PI3- Head. et al., “Alzheimer’s Disease in Down Syndrome”, Eur J
+Kinase pathway in rat primary neurons”, Abstract of the Annual Neurodegener Dis., 2012, vol. 1, No. 3, pp. 353-364 (16 pages
+Meeting of the Society for Neuroscience, Nov. 8, 2003, XP008135922, total).
+pp. 1-2 (total 2 pages). Office Action dated Feb. 14, 2022 in U.S. Appl. No. 16/617,607.
+Yano et al., “SIGMA-1 Receptor is a Molecular Target for Novel Office Action dated Jan. 25, 2022 in Russian Application No.
+Neuropretectant T-817MA”, Alzheimer’s & Dementia: The Journal 2019138538, corresponds to U.S. Appl. No. 16/617,607.
+of the Alzheimer’s Association, Jul. 1, 2015, XP029355158, p. Office Action dated Jan. 28, 2022 in U.S. Appl. No. 16/617,552.
+4-210, vol. 11, No. 7, p. P861 (total 1 page). Office Action dated Dec. 9, 2021 in Mexican Application No.
+Sugimoto, “Development of Anti-Alzheimer’s Disease Drug Based. MX/a/2019/014300, corresponding to U.S. Appl. No. 16/617,552.
+on Beta-Amyloid Hypothesis”, Yakugaku Zasshi, 2010, vol. 130, Decision of Refusal dated Nov. 30, 2021 from the Japanese Patent
+No. 4, pp. 521-526 (6 pages total). Office in Japanese Application No. 2019-521350, corresponds to
+Takamura et al., “Effects of the neurotrophic agent T-817MA on U.S. Appl. No. 16/617,552.
+oligomeric amyloid-beta-induced deficits in long-term potentiation A. Sugiyama and H. Shimada, “Tau PET Imaging for Dementia in
+in the hippocampal CA1 subfield”, Neurobiology of Aging, 2014, Clinical Practice”, Radioisotopes, vol. 65, No. 12, pp. 517-522
+vol. 35, pp. 532-536 (5 pages total). (Japan Radioisotope Association, 2016) (6 pages total).
+Tosun et al., “Relationship Between Regional Brain Amyloid-f Naoji Amano, “Neurodegenerative Diseases and Tauopathy”, Shinshu
+Deposition and Brain Atrophy Rates in Mild Cognitive Impair- Journal, 2002, vol. 50, No. 3, pp. 113-120 (8 pages total).
+ment”, Alzheimer’s & Dementia: The Journal of the Alzheimer’s Y. Soeda and A. Takashima, “Development of disease modifying
+Association, Jul. 1, 2010, XP027440489, vol. 6, No. 4, p. e15 (total drugs for dementia—focusing on anti-tau drugs”, Clinical Neurol-
+1 page). ogy, vol. 54, pp. 1178-1180 (2014) (3 pages total).
+Tosun et al., “Spatial patterns of brain amyloid-b burden and Y. Yoshiyama, Nippon Rinsho, Japanese Journal of Clinical Medi-
+atrophy rate associations in mild cognitive impairment”, Brain, cine, vol. 69, Suppl. 8, pp. 262-266 (2011) (5 pages total).
+2011, vol. 134, pp. 1077-1088. H. Takahashi, “Animal models of Alzheimer’s disease for preclini-
+Uehara et al., “T-817MA, a novel neurotrophic agent, ameliorates cal research”, Folia Pharmacol. Jpn., vol. 136, No. 1, pp. 6-10
+loss of GABAergic parvalbumin-positive neurons and sensorimotor (2010) (5 pages total).
+gating deficits in rats transiently exposed to MK-801 in the neonatal “Guidance for Industry: Estimating the Maximum Safe Starting
+period”, Journal of Psychiatric Research, vol. 46, No. 5, pp. Dose in Initial Clinical Trials for Therapeutics in Adult Healthy
+622-629, 2012 (8 pages total). Volunteers”, U.S. Department of Health and Human Services, Food.
+Office Action dated Jul. 2, 2021 in U.S. Appl. No. 16/617,552. and Drug Administration, Center for Drug Evaluation and Research
+Blennow, “Cerebrospinal Fluid Protein Biomarkers for Alzheimer’s (CDER), Pharma and Toxicology, 2005, pp. 1-27 (30 pages total).
+Disease”, The American Society for Experimental NanoTherapeutics, Office Action dated Dec. 15, 2021 in U.S. Appl. No. 16/617,739.
+2004, vol. 1, pp. 213-225. Notice of Allowance dated Dec. 15, 2021 in U.S. Appl. No.
+Grigorenko et al., “Molecular Basics of Alzheimer’s Disease”, 16/617,660.
+Molekulyarnaya Biologiya, 2007, vol. 41, No. 2, pp. 331-345. Notice of Allowance dated Mar. 14, 2022 in U.S. Appl. No.
+Lemere et al., “Sequence of Deposition of Heterogeneous Amyloid 16/617,584.
+6-Peptides and APO E in Down Syndrome: Implications for Initial Office Action dated Feb. 18, 2022 in Canadian Application No.
+Events in Amyloid Plaque Formation”, Neurobiology of Disease, 3,067,456, corresponds to U.S. Appl. No. 16/617,552.
+1996, vol. 3, pp. 16-32, Article No. 0003. Notice of Allowance dated Apr. 1, 2022 in U.S. Appl. No. 16/617,739.
+Office Action dated Jun. 10, 2021 in Russian Application No. Office Action dated Mar. 2, 2022 in Mexican Application No.
+2019138538. MX/a/2019/014302, corresponds to U.S. Appl. No. 16/617,660.
+Office Action dated Jun. 10, 2021 in Mexican Application No. Office Action dated Mar. 1, 2022 in Mexican Application No.
+MX/a/2019/014306. MX/a/2019/014306, corresponds to U.S. Appl. No. 16/617,607.
+Manto et al., “Animal Models of Human Cerebellar Ataxias: a Office Action dated Mar. 3, 2022 in Mexican Application No.
+Comerstone for the Therapies of the Twenty-First Century”, Cer- MX/a/2019/014310, corresponds to U.S. Appl. No. 16/617,739.
+ebellum, 2009, vol. 8, pp. 137-154. Notice of Allowance dated Apr. 4, 2022 in U.S. Appl. No. 16/617,607.
+Office Action dated Jul. 13, 2021 in Japanese Application No. Office Action dated Apr. 4, 2022 in New Zealand Application No.
+2019-521350. 759662, corresponds to U.S. Appl. No. 16/617,607.
+Shimohama et al., Journal of Japan Senile Medicine, vol. 50, No. 1, Office Action dated Mar. 31, 2022 in Korean Application No.
+pp. 50:1-50:8. 10-2019-703530, corresponds to U.S. Appl. No. 16/617,607.
+Office Action dated Nov. 9, 2021 in U.S. Appl. No. 16/617,607. Communication dated Apr. 12, 2022 from the Korean Patent Office
+Office Action dated Nov. 4, 2021 in Mexican Application No. in Korean Application No. 10-2019-7035347, corresponds to U.S.
+MX/a/2019/014306, corresponds to U.S. Appl. No. 16/617,607. Appl. No. 17/617,739.
+
+=== СТРАНИЦА 5 ===
+US 11,548,878 B2
+Page 5
+(56) References Cited Office Action dated Apr. 12, 2022 in Israeli Application No. 270910,
+corresponds to U.S. Appl. No. 16/617,660.
+OTHER PUBLICATIONS Office Action dated Jul. 26, 2022 in Brazilian Application No.
+BR1120190249834, corresponds to U.S. Appl. No. 16/617,607.
+Communication dated Apr. 7, 2022 from the Korean Patent Office Allowance dated Aug. 15, 2022 in U.S. Appl. No. 16/617,584.
+Appl No ‘App'ication No. 10-2019-7035349, corresponds to US. Office Action dated Aug. 15, 2022 in U.S. Appl. No. 16/617,739.
+Office Action dated May 10, 2022 in Japanese Application No. Office Action dated Aug. 16, 2022 m US. Appl. No. 16/617,607.
+2019-521347, corresponds to U.S. Appl. No. 16/617,584. Office Action dated Jun. 26, 2022 in Israeli Application No. 270912,
+Office Action dated May 6, 2022 in Chinese Application No. corresponds to U.S. Appl. No. 16/617,552.
+201880035394.0, corresponds to U.S. Appl. No. 16/617,739. Office Action dated Jun. 27, 2022 in Israeli Application No. 270922,
+Office Action dated May 6, 2022 in Chinese Application No. corresponds to U.S. Appl. No. 16/617,739.
+201880035501.X, corresponds to U.S. Appl. No. 16/617,660. Office Action dated Aug. 29, 2022 in Korean Application No.
+Sree Once cated May 6, 202 Chinese ‘Application No. —_10-2022-7022765, corresponds to U.S. Appl. No. 16/617,552.
+.9, corresponds to U.S. . No. ,552. : : ‘ati
+
+Office Action dated May 6, 2022 in ‘Chinese Application No. ae oo sion eae Aug. 29, 2022 in Korean Application No.
+201880035521.7, corresponds to U.S. Appl. No. 16/617,607. -2022-7022766, corresponds to U.S. Appl. No. 16/617,552.
+Office Action dated May 10, 2022 in Japanese Application No. Office Action issued in Brazilian Application No. BR1120190248811
+2019-521348, corresponds to U.S. Appl. No. 16/617,739. dated Sep. 13, 2022.
+Reconsideration Report by Examiner dated Apr. 28, 2022 in Japa- Office Action issued in Brazilian Application No. BR1120190245810
+nese Application No. 2019-521350, corresponds to U.S. Appl. No. dated Sep. 13, 2022.
+16/617,552. Office Action dated Oct. 18, 2022 by Japan Patent Office in Japanese
+Office Action dated May 24, 2022 in Japanese Application No. Application No. 2019-550404.
+2019-521349, corresponds to U.S. Appl. No. 16/617,660. Office Action dated Nov. 8, 2022 in Japanese Application No.
+Peng Ying et al., “Progress of clinical trials in Alzheimer’s disease 2019-521351, corresponds to U.S. Appl. No. 16/617,607.
+drugs”, Acta Pharmaceutica Sinica, 2016, vol. 51, No. 8, pp. Hanney et al., “Memantine for dementia in adults older than 40
+1185-1195 (11 pages total). years with Down’s syndrome (Meadows): a randomised, double-
+Yuli Xie, Pharmaceutical and Clinical Research, 2011, vol. 19, No. blind, placebo-controlled trial”, Lancet, 2012, vol. 379, pp. 528-536
+1, pp. 1-7 (7 pages total). (9 pages total).
+Buccarello et al., “Sex Impact on Tau-Aggregation and Postsynaptic Livingstone et al., “Pharmacological interventions for cognitive
+Protein Levels in the P301L Mouse Model of Tauopathy” Journal of decline in people with Down syndrome (Review)”, Cochrane Data-
+Alzheimer’s Disease, 2017, vol. 56, No. 4, pp. 1279-1292 (27 pages base of Systematic Reviews, 2015, Issue 10, Art. No. CD011546 (57
+total). pages total).
+Office Action dated Jun. 6, 2022 in U.S. Appl. No. 16/617,552. Office Action dated Nov. 15, 2022 in Japanese Application No.
+Office Action dated Jun. 7, 2022 in Japanese Application No. 2019-521347, corresponds to U.S. Appl. No. 16/617,584.
+2019-521351, corresponds to U.S. Appl. No. 16/617,607. Office Action dated Nov. 15, 2022 in Japanese Application No.
+Zheng et al., “Amyloid & Peptide induces Tau Phosphorylation and 2019-521348, corresponds to U.S. Appl. No. 16/617,739.
+Loss of Cholinergic Neurons in Rat Primary Septal Cultures”,
+Neuroscience, 2002, vol. 115, No. 1, pp. 201-211 (11 pages total). * cited by examiner
+
+=== СТРАНИЦА 6 ===
+U.S. Patent Jan. 10, 2023 US 11,548,878 B2
+[Fig. 1]
+= P “i= Sigma-1 receptor-deficient cells
+2 . vi A wien Sigma-1 receptor-deficient/
+B Hs i. EBP-deficient cells
+rs 8 whoosh EE SE nscnnnnanpnmnsennns
+Of i 160
+Tritum-labeled Compound A
+nM]
+[Fig. 2]
+
+LROG +
+wn 1BO0 -
+cS 1466 + ;
+DS sane
+Se sein Sigma-1 receptor-deficient/
+ge BOO EBP-overexpressing cells
+2 ROO : i Sigma-1 receptor-deficient cells
+
+ap p001 t 10
+
+-  Trittumlabeled Compound A
+[nM]
+
+=== СТРАНИЦА 7 ===
+US 11,548,878 B2
+1 2
+EMOPAMIL BINDING PROTEIN BINDING Non-Patent Documents
+AGENT AND USE THEREOF
+Non-Patent Document 1: Journal of Biological Chemistry,
+CROSS REFERENCE TO RELATED wy 271s pp. 22434-22440 (1996)
+APPLICATIONS Non-Patent Document 2: Nature Genetics, Vol. 22, pp.
+286-290 (1999)
+This application is a National Stage of International SUMMARY OF INVENTION
+Application No. PCT/JP2018/040283, filed Oct. 30, 2018,
+claiming priority to Japanese Patent Application No. 2017- . .
+209391, filed Oct. 30, 2017. Object to be Solved by the Invention
+It has been desired to develop a compound having high
+TECHNICAL FIELD affinity for EBP, and a method for activating or inhibiting
+1s EBP, using such a compound.
+The present invention relates to an alkyl ether derivative
+that is useful as an emopamil binding protein (hereinafter Means for Solving the Object
+also referred to as “EBP”’) binding agent, or a salt thereof. In
+addition, the present invention also relates to a method for Under such circumstances, the present inventor has con-
+activating or inhibiting EBP, using the alkyl ether derivative 59 ducted intensive studies, and as a result, the inventor has
+or a salt thereof. found that an alkyl ether derivative represented by the
+following formula [1] or a salt thereof exhibits high affinity
+BACKGROUND ART for EBP and thus, is useful as an EBP binding agent, thereby
+completing the present invention:
+EBP is a membrane protein that is mainly present in the 25
+endoplasmic reticulum, and exhibits D8-D7 sterolisomerase [Formula 1]
+activity (Non-Patent Document 1). EBP is also present in the
+nucleus in the central nervous system and multiple types of [1]
+. : . R R3
+central nervous cells (e.g., astrocyte, microglia, and oligo- R! s sf SK
+dendrocyte), and thus, it is considered that EBP has a role 3° < S Cate Ot CH -N 7
+other than the role of sterolisomerase. R |
+Tt has been reported that a mutation in EBP is one factor Ss va
+for X linked dominant Conradi-Hunermann chondrodyspla-
+sia punctata (CDPX2) (Non-Patent Document 2). CDPX2 35 wherein R! and R?, which are the same or different, each
+may cause asymmetric forelimb malformation, cataract,
+: ae : 4: represent one or more groups selected from a hydrogen
+alopecia, congenital ichthyosis, dermatrophy and the like, in . :
+ae : . . . atom, a halogen atom, an optionally substituted C,_; alkyl
+addition to abnormal mottled calcification of cartilage, in . . ¢
+. group, an optionally substituted aryl group, an optionally
+some cases. Thus, it has been suggested that EBP plays an . . .
+: : : substituted ar-C,_, alkyl group, an optionally substituted
+important role in bone growth and the like. . ;
+. 40 C,_, alkoxy group, an optionally substituted aryloxy group,
+Emopamil — (@-(1-methylethy1)-c.-[3-[methyl(2-phenyl- an optionally substituted C,_, alkylthio group, an optionally
+ethyl)amino |propyl]benzeneacetonitrile) has been known as substituted arylthio group, an optionally substituted C,_,
+an EBP ligand. It has been reported that compounds binding alkenyl group, an optionally substituted C,., alkenyloxy
+to EBP also have high affinity for calctum channel and other group, an optionally substituted C,_, alkylamino group, an
+proteins such as a sigma-1 receptor. However, the pharma- 45; optionally substituted C,., alkylsulfonyl group, an option-
+cological action of these compounds mediated by EBP has ally substituted arylsulfonyl group, an optionally substituted
+not yet been elucidated. carbamoyl group, an optionally substituted heterocyclic
+To date, alkyl ether derivatives, such as 1-(3-(2-(1-ben- group, an optionally protected amino group, an optionally
+zothiophen-5-yl)ethoxy)propylazetidin-3-ol, have been protected hydroxyl group, an optionally protected carboxyl
+known to have neuroprotective action, nerve regeneration 50 group, a nitro group, and an oxo group; R* represents an
+action, neurite outgrowth promoting action, and neurogen- optionally substituted C,_; alkylamino group, an optionally
+esis inducing action (Patent Documents 1 and 2). Moreover, protected amino group, or an optionally protected hydroxyl
+such alkyl] ether derivatives have also been known to exhibit group; and m and n, which are the same or different, each
+high affinity for sigma receptors (Patent Document 3). represent an integer of 1 to 6.
+55 According to the present invention, the following inven-
+tions are provided.
+PRIOR ART DOCUMENTS (1) An EBP binding agent comprising the alkyl ether deriva-
+tive represented by the formula [1] or a salt thereof.
+Patent Documents (2) The EBP binding agent according to the above (1),
+60 wherein R’ and R?, which are the same or different, each
+Patent Document 1: International Publication WO03/ represent a hydrogen atom, a halogen atom, or a C,_, alkoxy
+035647 SFOUp. 4 ;
+: — (3) The EBP binding agent according to the above (1) or (2),
+Patent Document 2: International Publication WO2007/ wherein m is 2, and n is 2 or 3.
+125913 65 (4) The EBP binding agent according to any one of the above
+Patent Document 3: International Publication WO2016/ (1) to (3), wherein R* is an optionally protected hydroxyl
+199878 group.
+
+=== СТРАНИЦА 8 ===
+US 11,548,878 B2
+
+3 4
+(5) The EBP binding agent according to the above (1), The term “acyl C,_,; alkyl group” means an acyl C,_, alkyl
+wherein the alkyl ether derivative is 1-(3-(2-(1-benzothi- group, such as, for example, acetylmethyl, benzoylmethyl,
+ophen-5-yl)ethoxy)propylazetidin-3-ol. p-nitrobenzoylmethyl, p-bromobenzoylmethyl, p-methoxy-
+(6) A method of using the alkyl ether derivative represented benzoylmethyl or 1-benzoylethyl.
+by the formula [1] or a salt thereof, to activate or inhibit EBP. > The term “acyloxy C,_, alkyl group” means an acyloxy
+(7) The method according to the above (6), wherein R’ and C,.¢ alkyl group, such as, for example, acetoxymethyl,
+R’, which are the same or different, each represent a propionyloxymethy] or pivaloyloxymethy].
+hydrogen atom, a halogen atom, or a C,_, alkoxy group. The term “arylthio C,_; alkyl group” means a group, such
+(8) The method according to the above (6) or (7), wherein m as, for example, phenylsulfenylmethyl or 2-(p-nitrophe-
+is 2, and n is 2 or 3. 10 nylsulfenyl)ethy1.
+(9) The method according to any one of the above (6) to (8), The term “arylsulfonyl C,, alkyl group” means an
+wherein R* is an optionally protected hydroxyl group. arylsulfonyl C,_s alkyl group, such as, for example, p-tolu-
+(10) The method according to the above (6), wherein the enesulfonylethy].
+alkyl ether derivative is_ 1-G-(2-(1-benzothiophen-5-yl) 1s The term “nitrogen-containing heterocyclic C,_, alkyl
+ethoxy )propylazetidin-3-ol. . . group” means a nitrogen-containing heterocyclic C,_, alkyl
+
+In addition, according to the present invention, the fol- . .
+
+oO . . group, such as, for example, phthalimidemethy]l or succin-
+lowing inventions are also provided. “midemethy!
+(a) Use of the alkyl ether derivative represented by the mt vn ”
+formula [1] or a salt thereof for the production of an EBP The term “C;.s cycloalkyl group” means a C;.s cycloalkyl
+binding agent. 20 group, such as, for example, cyclopropyl, cyclobutyl, cyclo-
+(b) A laboratory reagent comprising the alkyl ether deriva- pentyl or cyclohexyl. :
+tive represented by the formula [1] or a salt thereof, which The term “C,_¢ alkylthio C,_. alkyl group” means a C, _,
+is for use in examining the physiological role and/or physi- alkylthio C,_, alkyl group, such as, for example, methylth-
+ological activity of EBP. iomethyl, ethylthiomethyl or propylthiomethy]l.
+(c) A reference material comprising the alkyl ether deriva- 25 _ The term “C,_, alkoxy C,.¢ alkyl group” means a C,.,
+tive represented by the formula [1] or a salt thereof, which — @lkyloxy C,_, alkyl group, such as, for example, methoxym-
+is for use in examining the EBP activity of a sample. ethyl or 1-ethxyethyl.
+(d) A method of using the alkyl ether derivative represented The term “ar-C,_, alkyloxy C,_, alkyl group” means an
+by the formula [1] or a salt thereof, for examining the ar-C,_¢ alkyloxy C,.s alkyl group, such as, for example,
+physiological role and/or physiological activity of EBP. 3° benzyloxymethyl or phenethyloxymethyl.
+(e) A method of using the alkyl ether derivative represented The term “C,_s alkoxy group” means a linear or branched
+by the formula [1] or a salt thereof, for examining the EBP C,.6 alkyloxy group, such as a methoxy, ethoxy, propoxy,
+activity of a sample. isopropoxy, butoxy, isobutoxy, tert-butoxy, pentyloxy or
+hexyloxy group.
+Advantageous Effects of Invention 35 The term “C,_, alkenyloxy group” means a C,_, alkeny-
+loxy group, such as a vinyloxy, propenyloxy, butenyloxy,
+
+The alkyl ether derivative represented by the formula [1] pentenyloxy or hexenyloxy group.
+of the present invention or a salt thereof exhibits high affinity The term “C,_, alkylthio group” means a C,_, alkylthio
+for EBP, and thus, is useful as an EBP binding agent. group, such as methylthio, ethylthio, propylthio, isopropy-
+
+The method of using the alkyl ether derivative represented 40 Ithio, butylthio, isobutylthio, tert-butylthio, pentylthio or
+by the formula [1] of the present invention or a salt thereof hexylthio.
+is useful as a method for activating or inhibiting EBP. The term “aryl group” means a phenyl, naphthyl, indany]
+
+or indenyl group.
+BRIEF DESCRIPTION OF DRAWINGS The term “aryloxy group” means a phenyloxy, naphth-
+45 yloxy, indanyloxy or indenyloxy group.
+
+FIG. 1 shows a comparison made between sigma-1 recep- The term “ar-C,_, alkyl group” means an ar-C,_, alkyl
+tor-deficient cells and sigma-1 receptor-deficient and EBP- group, such as a benzyl, diphenylmethyl, trityl or phenethyl]
+deficient cells, in terms of the radiation dose of tritium- group.
+labeled Compound A in the cells. The term “arylthio group” means a phenylthio, naphth-
+
+FIG. 2 shows a comparison made between sigma-1 recep- 50 ylthio, indanylthio or indenylthio group.
+tor-deficient cells and sigma-1 receptor-deficient and EBP- The term “acyl group” means a formyl group, a C,_,
+overexpressing cells, in terms of the radiation dose of  alkanoyl group such as acetyl, isovareryl, propionyl or
+tritium-labeled Compound A in the cells. pivaloyl, an ar-C,_, alkylcarbonyl group such as benzylcar-
+
+bonyl, or an aroyl group such as benzoyl] or naphthoyl.
+EMBODIMENT OF CARRYING OUT THE 55 Theterm “C,_, alkyloxycarbonyl group” means a linear or
+INVENTION branched C,, alkyloxycarbonyl group, such as, for
+example, methoxycarbonyl, ethoxycarbonyl, 1,1-dimethyl-
+
+Hereinafter, the present invention is described in detail. propoxycarbonyl, isopropoxycarbonyl, 2-ethylhexyloxycar-
+
+In the present description, individual terms have the bonyl, tert-butoxycarbonyl or tert-pentyloxycarbonyl.
+following meanings, unless otherwise specified. 60 The term “ar-C,_; alkyloxycarbonyl group” means an
+
+The term “halogen atom” means a fluorine atom, a ar-C,_, alkyloxycarbonyl group, such as, for example, a
+chlorine atom, a bromine atom, or an iodine atom. benzyloxycarbonyl or phenethyloxycarbonyl group.
+
+The term “C, , alkyl group” means a linear or branched The term “aryloxycarbonyl group” means a group such
+C,_¢ alkyl group, such as a methyl, ethyl, propyl, isopropyl, as, for example, phenyloxycarbonyl.
+butyl, isobutyl, tert-butyl, pentyl or hexyl group. 65 The term “heterocyclic oxycarbonyl group” means a
+
+The term “C,_; alkenyl group” means a C,_, alkenyl group such as, for example, 2-furfuryloxycarbony] or 8-qui-
+group, such as vinyl, propenyl, butenyl, pentenyl or hexenyl. nolyloxycarbonyl.
+
+=== СТРАНИЦА 9 ===
+US 11,548,878 B2
+5 6
+
+The term “C,_, alkylsulfonyl group” means a C,_, John Wiley & Sons, INC. Specific examples of the carboxyl-
+alkylsulfonyl group, such as, for example, methyl sulfonyl, protecting group may include a C,_, alkyl group, a C,,
+ethylsulfonyl or propylsulfonyl. alkenyl group, an aryl group, an ar-C,_, alkyl group, an acyl
+
+The term “arylsulfonyl group” means a phenylsulfonyl, C,_.¢ alkyl group, an arylthio C,_,; alkyl group, an arylsulfo-
+p-toluenesulfonyl or naphthylsulfonyl group, etc. 5 nyl C,_, alkyl group, an oxygen-containing heterocyclic
+
+_The term “C,_, alkylamino group” means a mono- or group, a C,_, alkylsilyl C,_, alkyl group, an acyloxy C,_,
+
+di-C, 6 alkylamino group, such as methylamino, ethylamino, alkyl group, a nitrogen-containing heterocyclic C,_, alkyl
+propylamino, isopropylamino, butylamino, dimethylamino, group, a C;., cycloalkyl group, a C,., alkoxyC,., alkyl
+diethylamino, diisopropylamino or dibutylamino. group, an ar-C, ¢ alkyloxy C,.¢ alkyl group, a C,_, alkylthio
+
+The term “heterocyclic group” means a 5- or 6-membered 10 C Ikyl group, and a substituted silyl grou
+ring, condensed-ring or crosslinked-ring heterocyclic group ‘Sh yt eh t he C Ikvl veer re C
+comprising at least one heteroatom selected from nitrogen, udstituents Tor the 1.5 alky! group, ary! group, at- 1-6
+oxygen or sulfur atoms, such as pyrrolidinyl, piperidinyl, alkyl group, C16 alkoxy group, aryloxy group, C,_ alkylthio
+piperazinyl, homopiperazinyl, homopiperidinyl, morpholyl, group, arylthio group, C2.6 alkenyl group, C2_¢ alkenyloxy
+thiomorpholyl, tetrahydroquinolinyl, tetrahydroisoquinolyl, 15 2fCUP> C,.5 alkylamino group, C,., alkylsulfonyl group,
+quinuclidinyl, imidazolinyl, pyrrolyl, imidazolyl, pyrazolyl, ary Isulfonyl group, carbamoyl group, and heterocyclic
+pyridyl, pyrimidyl, quinolyl, quinolizinyl, thiazolyl, tetra- group, which are represented by R' and R’, and the C,_,
+zolyl, thiadiazolyl, pyrrolinyl, pyrazolinyl, pyrazolidinyl, alkylamino group represented by R®, may be selected from
+purinyl, furyl, thienyl, benzothienyl, pyranyl, isobenzofura- a halogen atom, a C,_5 alkyl group, a C3_, cycloalkyl group,
+nyl, oxazolyl, isoxazolyl, benzofuranyl, indolyl, benzimida- 20 an aryl group, a C,_, alkoxy group, an aryloxy group, a C,_¢
+zolyl, benzoxazolyl, benzisoxazolyl, benzothiazolyl, qui- alkylthio group, an arylthio group, a C,_, alkenyl group, a
+noxalyl, dihydroquinoxaly], 2,3-dihydrobenzothienyl, 2,3- C,.¢ alkylsulfonyl group, an arylsulfonyl group, a C,_,
+dihydrobenzopyrrolyl, 2,3-4H-1-thianaphthy1, 2,3- alkylamino group, an optionally protected amino group, an
+dihydrobenzofuranyl, benzo[b]dioxanyl, imidazo[2,3-a] optionally protected hydroxyl group, an optionally protected
+pyridyl, benzo[b]piperazinyl, chromenyl, isothiazolyl, 25 carboxyl group, an acyl group, a heterocyclic group, and the
+isoxazolyl, oxadiazolyl, pyridazinyl, isoindolyl, isoquinolyl, like.
+1,3-benzodioxonyl and 1,4-benzodioxanyl groups. Examples of the salt of the compound represented by the
+
+The term “oxygen-containing heterocyclic group” means formula [1] may include the salts of generally known basic
+a group such as, for example, 2-tetrahydropyranyl or 2-tet- groups such as amino groups, or acidic groups such as
+rahydrofuranyl. ., . 3° hydroxyl or carboxyl groups.
+
+The term “sulfur-containing heterocyclic group” means a E les of the salts of basic groups may include: salts
+group such as, for example, tetrahydrothiopyranyl. . hain L acid. has hvd “al P hvd bt .
+
+The term “substituted silyl group” means a group such as, wit MMNeTAN ACIS, SCD as OY moe ONE aCIC, DYCTODFOMC
+for example, trimethylsilyl, triethylsilyl or tributylsilyl. acid, nutric acid, and sulfuric acid; salts with organic Car-
+
+The term “C,_¢ alkylsilyl C,_, alkyl group” means a group 35 boxylic acids, such as formic acid, acetic acid, citric acid,
+such as, for example, 2-(trimethylsilylethyl. oxalic acid, fumaric acid, maleic acid, succinic acid, malic
+
+The amino-protecting group includes all groups that can Cid, tartaric acid, aspartic acid, trichloroacetic acid, and
+be used as protecting groups for common amino groups, and trifluoroacetic acid; and salts with sulfonic acids, such as
+examples of the amino-protecting group may include the methanesulfonic acid, benzenesulfonic acid, p-toluenesulfo-
+groups described in W. Greene, et al., Protective Groups in 40 nic acid, mesitylenesulfonic acid, and naphthalenesulfonic
+Organic Synthesis, 4th edition, pp. 696-868, 2007, John acid.
+Wiley & Sons, INC. Specific examples of the amino- Examples of the salts of acidic groups may include: salts
+protecting group may include an acyl group, a C,_, alky- with alkali metals, such as sodium and potassium; salts with
+loxycarbony] group, an ar-C,_, alkyloxycarbonyl group, an alkaline earth metals, such as calcium and magnesium;
+aryloxycarbonyl group, an ar-C,_, alkyl group, a C,_, alkoxy 45 ammonium salts; and salts with nitrogen-containing organic
+C,_¢ alkyl group, an ar-C,_, alkyloxy C,_; alkyl group, an bases, such as trimethylamine, triethylamine, tributylamine,
+arylthio group, a C,_, alkylsulfonyl group, an arylsulfonyl pyridine, N,N-dimethylaniline, N-methylpiperidine,
+group, and a substituted silyl group. N-methylmorpholine, diethylamine, dicyclohexylamine,
+
+The hydroxyl-protecting group includes all groups that procain, dibenzylamine, N-benzyl-f-phenethylamine,
+can be used as protecting groups for common hydroxyl 50 1-ephenamine, and N,N'-dibenzylethylenediamine.
+groups, and examples of the hydroxy]-protecting group may Among the above-described salts, preferred salts may
+include the groups described in W. Greene, et al., Protective include pharmacologically acceptable salts, and more pre-
+Groups in Organic Synthesis, 4th edition, pp. 16-299, 2007, ferred salts may include maleic acid.
+John Wiley & Sons, INC. Specific examples of the When the alkyl ether derivative represented by the for-
+hydroxyl-protecting group may include an acyl group,aC,_, 55 mula [1] or a salt thereof includes isomers (for example,
+alkyloxycarbony] group, an ar-C, _, alkyloxycarbony] group, optical isomers, geometrical isomers, tautomers, etc.), the
+a heterocyclic oxycarbonyl group, a C,_, alkyl group, a C._, present invention includes all of those isomers, and also
+alkenyl group, an ar-C,_, alkyl group, an oxygen-containing include hydrates, solvates and various forms of crystals.
+heterocyclic group, a sulfur-containing heterocyclic group, a The alkyl] ether derivative represented by the formula [1]
+C,_¢ alkoxy C,_, alkyl group, an ar-C,_, alkyloxy C,_, alkyl 60 or a salt thereof, which is used in the present invention,
+group, aC,_, alkylsulfonyl group, an arylsulfonyl group, and includes the following preferred compounds.
+a substituted silyl group. Preferable is a compound, in which R' is a hydrogen
+
+The carboxyl-protecting group includes all groups that atom, a halogen atom, or a C, _, alkoxy group; and more
+can be used as protecting groups for common carboxyl preferable is a compound, in which R' is a hydrogen atom.
+groups, and examples of the carboxyl-protecting group may 65 Preferable is a compound, in which R? is a hydrogen
+include the groups described in W. Greene, et al., Protective atom, a halogen atom, or a C,_, alkoxy group; and more
+Groups in Organic Synthesis, 4th edition, pp. 533-643, 2007, preferable is a compound, in which R? is a hydrogen atom.
+
+=== СТРАНИЦА 10 ===
+US 11,548,878 B2
+7 8
+Preferable is a compound, in which R* is an optionally such as an oral agent (a tablet, a capsule, a powder agent, a
+protected hydroxyl group; and more preferable is a com- granule, a fine granule, a pill, a suspending agent, an
+pound, in which R? is a hydroxyl group. emulsion, a liquid agent, a syrup, etc.), an injection, or eye
+Preferable is a compound, in which m is 2, and n is 2 or drops, by adding to the present alky] ether derivative or a salt
+3; and more preferable is a compound, in which mis 2, and 5 thereof, various types of pharmaceutical product additives,
+nis 3. such as an excipient, a binder, a disintegrator, a disintegra-
+__ The alkyl ether derivative represented by the formula [1] tion inhibitor, a caking/adhesion inhibitor, a lubricant, an
+is particularly pr efer ably 1-G-(2-(1-benzothiophen-5-yl) absorption/adsorption carrier, a solvent, an extender, a tonic-
+ethoxy)propylazetidin-3-ol, and the salt thereof is particu- ity agent, a solubilizer, an emulsifier, a suspending agent, a
+larly preferably maleate. 10 ‘thickener, a coating agent, an absorption promoter, a gela-
+Tt can be expected that the present invention will be used er a | & ae al ai h P bili as
+in studies for elucidating the role of EBP in various physi- unizati onrcoa gst ation acce erator, ag t stabi ier, @ Pre-
+ological and pathological pathways. servative, a desiccant, an emulsification/suspension/disper-
+The alkyl ether derivative represented by the formula [1] sion stabilizer, a coloring inhibitor, a deoxygenation/
+of the present invention or a salt thereof can be used as a 15 oxidation inhibitor, a corrective/ corrigent, a coloring agent,
+laboratory reagent or a reference material in experiments 4 foaming agent, a defoaming agent, a soothing agent, an
+regarding EBP activity. For example, the present alkyl ether antistatic agent, and a buffer/pH adjuster.
+derivative or a salt thereof can be used in purification of EBP The above-described various types of drugs are formu-
+fractions, screening for a novel EBP binding agent, activator lated according to ordinary methods.
+or inhibitor, the imaging of EBP, ete. 20 The solid preparation for oral use, such as a tablet, a
+When the alkyl ether derivative represented by the for- powder agent, or a granule, may be prepared according to a
+mula [1] of the present invention or a salt thereof is used in common method, for example, using pharmaceutical addi-
+experiments, it can also be used by being dissolved in a tives for solid preparations, including: excipients, such as
+solvent (for example, dimethyl sulfoxide, etc.). Moreover, lactose, white sugar, sodium chloride, glucose, starch, cal-
+the present alkyl ether derivative or a salt thereof can also be 25 cium carbonate, kaoline, crystalline cellulose, anhydrous
+used together with an auxiliary agent (for example, a stabi- dibasic calcium phosphate, partially pregelatinized starch,
+lizer, a pH adjuster, etc.) or other pharmaceutical compo- corn starch, and alginic acid; binders, such as simple syrup,
+nents. glucose solution, starch solution, gelatin solution, polyvinyl
+Tt can be expected that the present invention is used in the alcohol, polyvinyl ether, polyvinyl pyrrolidone, carboxym-
+prevention and/or treatment of disease associated with EBP. 30 ethyl cellulose, shellac, methyl cellulose, ethyl cellulose,
+The drug characterized in that it comprises the alkyl ether sodium alginate, gum Arabic, hydroxypropylmethyl cellu-
+derivative represented by the formula [1] of the present lose, hydroxypropyl] cellulose, water, and ethanol; disinte-
+invention or a salt thereof can be used as a preventive and/or grators, such as dry starch, alginic acid, agar powders,
+therapeutic agent against the disease associated with EBP. starch, crosslinked polyvinyl pyrrolidone, crosslinked car-
+The method comprising administering the alkyl ether 35 boxymethyl cellulose sodium, carboxymethyl cellulose cal-
+derivative represented by the formula [1] of the present cium, and starch sodium glycolate; disintegration inhibitors,
+invention or a salt thereof to a subject can be used as a such as stearyl alcohol, stearic acid, cacao butter, and
+method for preventing and/or treating the disease associated hydrogenated oil; caking/adhesion inhibitors, such as alu-
+with EBP. minum silicate, calcium hydrogen phosphate, magnesium
+The method for preventing and/or treating the disease 40 oxide, talc, and silicic anhydride; lubricants, such as car-
+associated with EBP may comprise measuring EBP activity nauba wax, light silicic anhydride, aluminum silicate, mag-
+in a subject, and then administering the alkyl ether derivative nesium silicate, hydrogenated oil, hydrogenated vegetable
+represented by the formula [1] of the present invention or a oil derivatives, sesame oil, white beeswax, titanium oxide,
+salt thereof to a subject in need of activation or inhibition of dried aluminum hydroxide gel, stearic acid, calcium stear-
+EBP. 45 ate, magnesium stearate, talc, calcium hydrogen phosphate,
+The alkyl ether derivative represented by the formula [1] sodium lauryl sulfate, and polyethylene glycol; absorption
+of the present invention or a salt thereof can be used in the promoters, such as quaternary ammonium salt, sodium lau-
+production of a preventive and/or therapeutic agent against ryl sulfate, urea, and enzyme; absorption/adsorption carriers,
+the disease associated with EBP. such as starch, lactose, kaoline, bentonite, silicic anhydride,
+Examples of the disease associated with EBP may include 50 hydrous silicon dioxide, magnesium metasilicate aluminate,
+male EBP disorder with X linked dominant Conradi-Huner- and colloidal silicic acid.
+mann chondrodysplasia punctate, and disease associated Furthermore, the tablet can be processed into a generally
+with cholesterol biosynthesis pathway. Examples of the coated tablet, such as, for example, a sugar-coated tablet, a
+disease associated with cholesterol biosynthesis pathway gelatin-coated tablet, a gastric coated tablet, an enteric
+may include neurodegenerative disease (Alzheimer’s dis- 55 coated tablet, and a water-soluble film-coated tablet, as
+ease, Huntington’s disease, Parkinson’s disease, amyo- necessary.
+trophic lateral sclerosis (ALS), Down’s syndrome, etc.), The capsule is prepared by mixing the present alkyl ether
+multiple sclerosis, schizophrenia, Smith-Lemli-Opitz Syn- derivative or a salt thereof with the above-exemplified
+drome, Lathosterolosis, and Desmosterolosis. various types of pharmaceutical products, and then filling
+The alkyl ether derivative represented by the formula [1] 60 the mixture into a hard gelatin capsule, a soft capsule, or the
+or a salt thereof, which is used in the present invention, can like.
+be produced by applying known methods or appropriately Otherwise, the above-described various types of liquid
+combining the known methods with one another, or applying preparation additives, such as a solvent, an extender, a
+the method described in Patent Document 1. tonicity agent, a solubilizer, an emulsifier, a suspending
+The alkyl ether derivative represented by the formula [1] 65 agent, or a thickener, are used, and according to a common
+or a salt thereof, which is used in the present invention, can method, an aqueous or oily suspension, a solution, syrup,
+be processed into a pharmaceutical product preparation, and an elixir can be prepared.
+
+=== СТРАНИЦА 11 ===
+US 11,548,878 B2
+9 10
+
+The injection may be prepared according to a common The trittum-labeled Compound A was prepared according
+method, using pharmaceutical product additives for liquid to a common method, by adding tritiated lithium triethyl
+preparations, for example, including: diluents, such as water, boron used as a tritium-labeling reagent to a compound
+ethyl alcohol, macrogol, propylene glycol, citric acid, acetic represented by the following formula [3]:
+acid, phosphoric acid, lactic acid, sodium lactate, sulfuric 5
+acid, and sodium hydroxide; pH adjusters and buffers, such
+as sodium citrate, sodium acetate, and sodium phosphate; [Formula 3]
+stabilizers, such as sodium pyrosulfite, ethylenediaminetet-
+raacetic acid, thioglycolic acid, and thiolactic acid; tonicity 0 S
+agents, such as common salt, glucose, mannitol, or glycerin; 10 SOD
+solubilizers, such as carboxymethyl] cellulose sodium, pro- JAX W4
+pylene glycol, sodium benzoate, benzyl benzoate, urethane, N O
+ethanolamine, or glycerin; soothing agents, such as calcium
+gluconate, chlorobutanol, glucose, or benzyl alcohol; and HH
+local anesthetic. HO
+
+The eye drops may be prepared according to a common }5
+method, by appropriately mixing the present alkyl ether
+derivative or a salt thereof with: preservatives, such as “ge
+chlorobutanol, sodium dehydroacetate, benzalkonium chlo- Test Example 1 (EBP Binding Test)
+ride, cetylpyridinium chloride, phenethyl alcohol, methyl 4 we
+ponybera nate, and penzethoniam chloride: buffers, such 5 20 , The binding ability of Compound A to EBP was exam-
+borax, boric acid and potassium dihydrogen phosphate; ined. The test was carried out in accordance with Receptor
+thickeners, such as methyl cellulose, hydroxyethyl cellulose, Signal Transduction Protocols, pp. 135-164 (ISBN 978-1-
+carboxymethyl cellulose, hydroxypropylmethyl cellulose, 61779-125-3).
+polyvinyl alcohol, carboxymethyl cellulose sodium, and A membrane fraction was collected from sigma-1 recep-
+chondroitin sulfate; solubilizers, such as polysorbate 80 and 55 tor-deficient human neuroblastoma (SH-SY5Y) cells, in
+polyoxyethylene hydrogenated castor oil; stabilizers, such as which EBP was deleted or was overexpressed. Inactivated
+sodium edetate and sodium bisulfite; and tonicity agents, fetal bovine serum was added to a liquid medium DMEM
+such as sodium chloride, potassium chloride, and glycerin. (Dulbecco’s Modified Eagle’s Medium) to a final concen-
+
+The administration method of the above-described prepa- . 6 se . .
+ration is not particularly limited, and it is determined, as tration of 10%, and then, a Penicillin-Streptomycin solution
+appropriate, depending on the form of the preparation, 30 (10000 U/mL Penicillin-10000 pg/mL Streptmycin) was
+patient’s age, sex, and other conditions, and the degree of the added to the medium to a final concentration of 100 U/mL
+symptoms of the patient. Penicillin-100 pg/mL Streptmycin. The SH-SYSY cells
+
+The dose of the active ingredient (the alkyl ether deriva- were cultured in the thus prepared medium.
+tive represented by the formula [1] or a salt thereof) of the The method of preparing a membrane fraction is as
+above-described preparation is selected, as appropriate, 35 follows. The cells cultured to a subconfluent state were
+depending on usage, patient’s age and sex, the form of the recovered using a cell scraper, and were then suspended in
+disease, other conditions, and the like. In general, the alkyl a 50 mM Tris-HCl (pH=7.4) buffer, followed by disintegrat-
+ether derivative represented by the formula [1] or a salt ing the cells with an ultrasonic disinte ator. The disinte-
+thereof may be administered to an adult, at a daily dose of me . . erator.
+
+0.1 to 1000 mg, once or divided over several administra- 40 grated solution was centrifuged (100 0 g, 10 minutes), and
+tions, and preferably, at a daily dose of 40 to 500 mg, once the supernatant was then ultracentrifuged (28000 rpm, 30
+or divided over several administrations. minutes). Thereafter, the obtained precipitate was re-sus-
+pended in a 50 mM Tris-HCl (pH=7.4) buffer to obtain a
+
+EXAMPLES membrane fraction. Regarding the thus prepared membrane
+
+45 fraction, the protein concentration was measured according
+
+Hereinafter, the present invention is described in the to a BCA method, and the membrane fraction was then
+following test example. However, the present invention is adjusted to a concentration of approximately 1 mg/mL.
+not limited thereto. tance, 1-(3-(2-(1-benzothiophen-5-yl) Thereafter, as necessary, the membrane fraction was diluted
+ethoxy)propylazetidin-3-0l (hereinafter referred to as “Com- with a 50 mM Tris-HCI (pH=7.4) butter, which was then
+pound A”) was used. 50 used in the subsequent test.
+
+Regarding such Compound A, a radioisotope-labeled The receptor binding test method is as follows. A mem-
+Compound A and a non-labeled Compound A were used. As brane fraction of individual cells (21.7 to 120 ug/well) and
+such a radioisotope-labeled Compound A, a tritium-labeled the tritium-labeled Compound A (0.05, 0.1, 0.2, 0.4, 0.8, 1.6,
+Compound A represented by the following formula [2] was 3.1, 6.3, 12.5, 25.0, 50.0 or 100.0 nM) were added to a
+used: 55 96-well plate, and incubation was then carried out at 37° C.
+
+for 2 hours (Total binding). As a control, the trittum-labeled
+Compound A (0.05, 0.1, 0.2, 0.4, 0.8, 1.6, 3.1, 6.3, 12.5,
+[Formula 2] 25.0, 50.0 or 100.0 nM) and the 100 uM non-labeled
+Compound A were added to a membrane fraction of indi-
+T T 8 60 vidual cells, and incubation was then carried out in the same
+aN y manner as described above (Non-specific binding). After
+N 0 completion of the incubation, the reaction solution was
+subjected to suction filtration with a 96-well glass filter, and
+HH the glass filter was then dried. Thereafter, a liquid scintilla-
+HO 65 tion cocktail was added thereto, and the radiation dose
+(CPM) in each well was then measured using a scintillation
+
+counter.
+
+=== СТРАНИЦА 12 ===
+US 11,548,878 B2
+11 12
+
+The specific binding ability of Compound A to EBP was
+determined by subtracting the radiation dose of the control (1
+(Non-specific binding) from the radiation dose derived from j R? R?
+the trittum-labeled Compound A at each concentration (Total ne SK Cbs co-eCIp gen’ x
+binding). Since the amount of the protein used was different 5 UC | m . \?
+depending on the cell membrane, CPM per ug of the ZA
+membrane fraction protein used in the reaction was calcu- 8
+lated (CPM/protein amount).
+
+A comparison made between sigma-1 receptor-deficient wherein R' and R?, which are the same or different, each
+cells and sigma-1 receptor-deficient and EBP-deficient cells, 10 represents one or more groups selected from a hydro-
+in terms of the radiation dose, is shown in FIG. 1. gen atom, a halogen atom, an optionally substituted
+
+A comparison made between sigma-1 receptor-deficient C,_, alkyl group, an optionally substituted aryl group,
+cells and sigma-1 receptor-deficient and EBP-overexpress- an optionally substituted ar-C,_; alkyl group, an option-
+ing cells, in terms of the radiation dose, is shown in FIG. 2. ally substituted C,_, alkoxy group, an optionally sub-
+
+The radiation dose in the sigma-1 receptor-deficient and 15 stituted aryloxy group, an optionally substituted C, _,
+EBP-deficient cells was lower than the radiation dose in the alkylthio group, an optionally substituted arylthio
+sigma-1 receptor-deficient cells. In contrast, the radiation group, an optionally substituted C,_, alkenyl group, an
+dose in the sigma-1 receptor-deficient and EBP-overexpress- optionally substituted C,, alkenyloxy group, an
+ing cells was higher than the radiation dose in the sigma-1 optionally substituted C, alkylamino group, an
+receptor-deficient cells. 20 optionally substituted C,_, alkylsulfonyl group, an
+
+From these results, it became clear that Compound A has optionally substituted arylsulfonyl group, an optionally
+high affinity for EBP. substituted carbamoyl] group, an optionally substituted
+
+heterocyclic group, an optionally protected amino
+
+INDUSTRIAL APPLICABILITY group, an optionally protected hydroxyl group, an
+
+The alkyl ether derivative represented by the formula [1] ° eo repres. Man optigually a betitut ac : ne jamino
+represents an optionally substitute alkylamino
+
+- the preset invention ora salt phereot exhibits high affinity eroup, an optionally protected amino soup. or an
+or EBP, and is useful as an EBP binding agent. optionally protected hydroxyl group; and m and n,
+
+The method of using the alkyl ether derivative represented which ae the same on different cech represents an
+by the formula [1] of the present invention or a salt thereof 30 integer of 1 to 6.
+is useful as a method for activating or inhibiting EBP. 2. The method according to claim 1, wherein R! and R?,
+
+The invention claimed is: which are the same or different, each represents a hydrogen
+
+1. A method for treating a disease associated with emo- atom, a halogen atom, ora C16 alkoxy group.
+pamil binding protein (EBP) which comprises administering 35 3. The method according to claim 1, wherein m is 2, and
+an alkyl ether derivative represented by the following for- nis 2 or 3. . . . 3:
+mula [1] or a salt thereof to a subject in need of activation 4. The method according to claim 1, wherein R° is an
+or inhibition of EBP, optionally protected hydroxy! group.
+
+wherein the disease associated with EBP is male EBP 5. The method according to claim 1, wherein the alkyl
+
+disorder with X linked dominant Conradi-Hunermann ether derivative is 1-(3-(2-(1-benzothiophen-S-yljethoxy)
+chondrodysplasia punctate, Smith-Lemli-Opitz Syn- 40 propylazetidin-3-ol.
+drome, Lathosterolosis, or Desmosterolosis, a a

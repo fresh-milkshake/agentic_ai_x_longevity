@@ -3,7 +3,6 @@ from pathlib import Path
 
 from pydantic import BaseModel
 from agents import Agent, RunResult, Runner, ModelBehaviorError
-from src.constants import RESULTS_INTERMEDIATE_DIR
 from src.processing.llm_models import DEFAULT_MODEL
 from src.processing.txt_reader import Page, TxtDocument
 from src.utils import logger
@@ -24,7 +23,7 @@ class SearcherAgentResults(BaseModel):
 
 class InteractionParameters(BaseModel):
     """
-    Ki   : константа ингибирования (характеризует силу связывания лиганда с белком)
+    Ki   : константа ингибирования
     IC50 : концентрация вещества, при которой наблюдается 50% ингибирование активности
     Kd   : константа диссоциации комплекса лиганда и белка
     EC50 : концентрация, вызывающая 50% максимального эффекта
@@ -89,8 +88,15 @@ class PipelineResult:
 
 class Pipeline:
     def __init__(
-        self, txt_document: TxtDocument, output_dir: Path = RESULTS_INTERMEDIATE_DIR
+        self, txt_document: TxtDocument, output_dir: Path
     ):
+        """
+        Инициализация Pipeline
+        
+        Args:
+            txt_document: Текстовый документ
+            output_dir: Директория для сохранения результатов
+        """
         if not isinstance(txt_document, TxtDocument):
             logger.error("txt_document must be an instance of TxtDocument")
             raise ValueError("txt_document must be an instance of TxtDocument")
@@ -213,18 +219,19 @@ class Pipeline:
     def should_search_interactions(self, page: Page) -> bool:
         logger.debug("Запуск агента-поиска")
         result = self.use_runner_safely(self.searcher_agent, page.text)
-        logger.debug("Агент-поиск завершил обработку страницы")
+        logger.debug("Агент-поиска завершил обработку страницы")
 
         decision: SearcherAgentResults = result.final_output
+        decision_text = (
+            "Содержит" if decision.does_contain_interactions else "Не содержит"
+        )
         if not decision.does_contain_interactions or decision.accuracy < 0.5:
-            decision_text = (
-                "Содержит" if decision.does_contain_interactions else "Не содержит"
-            )
             logger.debug(
-                f"Агент-поиск не обнаружил взаимодействий на странице {page.number}. Решение агента: {decision_text}, уверенность: {decision.accuracy * 100}%"
+                f"Агент-поиска не обнаружил взаимодействий на странице {page.number}. Решение агента: {decision_text}, уверенность: {decision.accuracy * 100}%"
             )
             return False
-
+        
+        logger.debug(f"Агент-поиска обнаружил взаимодействия на странице {page.number}. Решение агента: {decision_text}, уверенность: {decision.accuracy * 100}%")
         return True
 
     def process_page(self, page: Page):
@@ -248,11 +255,11 @@ class Pipeline:
             logger.info(f"Обработка страницы {idx + 1}/{len(self.txt_document)}")
             result = self.process_page(page)
             if result is None:
-                logger.warning(
-                    f"Супервайзер обнаружил ошибки в результате на странице {idx + 1}. Пропуск страницы."
+                logger.info(
+                    f"Страница {idx + 1} не содержит взаимодействий либо некорректно обработана. Пропуск страницы."
                 )
                 continue
-            logger.success(
+            logger.info(
                 f"Извлечено {len(result.interactions)} взаимодействий на странице {idx + 1}"
             )
             interactions.append(Pagedata(page=page, interactions=result))

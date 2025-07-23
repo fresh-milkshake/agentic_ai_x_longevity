@@ -4,6 +4,9 @@ import os
 
 load_dotenv(override=True)
 
+# API keys
+USPT_API_KEY = os.getenv("USPT_API_KEY")
+
 # Paths
 PROJECT_DIR = Path(__file__).parent.parent.parent
 PATENTS_DIR = PROJECT_DIR / "patents"

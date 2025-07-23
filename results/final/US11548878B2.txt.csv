@@ -1,0 +1,12 @@
+page_number,ligand,protein,interaction_type,context,Ki,IC50,Kd,EC50
+1,emopamil,emopamil binding protein,binding,"Silve et al., “Emopamil-binding Protein, a Mammalian Protein That Binds a Series of Structurally Diverse Neuroprotective Agents, Exhibits A8-A7 Sterol Isomerase Activity in Yeast”, The Journal of Biological Chemistry, Sep. 13, 1996, vol. 271, No. 37, pp. 22434-22440 (8 pgs. total).",,,,
+4,,,,,,,,
+7,Emopamil,EBP,binding,Emopamil — (@-(1-methylethy1)-c.-[3-[methyl(2-phenyl- ethyl)amino |propyl]benzeneacetonitrile) has been known as an EBP ligand.,,,,
+8,,,,,,,,
+9,,,,,,,,
+11,Compound A,EBP,binding,"The binding ability of Compound A to EBP was examined. The test was carried out in accordance with Receptor Signal Transduction Protocols, pp. 135-164 (ISBN 978-1-61779-125-3).",,,,
+11,Compound A,EBP,binding,"A membrane fraction was collected from sigma-1 receptor-deficient human neuroblastoma (SH-SY5Y) cells, in which EBP was deleted or was overexpressed.",,,,
+11,Compound A,EBP,binding,"The receptor binding test method is as follows. A membrane fraction of individual cells (21.7 to 120 ug/well) and the tritium-labeled Compound A (0.05, 0.1, 0.2, 0.4, 0.8, 1.6, 3.1, 6.3, 12.5, 25.0, 50.0 or 100.0 nM) were added to a 96-well plate, and incubation was then carried out at 37° C. for 2 hours (Total binding).",,,,
+11,Compound A,EBP,binding,"As a control, the trittum-labeled Compound A (0.05, 0.1, 0.2, 0.4, 0.8, 1.6, 3.1, 6.3, 12.5, 25.0, 50.0 or 100.0 nM) and the 100 uM non-labeled Compound A were added to a membrane fraction of individual cells, and incubation was then carried out in the same manner as described above (Non-specific binding).",,,,
+12,Compound A,EBP,binding,The specific binding ability of Compound A to EBP was determined by subtracting the radiation dose of the control (1 (Non-specific binding) from the radiation dose derived from tritium-labeled Compound A at each concentration (Total binding).,,,,
+12,Compound A,EBP,high affinity binding,"From these results, it became clear that Compound A has high affinity for EBP.",,,,
