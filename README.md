@@ -1,5 +1,10 @@
 ![header](assets/header.png)
 
+![Build](https://github.com/fresh-milkshake/agentic_ai_x_longevity/actions/workflows/gh-pages.yml/badge.svg)
+![License](https://img.shields.io/github/license/fresh-milkshake/agentic_ai_x_longevity)
+![Hackathon](https://img.shields.io/badge/Agentic%20AI%20X%20Longevity-Hackathon-lightgreen)
+![Python](https://img.shields.io/badge/Python-3.13%2B-blue)
+
 Этот проект создает извлеченный набор данных о связывании лигандов с белками в формате CSV-таблицы с требуемыми полями. Датасет создается с помощью API для поиска патентов, их дальнейшей обработки и извлечения данных.
 
 ## Использование
