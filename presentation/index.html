@@ -60,198 +60,509 @@
                         <span class="accent">биоактивности</span> из патентов
                     </h4>
                     <p style="font-size: 20px">
-                        Пайплайн для фильтрации, анализа и оценки научных
-                        публикаций и патентов
+                        Пайплайн для фильтрации и анализа научных публикаций и
+                        патентов
                     </p>
                 </section>
 
                 <!-- Project Overview -->
                 <section>
-                    <h2>Обзор проекта</h2>
-                    <ul>
-                        <li>
-                            Автоматизация извлечения и структурирования данных о
-                            взаимодействиях лигандов и белков из патентов
-                        </li>
-                        <li>
-                            Использование Agents Framework, OCR, OpenCV и других
-                            технологий для обработки
-                        </li>
-                        <li>
-                            Результат: демонстрация подхода и формирование
-                            основы для последующего расширения и улучшения
-                        </li>
-                    </ul>
-                </section>
+                    <section>
+                        <h2>Краткий обзор</h2>
+                        <ul>
+                            <li>
+                                Автоматизация извлечения и структурирования
+                                данных о взаимодействиях лигандов и белков из
+                                патентов
+                            </li>
+                            <li>
+                                Использование Agents Framework, OCR, OpenCV и
+                                других технологий для обработки
+                            </li>
+                            <li>
+                                Результат: демонстрация подхода и формирование
+                                основы для последующего расширения и улучшения
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Структура проекта</h2>
 
-                <!-- Dataset Structure -->
-                <!-- <section>
-                    <h2>Структура набора данных</h2>
-                    <table>
-                        <tr>
-                            <td><b>Ligand SMILES</b></td>
-                            <td>Молекулярная структура</td>
-                        </tr>
-                        <tr>
-                            <td><b>Ligand InChI Key</b></td>
-                            <td>Уникальный идентификатор</td>
-                        </tr>
-                        <tr>
-                            <td><b>Sequence</b></td>
-                            <td>Аминокислотная последовательность белка</td>
-                        </tr>
-                        <tr>
-                            <td><b>Patent ID</b></td>
-                            <td>ID патента</td>
-                        </tr>
-                        <tr>
-                            <td><b>Ki, IC50, Kd, EC50</b></td>
-                            <td>Параметры связывания (нМ)</td>
-                        </tr>
-                    </table>
-                </section> -->
+                        <p>Система состоит из 3-х основных модулей:</p>
 
-                <!-- System Architecture -->
-                <section>
-                    <h2>Архитектура системы</h2>
-                    <img
-                        src="draft/arch-diagram.png"
-                        alt="Архитектура"
-                        style="
-                            max-width: 80%;
-                            background: #fff;
-                            border-radius: 8px;
-                            box-shadow: 0 2px 8px #ccc;
-                        "
-                        onerror="this.style.display='none'"
-                    />
-                    <ul>
-                        <li>
-                            Многоуровневая обработка: получение патентов →
-                            анализ → валидация
-                        </li>
-                        <li>
-                            Модули: Orchestrator, Pipeline, AI-агенты, OCR,
-                            API-интеграции
-                        </li>
-                    </ul>
-                </section>
-
-                <!-- Main Modules -->
-                <section>
-                    <h2>Основные модули</h2>
-                    <ul>
-                        <li>
-                            <b>Orchestrator</b> — управление скачивнием
-                            патентов, обработкой, сохранием и остальными
-                            процессами
-                        </li>
-                        <li>
-                            <b>Pipeline</b> — последовательная обработка
-                            документов и использование AI-агентов
-                        </li>
-                        <li>
-                            <b>AI-агенты</b> — SearcherAgent, BioinfAgent,
-                            SupervisorAgent, FixerAgent
-                        </li>
-                        <li>
-                            <b>OCR и Text Extraction</b> — извлечение текста из
-                            PDF
-                        </li>
-                        <li>
-                            <b>Filtering</b> — интеграция с USPTO API и
-                            опционально с SureChEMBL
-                        </li>
-                    </ul>
+                        <ul>
+                            <li>
+                                <b>src/filtering</b> — интеграция с USPTO API
+                            </li>
+                            <li>
+                                <b>src/processing</b> — обработка текста
+                                патентов с ИИ
+                            </li>
+                            <li>
+                                <b>src/orchestration</b> — управление процессом
+                                обработки и чекпоинтами пайплайна
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Архитектура системы</h2>
+                        <img
+                            src="draft/arch-diagram.png"
+                            alt="Архитектура"
+                            style="
+                                max-width: 80%;
+                                background: #fff;
+                                border-radius: 8px;
+                                box-shadow: 0 2px 8px #ccc;
+                            "
+                            onerror="this.style.display='none'"
+                        />
+                        <ul>
+                            <li>
+                                Поэтапная гибкая обработка: получение патентов →
+                                анализ → валидация
+                            </li>
+                            <li>
+                                Модуль оркестрации позволяет гибко управлять
+                                процессами и обеспечивать отказоустойчивость в
+                                случае критических ошибок или резкого завершения
+                                работы
+                            </li>
+                        </ul>
+                    </section>
                 </section>
 
                 <!-- Key Algorithm: Orchestrator Example -->
                 <section>
-                    <h2>Пример: Orchestrator</h2>
-                    <pre><code class="python">class Orchestrator:
-    def run(self):
-        results = self._extract_texts()
-        all_docs = self._collect_documents(results)
-        self._process_documents(all_docs[3:])
+                    <section>
+                        <h2>Гибкий оркестратор обработки</h2>
+                        <pre>
+                            <code class="python" style="font-size: 15px;" data-trim data-line-numbers="1-9|6" >
+from pathlib import Path
+from src.orchestration import create_patent_orchestrator
+from src.constants import PATENTS_PER_BATCH
+
+if __name__ == "__main__":
+    orchestrator = create_patent_orchestrator(patent_per_batch=PATENTS_PER_BATCH)
+    orchestrator.run(initial_context={"documents_path": Path("patents")})
 </code></pre>
-                    <ul>
-                        <li>Извлечение текстов из патентов</li>
-                        <li>Сбор документов и запуск пайплайна обработки</li>
-                    </ul>
+                        <ul>
+                            <li>
+                                Оркестратор управляет последовательностью шагов:
+                                поиск, извлечение, сбор, обработка, сохранение.
+                            </li>
+                            <li>
+                                Поддержка восстановления прогресса (чекпоинты).
+                            </li>
+                            <li>
+                                Каждый шаг — отдельный класс
+                                (Step/GeneratorStep).
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Сборка оркестратора</h2>
+                        <pre><code data-trim data-line-numbers="19-25|27-35">
+def create_patent_orchestrator(
+    patent_per_batch: int = 10, checkpoint_file: Path = Path("checkpoints/patents.pkl")
+) -> FlexibleOrchestrator:
+    """
+    Создает стандартный оркестратор с полным циклом работы:
+    
+    Поиск и скачивание патентов ->
+    Извлечение текстов ->
+    Сбор документов ->
+    Обработка документов <-> Сохранение результатов
+
+    Args:
+        patent_per_batch: Количество патентов для обработки за раз
+        checkpoint_file: Путь к файлу чекпоинтов
+
+    Returns:
+        FlexibleOrchestrator: Стандартный оркестратор с полным циклом работы
+    """
+    from src.orchestration.steps import (
+        CheckPatentsStep,
+        ExtractTextsStep,
+        CollectDocumentsStep,
+        ProcessDocumentsStep,
+        SaveResultsStep,
+    )
+
+    steps = [
+        CheckPatentsStep(patent_per_batch),
+        ExtractTextsStep(),
+        CollectDocumentsStep(),
+        ProcessDocumentsStep(),
+        SaveResultsStep(),
+    ]
+
+    return FlexibleOrchestrator(steps, checkpoint_file)
+</code></pre>
+                    </section>
+                    <section>
+                        <h2>Полный цикл работы</h2>
+
+                        <div
+                            style="
+                                display: flex;
+                                align-items: center;
+                                gap: 20px;
+                            "
+                        >
+                            <div class="block">
+                                <p>Поиск патентов</p>
+                            </div>
+
+                            <svg
+                                width="50"
+                                height="50"
+                                viewBox="0 0 50 50"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                            >
+                                <path
+                                    d="M43.766 24l-15.054 12.47 1.288 1.53 18-15.042-18-14.958-1.29 1.528 15.058 12.472h-43.768v2h43.766z"
+                                    fill="#00ff90"
+                                />
+                            </svg>
+
+                            <div class="block">
+                                <p>Скачивание PDF</p>
+                            </div>
+
+                            <svg
+                                width="50"
+                                height="50"
+                                viewBox="0 0 50 50"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                            >
+                                <path
+                                    d="M43.766 24l-15.054 12.47 1.288 1.53 18-15.042-18-14.958-1.29 1.528 15.058 12.472h-43.768v2h43.766z"
+                                    fill="#00ff90"
+                                />
+                            </svg>
+
+                            <div class="block">
+                                <p>Экстракция текстов</p>
+                            </div>
+
+                            <svg
+                                width="50"
+                                height="50"
+                                viewBox="0 0 50 50"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                            >
+                                <path
+                                    d="M43.766 24l-15.054 12.47 1.288 1.53 18-15.042-18-14.958-1.29 1.528 15.058 12.472h-43.768v2h43.766z"
+                                    fill="#00ff90"
+                                />
+                            </svg>
+                        </div>
+                        <div
+                            style="
+                                display: flex;
+                                align-items: center;
+                                gap: 20px;
+                                margin-top: 40px;
+                            "
+                        >
+                            <div class="block">
+                                <p>Обработка документов</p>
+                            </div>
+
+                            <svg
+                                width="50"
+                                height="50"
+                                viewBox="0 0 50 50"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                            >
+                                <path
+                                    d="M43.766 24l-15.054 12.47 1.288 1.53 18-15.042-18-14.958-1.29 1.528 15.058 12.472h-43.768v2h43.766z"
+                                    fill="#00ff90"
+                                />
+                            </svg>
+
+                            <div class="block">
+                                <p>Сохранение результатов</p>
+                            </div>
+
+                            <svg
+                                width="50"
+                                height="50"
+                                viewBox="0 0 50 50"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                            >
+                                <path
+                                    d="M43.766 24l-15.054 12.47 1.288 1.53 18-15.042-18-14.958-1.29 1.528 15.058 12.472h-43.768v2h43.766z"
+                                    fill="#00ff90"
+                                />
+                            </svg>
+
+                            <div class="block">
+                                <p>Ручной просмотр</p>
+                            </div>
+                        </div>
+                    </section>
                 </section>
 
-                <!-- Key Algorithm: Pipeline & Agents -->
                 <section>
-                    <h2>Pipeline и ИИ-агенты</h2>
-                    <pre><code class="python">class Pipeline:
-    def __init__(self, txt_document):
-        self.searcher_agent = Agent(...)
-        self.bioinf_agent = Agent(...)
-        self.supervisor_agent = Agent(...)
-    def run(self):
-        # 1. Поиск взаимодействий
-        # 2. Извлечение структурированных данных
-        # 3. Валидация и исправление
-                    </code></pre>
-                    <ul>
-                        <li>
-                            Многоагентная обработка: поиск, извлечение,
-                            валидация
-                        </li>
-                        <li>
-                            Использование базовой нейросети для анализа
-                            биомедицинских текстов
-                        </li>
-                    </ul>
+                    <section data-auto-animate>
+                        <h2>Многоагентный Pipeline</h2>
+                        <pre><code data-trim data-line-numbers="3-8" class="language-python" auto>
+class Pipeline:
+    def __init__(self, txt_document: TxtDocument, output_dir: Path):
+        self.searcher_agent = Agent(
+            name="SearcherAgent",
+            instructions=...,
+            model=DEFAULT_MODEL,
+            output_type=SearcherAgentResults
+        )
+        self.bioinf_agent = Agent(
+            name="BioinfAgent", 
+            instructions=...,
+            model=DEFAULT_MODEL,
+            output_type=BioinfAgentResults
+        )
+        self.supervisor_agent = Agent(
+            name="SupervisorAgent",
+            instructions=...,
+            model=DEFAULT_MODEL,
+            output_type=SupervisorAgentResults
+        )
+        self.fix_agent = Agent(
+            name="FixAgent",
+            instructions=...,
+            model=DEFAULT_MODEL,
+            output_type=BioinfAgentResults
+        )
+
+</code></pre>
+                        <p>
+                            <b>SearcherAgent</b>: определяет наличие
+                            лиганд-белковых взаимодействий с оценкой уверенности
+                        </p>
+                    </section>
+                    <section data-auto-animate>
+                        <h2>Многоагентный Pipeline</h2>
+                        <pre><code data-trim data-line-numbers="9-13" class="language-python">
+class Pipeline:
+    def __init__(self, txt_document: TxtDocument, output_dir: Path):
+        self.searcher_agent = Agent(
+            name="SearcherAgent",
+            instructions=...,
+            model=DEFAULT_MODEL,
+            output_type=SearcherAgentResults
+        )
+        self.bioinf_agent = Agent(
+            name="BioinfAgent", 
+            instructions=...,
+            model=DEFAULT_MODEL,
+            output_type=BioinfAgentResults
+        )
+        self.supervisor_agent = Agent(
+            name="SupervisorAgent",
+            instructions=...,
+            model=DEFAULT_MODEL,
+            output_type=SupervisorAgentResults
+        )
+        self.fix_agent = Agent(
+            name="FixAgent",
+            instructions=...,
+            model=DEFAULT_MODEL,
+            output_type=BioinfAgentResults
+        )
+
+</code></pre>
+                        <p>
+                            <b>BioinfAgent</b>: извлекает взаимодействия,
+                            параметры (Ki, IC50, Kd, EC50), названия лигандов и
+                            белков
+                        </p>
+                    </section>
+                    <section data-auto-animate>
+                        <h2>Многоагентный Pipeline</h2>
+                        <pre><code data-trim data-line-numbers="14-20" class="language-python">
+class Pipeline:
+    def __init__(self, txt_document: TxtDocument, output_dir: Path):
+        self.searcher_agent = Agent(
+            name="SearcherAgent",
+            instructions=...,
+            model=DEFAULT_MODEL,
+            output_type=SearcherAgentResults
+        )
+        self.bioinf_agent = Agent(
+            name="BioinfAgent", 
+            instructions=...,
+            model=DEFAULT_MODEL,
+            output_type=BioinfAgentResults
+        )
+        self.supervisor_agent = Agent(
+            name="SupervisorAgent",
+            instructions=...,
+            model=DEFAULT_MODEL,
+            output_type=SupervisorAgentResults
+        )
+        self.fix_agent = Agent(
+            name="FixAgent",
+            instructions=...,
+            model=DEFAULT_MODEL,
+            output_type=BioinfAgentResults
+        )
+
+</code></pre>
+                        <p>
+                            <b>SupervisorAgent</b>: проверяет корректность
+                            результатов, определяет возможность исправления
+                        </p>
+                    </section>
+                    <section data-auto-animate>
+                        <h2>Многоагентный Pipeline</h2>
+                        <pre><code data-trim data-line-numbers="21-26" class="language-python">
+class Pipeline:
+    def __init__(self, txt_document: TxtDocument, output_dir: Path):
+        self.searcher_agent = Agent(
+            name="SearcherAgent",
+            instructions=...,
+            model=DEFAULT_MODEL,
+            output_type=SearcherAgentResults
+        )
+        self.bioinf_agent = Agent(
+            name="BioinfAgent", 
+            instructions=...,
+            model=DEFAULT_MODEL,
+            output_type=BioinfAgentResults
+        )
+        self.supervisor_agent = Agent(
+            name="SupervisorAgent",
+            instructions=...,
+            model=DEFAULT_MODEL,
+            output_type=SupervisorAgentResults
+        )
+        self.fix_agent = Agent(
+            name="FixAgent",
+            instructions=...,
+            model=DEFAULT_MODEL,
+            output_type=BioinfAgentResults
+        )
+
+</code></pre>
+                        <p>
+                            <b>FixAgent</b>: исправляет некорректные результаты
+                            на основе объяснений супервайзера и редактирует
+                            данные BioinfAgent
+                        </p>
+                    </section>
                 </section>
 
-                <!-- Data Sources -->
                 <section>
-                    <h2>Источники данных</h2>
-                    <ul>
-                        <li>
-                            <b>BindingDB</b> — экспериментальные данные
-                            связывания
-                        </li>
-                        <li>
-                            <b>SureChEMBL API</b> — патентные данные и
-                            химические структуры
-                        </li>
-                        <li>
-                            <b>PubChem API</b> — биологическая активность и
-                            мишени
-                        </li>
-                        <li><b>USPTO Patents</b> — патентные документы</li>
-                    </ul>
-                </section>
+                    <section>
+                        <h3>Выбор LLM для агентной архитектуры</h3>
+                        <p>Критерии отбора:</p>
+                        <ul>
+                            <li>
+                                Высокая производительность в задачах рассуждений
+                                и генерации
+                            </li>
+                            <li>
+                                Поддержка агентного режима (agent capabilities)
+                            </li>
+                            <li>
+                                Возможность интеграции с внешними инструментами
+                                (tool calling)
+                            </li>
+                            <li>
+                                Доступность (открытые веса, лицензия, ресурсы
+                                для запуска)
+                            </li>
+                        </ul>
 
-                <!-- Quality Assurance -->
-                <section> 
-                    <!-- TODO: Переписать -->
-                    <h2>Контроль качества</h2> 
-                    <ul>
-                        <li>
-                            Базовая валидация формата SMILES и белковых
-                            последовательностей
-                        </li>
-                        <li>Проверка диапазонов значений активности</li>
-                        <li>Удаление дубликатов и ручная модерация</li>
-                        <li>Многоуровневая система валидации с ИИ-агентами</li>
-                    </ul>
+                        <div
+                            style="
+                                display: flex;
+                                gap: 10px;
+                                flex-wrap: wrap;
+                                justify-content: center;
+                            "
+                        >
+                            <span class="badge">DeepSeek-R1 (8B)</span>
+                            <span class="badge">Qwen3 (8B)</span>
+                            <span class="badge">Llama 3.1 (8B)</span>
+                            <span class="badge">Mistral (7B)</span>
+                            <span class="badge">Gemma 3 (4B)</span>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>Выбор LLM для агентной архитектуры</h3>
+                        <p>Итоговым выбором стала модель <b>Qwen3</b>:</p>
+                        <ul>
+                            <li>
+                                Гибридная архитектура (Dense + MoE), которая
+                                снизит нагрузку при масштабировании
+                            </li>
+                            <li>Контекст до 128K токенов</li>
+                            <li>
+                                Заточенность под работы в агентном режимое и
+                                использование инструментов
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>Характеристики модели</h4>
+                        <img
+                            src="../assets/model_info.png"
+                            alt="model_info"
+                            style="
+                                width: 100%;
+                                height: auto;
+                                border-radius: 10px;
+                            "
+                        />
+                    </section>
                 </section>
 
                 <!-- Usage Examples TODO: Переписать -->
                 <section>
-                    <h2>Примеры использования</h2>
-                    <pre><code class="python">import pandas as pd
-# Загрузка демо-данных
-df = pd.read_csv('data/ligand_protein_binding_dataset.csv')
-# Фильтрация по активности
-ki_data = df[df['Ki (nM)'].notna()]
-</code></pre>
-                    <pre><code class="bash"># Запуск пайплайна
-python run.py
-</code></pre>
+                    <section data-auto-animate>
+                        <h2>Запуск и развертывание</h2>
+
+                        <ul>
+                            <li>
+                                Для запуска проекта необходимо
+                                <span class="accent"
+                                    >по меньшей мере 3 зависимости</span
+                                >: Python, ollama, tesseract
+                            </li>
+                            <li>
+                                Нужно будет скачать модель Qwen3 (или другую,
+                                если хочется) командой
+                                <code class="inline-code"
+                                    >ollama pull qwen3</code
+                                >
+                            </li>
+                            <li>
+                                Так же необходим
+                                <span class="accent"
+                                    >API-ключ от USPTO PatentsView</span
+                                >, ссылка на его получение есть в README.md
+                            </li>
+                            <li>
+                                После синхронизации зависимостей при помощи
+                                <code class="inline-code">uv sync</code> - можно
+                                запустить проект командой
+                                <code class="inline-code">uv run main.py</code>
+                            </li>
+                        </ul>
+                    </section>
                 </section>
 
                 <!-- Future Development TODO: Переписать -->
@@ -272,12 +583,117 @@ python run.py
                 <!-- Technology Stack -->
                 <section>
                     <h2>Технологический стек</h2>
-                    <ul>
-                        <li>Python 3.13+, Pandas, Pydantic, Requests</li>
-                        <li>PyTesseract, OpenCV, PyMuPDF</li>
-                        <li>OpenAI Agents, Ollama, Llama3.2</li>
-                        <li>Loguru, Rich, Textual</li>
-                    </ul>
+                    <div
+                        style="
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 10px;
+                            justify-content: center;
+                            align-items: center;
+                            margin-top: 16px;
+                        "
+                    >
+                        <span
+                            style="background: #3776ab; color: #fff"
+                            class="tech-badge"
+                            >Python</span
+                        >
+                        <span
+                            style="background: #2d2e2f; color: #fff"
+                            class="tech-badge"
+                            >Ollama</span
+                        >
+                        <span
+                            style="background: #5d8a4e; color: #fff"
+                            class="tech-badge"
+                            >Tesseract</span
+                        >
+                        <span
+                            style="background: #150458; color: #fff"
+                            class="tech-badge"
+                            >Pandas</span
+                        >
+                        <span
+                            style="background: #b8e3ff; color: #222"
+                            class="tech-badge"
+                            >Pydantic</span
+                        >
+                        <span
+                            style="background: #2d3748; color: #fff"
+                            class="tech-badge"
+                            >OpenAI Agents</span
+                        >
+                        <span
+                            style="background: #f7c873; color: #222"
+                            class="tech-badge"
+                            >g4f</span
+                        >
+                        <span
+                            style="background: #f44336; color: #fff"
+                            class="tech-badge"
+                            >PyMuPDF</span
+                        >
+                        <span
+                            style="background: #e6e6e6; color: #222"
+                            class="tech-badge"
+                            >pypdf</span
+                        >
+                        <span
+                            style="background: #5c3ee8; color: #fff"
+                            class="tech-badge"
+                            >OpenCV</span
+                        >
+                        <span
+                            style="background: #003366; color: #fff"
+                            class="tech-badge"
+                            >RDKit</span
+                        >
+                        <span
+                            style="background: #e94f37; color: #fff"
+                            class="tech-badge"
+                            >Loguru</span
+                        >
+                        <span
+                            style="background: #6e44ff; color: #fff"
+                            class="tech-badge"
+                            >Rich</span
+                        >
+                        <span
+                            style="background: #1a1a1a; color: #fff"
+                            class="tech-badge"
+                            >Textual</span
+                        >
+                        <span
+                            style="background: #f9a825; color: #222"
+                            class="tech-badge"
+                            >Tenacity</span
+                        >
+                        <span
+                            style="background: #0057b7; color: #fff"
+                            class="tech-badge"
+                            >USPTO PatentsView</span
+                        >
+                        <span
+                            style="background: #005571; color: #fff"
+                            class="tech-badge"
+                            >requests</span
+                        >
+                        <span
+                            style="background: #181717; color: #fff"
+                            class="tech-badge"
+                            >uv</span
+                        >
+                        <span
+                            style="background: #6f4a8e; color: #fff"
+                            class="tech-badge"
+                            >Pillow</span
+                        >
+                        <span
+                            style="background: #ffc107; color: #222"
+                            class="tech-badge"
+                            >BeautifulSoup</span
+                        >
+                    </div>
                 </section>
 
                 <!-- Conclusion -->
@@ -293,27 +709,46 @@ python run.py
                             top: 0;
                             z-index: 10;
                             width: 72px;
-                            height: auto;
                             pointer-events: none;
                         "
                     />
-                    <h2>Заключение</h2>
-                    <ul>
-                        <!-- TODO: Переписать -->
-                        <li>
-                            Longevity — AI-платформа для извлечения и анализа
-                            биомедицинских данных из патентов
-                        </li>
-                        <li>
-                            Гибкая архитектура, интеграция с ведущими
-                            источниками, возможность масштабирования
-                        </li>
-                        <li>
-                            Прототип служит отправной точкой для дальнейших
-                            исследований вопроса скрапинга патентов и их анализа
-                        </li>
-                    </ul>
-                    <h3>Спасибо за внимание!</h3>
+                    <h4>Будущее биоинформатики уже здесь</h4>
+                    <p>
+                        Не смотря на то, что это скорее прототип большей
+                        системы, уже сейчас можно сделать выводы о том, что
+                        ИИ-агенты не просто могут, а почти
+                        обязаны быть частью процесса обработки хаоса научных
+                        данных.
+                    </p>
+                    <p>
+                        Пусть технологии помогают нам открывать новое в
+                        биологии быстрее и точнее, давая возможность каждому
+                        поучаствовать в новых открытиях.
+                    </p>
+                    <p
+                        style="
+                            font-size: 24px;
+                            color: #00ff90;
+                            font-weight: 600;
+                            font-style: italic;
+                        "
+                    >
+                        "От патента к биоактивности — за минуты, а не часы.""
+                    </p>
+                    <div>
+                        <p style="margin-bottom: 0">Спасибо за внимание!</p>
+                        <p
+                            style="
+                                font-family: 'Fira Code', monospace;
+                                color: #00ff90;
+                                font-size: 29px;
+                                font-weight: 500;
+                                margin-top: 4px;
+                            "
+                        >
+                            → Давайте строить будущее уже сейчас
+                        </p>
+                    </div>
                 </section>
             </div>
         </div>
