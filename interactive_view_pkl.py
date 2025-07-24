@@ -153,15 +153,15 @@ class InteractionTreeWidget(Tree):
 
         file_node.expand()
 
-    def _add_parameters_to_tree(self, parent_node: EventTreeDataType, params):
+    def _add_parameters_to_tree(self, parent_node: EventTreeDataType, params): # type: ignore
         if isinstance(params, dict):
             for key, value in params.items():
-                parent_node.add_leaf(f"{key}: {value}")
+                parent_node.add_leaf(f"{key}: {value}") # type: ignore
         elif isinstance(params, list):
             for item in params:
-                parent_node.add_leaf(f"• {item}")
+                parent_node.add_leaf(f"• {item}") # type: ignore
         else:
-            parent_node.add_leaf(str(params))
+            parent_node.add_leaf(str(params)) # type: ignore
 
 
 class InteractionViewerApp(App):
@@ -233,7 +233,7 @@ class InteractionViewerApp(App):
     BINDINGS = [
         Binding("q", "quit", "Выход"),
         Binding("r", "refresh", "Обновить"),
-        Binding("t", "toggle_view", "Переключить вид"),
+        # Binding("t", "toggle_view", "Переключить вид"),
     ]
 
     def __init__(self):
@@ -295,7 +295,7 @@ class InteractionViewerApp(App):
         if event.list_view.id == "file_list":
             selected_item = event.item
             if selected_item and hasattr(selected_item, "children"):
-                filename = str(selected_item.children[0].renderable)
+                filename = str(selected_item.children[0].renderable) # type: ignore
                 self.load_and_display_file(filename)
 
     def load_and_display_file(self, filename: str):
