@@ -536,7 +536,7 @@ class Pipeline:
 
                 <!-- Usage Examples TODO: Переписать -->
                 <section>
-                    <section data-auto-animate>
+                    <section>
                         <h2>Запуск и развертывание</h2>
 
                         <ul>
@@ -567,21 +567,100 @@ class Pipeline:
                             </li>
                         </ul>
                     </section>
+                    <section>
+                        <h2>Gradio UI</h2>
+
+                        <ul>
+                            <li>
+                                Запуск web-ui: <code class="inline-code">uv run gradio-ui.py</code>
+                            </li>
+                            <li>
+                                <span class="accent">Анализ текста</span> — вводите текст или загружайте файл для поиска взаимодействий
+                            </li>
+                            <li>
+                                <span class="accent">Скачивание патентов</span> — автоматический поиск и загрузка патентов USPTO по ключевым словам
+                            </li>
+                            <li>
+                                <span class="accent">Обработка патентов</span> — запуск полного пайплайна для извлечения данных из всех загруженных PDF
+                            </li>
+                            <li>
+                                <span class="accent">Просмотр результатов</span> — интерактивный просмотр и экспорт найденных взаимодействий в CSV
+                            </li>
+                            <li>
+                                <span class="accent">Скачивание файлов</span> — загрузка исходных PDF и итоговых CSV из интерфейса
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>Gradio API</h2>
+                        <div>
+                            <div style="flex: 1 1 300px; min-width: 260px;">
+                                <p style="margin-top: 0; text-align: left; margin-left: 50px;">Сценарий работы (Python)</p>
+                                <ul>
+                                    <li>
+                                        <span class="accent">Подключение:</span>
+                                        используйте <code class="inline-code">Client("http://localhost:7860/")</code>
+                                    </li>
+                                    <li>
+                                        <span class="accent">Вызов:</span>
+                                        метод <code class="inline-code">predict()</code> отправляет данные на нужный <code class="inline-code">api_name</code>
+                                    </li>
+                                    <li>
+                                        <span class="accent">Работа с файлами:</span>
+                                        используйте <code class="inline-code">handle_file()</code> для передачи пути или URL файла
+                                    </li>
+                                </ul>
+                            </div>
+                            <pre><code data-trim data-line-numbers="1-10|3|5-8" class="language-python">
+from gradio_client import Client
+
+client = Client("http://localhost:7860/")
+
+result = client.predict(
+    "text",
+    api_name="/process_single_text"
+)
+                            </code></pre>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>Основные эндпоинты</h3>
+        
+                        <ul style="margin-bottom: 0;">
+                            <li><code class="inline-code">/process_single_text</code> — анализ переданного текста ИИ агентами</li>
+                            <li><code class="inline-code">/process_uploaded_file</code> — то же, что и предыдущий, но для загружаемого файла</li>
+                            <li><code class="inline-code">/download_patents</code> — скачивание патентов на сервере Gradio с параметрами ключевых слов и
+                                    ограничением по количеству</li>
+                            <li><code class="inline-code">/run_full_pipeline</code> — полный цикл обработки, такой же, как при обычном запуске проекта</li>
+                            <li><code class="inline-code">/download_pdf_file</code>, <code class="inline-code">/download_csv_file</code> — скачивание файлов с сервера Gradio</li>
+                            <li><code class="inline-code">/create_combined_export</code> — объединение данных отдельных патентов в один CSV</li>
+                        </ul>
+                        
+                    </section>
                 </section>
 
                 <!-- Future Development TODO: Переписать -->
                 <section>
-                    <h2>Планы развития</h2>
-                    <ul>
-                        <li>Интеграция UniProt и PubMed</li>
-                        <li>Улучшение качества OCR и фильтрации</li>
-                        <li>
-                            Расширение набора данных и автоматизация анализа
-                        </li>
-                        <li>
-                            Внедрение новых ML-моделей и кастомных датасетов
-                        </li>
-                    </ul>
+                    <section data-auto-animate>
+                        <h4>Потенциальные направления развития</h4>
+                        <ul>
+                            <li>Интеграция с другими источниками различных данных: Arxiv, PubMed, UniProt</li>
+                            <li>Улучшение качества OCR дополнительными и более совершенными обработками</li>
+                            <li>Создание интеллектуальной системы работы с pdf и дополнительный анализ через vision LLM</li>
+                            <li>Внедрение специализированных ML-моделей, таких как ChemBERT, BioBERT и других</li>
+                        </ul>
+                    </section>
+                    <section data-auto-animate>
+                        <h4>Потенциальные направления развития</h4>
+                        <ul>
+                            <li>Создание интеллектуальной системы работы с pdf и дополнительный анализ через vision LLM</li>
+                            <li>Внедрение специализированных ML-моделей, таких как ChemBERT, BioBERT и других</li>
+                            <li>Создание более качественного web-интерфейса для работы с пайплайном через FastAPI</li>
+                            <li>Горизонтальное масштабирование системы через распределенные вычисления с переходом на vLLM
+                                или использование нескольких узлов с ollama и собственной балансировкой нагрузки
+                            </li>
+                        </ul>
+                    </section>
                 </section>
 
                 <!-- Technology Stack -->
@@ -696,6 +775,11 @@ class Pipeline:
                             style="background: #ffc107; color: #222"
                             class="tech-badge"
                             >BeautifulSoup</span
+                        >
+                        <span
+                            style="background: #ff8800; color: #fff"
+                            class="tech-badge"
+                            >Gradio</span
                         >
                     </div>
                 </section>
