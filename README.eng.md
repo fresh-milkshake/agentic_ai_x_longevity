@@ -8,8 +8,6 @@
    ![Russian](https://img.shields.io/badge/Russian%20version%20of%20README-README.md-blue)
 </a>
 
-# Agentic AI x Longevity - Ligand-Protein Interaction Dataset
-
 This project creates an extracted dataset of ligand-protein binding interactions in CSV format with required fields. The dataset is generated using an API for patent search, followed by processing and data extraction.
 
 The project uses [uv](https://docs.astral.sh/uv/) for dependency and project management. Code formatting and linting is handled by [ruff](https://github.com/astral-sh/ruff).
