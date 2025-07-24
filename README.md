@@ -77,10 +77,12 @@ ollama pull qwen3
 uv run gradio-ui.py
 ```
 
-<div style="display: flex; flex-direction: row; gap: 10px;">
-    <img src="assets/gradio-1.png" alt="Gradio UI" style="width: 50%;">
-    <img src="assets/gradio-2.png" alt="Gradio UI" style="width: 50%;">
-</div>
+<kbd>
+   <p>
+    <img src="assets/gradio-1.png" alt="Gradio UI" style="width: 49%;">
+    <img src="assets/gradio-2.png" alt="Gradio UI" style="width: 49%;">
+   </p>
+</kbd>
 
 #### Запуск скрипта обзора промежуточных результатов
 
@@ -90,10 +92,12 @@ uv run gradio-ui.py
 uv run interactive_view_pkl.py
 ```
 
-<div style="display: flex; flex-direction: row; gap: 10px;">
-    <img src="assets/script-1.png" alt="Interactive View" style="width: 50%;">
-    <img src="assets/script-2.png" alt="Interactive View" style="width: 50%;">
-</div>
+<kbd>
+   <p>
+    <img src="assets/script-1.png" alt="Interactive View" style="width: 49%;">
+    <img src="assets/script-2.png" alt="Interactive View" style="width: 49%;">
+   </p>
+</kbd>
 
 ## Структура проекта
 
