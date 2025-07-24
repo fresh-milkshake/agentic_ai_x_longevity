@@ -20,4 +20,5 @@ dependencies = [
     "rich>=14.0.0",
     "textual>=4.0.0",
     "textual-dev>=1.7.0",
+    "gradio==5.37",
 ]

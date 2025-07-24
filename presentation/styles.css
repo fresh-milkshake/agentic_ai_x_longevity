@@ -107,3 +107,20 @@ td {
     padding: 6px 16px;
     font-weight: 600;
 }
+
+.accent-underline {
+    text-decoration: underline;
+    text-decoration-color: #00ff90;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 4px;
+}
+
+.accent-border {
+    border: 3px solid #00ff90;
+    border-radius: 8px;
+    padding: 0px;
+}
+
+.fira-code {
+    font-family: "Fira Code", Arial, sans-serif !important;
+}

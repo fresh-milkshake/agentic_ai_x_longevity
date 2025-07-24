@@ -3,6 +3,7 @@ import requests
 
 from src.models import Patent
 from src.filtering.fetchers.base import BaseFetcher
+from src.constants.processing import DEFAULT_YEAR_RANGE
 from loguru import logger
 
 
@@ -88,7 +89,7 @@ class PatentsViewFetcher(BaseFetcher):
         return f"<PatentsViewFetcher(api_key={'***' if self.api_key else None})>"
 
     def get_patents_by_query(
-        self, query: str, limit: int = 10, year: str = "2023"
+        self, query: str, limit: int = 10, year: str = DEFAULT_YEAR_RANGE
     ) -> list[Patent]:
         """
         Поиск патентов по ключевым словам title/abstract (POST-запрос).

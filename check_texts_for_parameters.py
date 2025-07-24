@@ -2,15 +2,13 @@ import re
 from pathlib import Path
 
 params_patterns = [
-    # Оригинальный паттерн
+    # Kd = 10 nM / Kd < 10 nM / Kd > 10 nM
     ("classic", r"(?P<param>Kd|IC50|Ki|C50)\s*[=<>]?\s*(?P<value>\d+\.?\d*)\s*(?P<unit>nM|μM|mM)"),
-    # Параметр в скобках: Kd (10 nM)
+    # Kd (10 nM)
     ("brackets", r"(?P<param>Kd|IC50|Ki|C50)\s*\(\s*(?P<value>\d+\.?\d*)\s*(?P<unit>nM|μM|mM)\s*\)"),
-    # Параметр с двоеточием: Kd: 10 nM
-    ("colon", r"(?P<param>Kd|IC50|Ki|C50)\s*:\s*(?P<value>\d+\.?\d*)\s*(?P<unit>nM|μM|mM)"),
-    # Параметр с запятой: Kd, 10 nM
-    ("comma", r"(?P<param>Kd|IC50|Ki|C50)\s*,\s*(?P<value>\d+\.?\d*)\s*(?P<unit>nM|μM|mM)"),
-    # Только значение и единица: 10 nM (без параметра)
+    # Kd: 10 nM / Kd, 10 nM
+    ("colon_or_comma", r"(?P<param>Kd|IC50|Ki|C50)\s*[:|,]\s*(?P<value>\d+\.?\d*)\s*(?P<unit>nM|μM|mM)"),
+    # 10 nM
     ("value_only", r"(?P<value>\d+\.?\d*)\s*(?P<unit>nM|μM|mM)")
 ]
 
@@ -32,7 +30,7 @@ def extract_params(text: str):
         print("Параметры взаимодействия не найдены ни одним паттерном.")
 
 if __name__ == "__main__":
-    patents_txts = Path("patents")
+    patents_txts = Path("results/raw")
     for txt_file in patents_txts.glob("*.txt"):
         print(f"\nФайл: {txt_file.name}")
         with open(txt_file, "r", encoding="utf-8") as f:
