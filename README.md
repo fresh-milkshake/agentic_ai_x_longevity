@@ -77,6 +77,11 @@ ollama pull qwen3
 uv run gradio-ui.py
 ```
 
+<div style="display: flex; flex-direction: row; gap: 10px;">
+    <img src="assets/gradio-1.png" alt="Gradio UI" style="width: 50%;">
+    <img src="assets/gradio-2.png" alt="Gradio UI" style="width: 50%;">
+</div>
+
 #### Запуск скрипта обзора промежуточных результатов
 
 Для обзора промежуточных результатов в формате pickle файлов, которые создаются в процессе работы агентов, можно использовать TUI скрипт:
@@ -84,6 +89,11 @@ uv run gradio-ui.py
 ```bash
 uv run interactive_view_pkl.py
 ```
+
+<div style="display: flex; flex-direction: row; gap: 10px;">
+    <img src="assets/script-1.png" alt="Interactive View" style="width: 50%;">
+    <img src="assets/script-2.png" alt="Interactive View" style="width: 50%;">
+</div>
 
 ## Структура проекта
 

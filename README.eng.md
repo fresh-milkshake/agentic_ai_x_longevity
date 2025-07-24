@@ -79,6 +79,11 @@ To launch the interface, run:
 uv run gradio-ui.py
 ```
 
+<div style="display: flex; flex-direction: row; gap: 10px;">
+    <img src="assets/gradio-1.png" alt="Gradio UI" style="width: 50%;">
+    <img src="assets/gradio-2.png" alt="Gradio UI" style="width: 50%;">
+</div>
+
 #### Running Intermediate Results Review Script
 
 To review intermediate results in pickle file format created during agent processing, you can use the TUI script:
@@ -86,6 +91,11 @@ To review intermediate results in pickle file format created during agent proces
 ```bash
 uv run interactive_view_pkl.py
 ```
+
+<div style="display: flex; flex-direction: row; gap: 10px;">
+    <img src="assets/script-1.png" alt="Interactive View" style="width: 50%;">
+    <img src="assets/script-2.png" alt="Interactive View" style="width: 50%;">
+</div>
 
 ## Project Structure
 
